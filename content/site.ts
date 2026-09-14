@@ -703,3 +703,444 @@ export const founding = {
     "ابھی اپنی جگہ محفوظ کریں — ایک منٹ لگتا ہے اور دستخط تک کوئی پابندی نہیں۔",
   ),
 };
+
+/* ───────────────────────────── Shared: money & coverage ───────────────────────────── */
+
+export const commissionTable = {
+  caption: l("Commission by category", "کیٹیگری کے حساب سے کمیشن"),
+  category: l("Category", "کیٹیگری"),
+  rate: l("Commission (% of item price)", "کمیشن (پروڈکٹ قیمت کا %)"),
+  foundingNote: l(
+    "Founding Sellers pay {foundingRate} on every category for their first {months} months after launch.",
+    "فاؤنڈنگ سیلرز لانچ کے بعد پہلے {months} ماہ ہر کیٹیگری پر {foundingRate} کمیشن دیتے ہیں۔",
+  ),
+  note: l(
+    "Commission is a percentage of the item price. Shipping charges are separate and listed on the delivery page.",
+    "کمیشن پروڈکٹ قیمت کا فیصد ہے۔ شپنگ چارجز الگ ہیں اور ڈیلیوری کے صفحے پر درج ہیں۔",
+  ),
+};
+
+export const payoutRails = {
+  title: l("Get paid where you want", "جہاں چاہیں ادائیگی لیں"),
+  items: [
+    {
+      name: l("Bank account", "بینک اکاؤنٹ"),
+      body: l("Any Pakistani bank account in the seller's name (IBAN).", "سیلر کے نام پر کسی بھی پاکستانی بینک کا اکاؤنٹ (IBAN)۔"),
+    },
+    {
+      name: l("JazzCash", "JazzCash"),
+      body: l("Mobile wallet registered to the seller's CNIC.", "سیلر کے شناختی کارڈ پر رجسٹرڈ موبائل والیٹ۔"),
+    },
+    {
+      name: l("Easypaisa", "Easypaisa"),
+      body: l("Mobile wallet registered to the seller's CNIC.", "سیلر کے شناختی کارڈ پر رجسٹرڈ موبائل والیٹ۔"),
+    },
+  ],
+};
+
+export const coverage = {
+  mapLabel: l(
+    "Map of Pakistan showing AdeelSab delivery coverage by city",
+    "پاکستان کا نقشہ جس میں شہروں کے حساب سے AdeelSab ڈیلیوری کوریج دکھائی گئی ہے",
+  ),
+  legendFleet: l("Own fleet (same-city delivery)", "اپنا فلیٹ (اسی شہر میں ڈیلیوری)"),
+  legend3pl: l("Nationwide via TCS · Leopards · PostEx", "ملک بھر میں TCS · Leopards · PostEx کے ذریعے"),
+  fleetPending: l("Own-fleet cities will be marked here once confirmed.", "اپنے فلیٹ والے شہر تصدیق کے بعد یہاں دکھائے جائیں گے۔"),
+  citiesTitle: l("Cities on the map", "نقشے پر شہر"),
+  mapNote: l(
+    "Courier partners also deliver to towns and villages beyond the cities shown.",
+    "کوریئر پارٹنرز دکھائے گئے شہروں کے علاوہ قصبوں اور دیہات میں بھی ڈیلیور کرتے ہیں۔",
+  ),
+};
+
+/* ───────────────────────────── Sell hub ───────────────────────────── */
+
+export const sellHub = {
+  meta: {
+    title: "Sell With Us",
+    description:
+      "Three ways to earn on AdeelSab: local sellers (now onboarding), resellers (waitlist) and dropshippers (Phase 2). Compare and choose.",
+  },
+  hero: {
+    eyebrow: l("Sell With Us", "ہمارے ساتھ بیچیں"),
+    title: l("One marketplace, three ways to earn", "ایک مارکیٹ پلیس، کمانے کے تین طریقے"),
+    lead: l(
+      "Whether you own a shop, want to sell without stock, or run your own online store — here's where you fit, and when each path opens.",
+      "چاہے آپ کی دکان ہو، بغیر اسٹاک کے بیچنا چاہتے ہوں، یا اپنا آن لائن اسٹور چلاتے ہوں — یہاں دیکھیں آپ کہاں فٹ ہوتے ہیں اور ہر راستہ کب کھلے گا۔",
+    ),
+  },
+  why: {
+    title: l("Why we open in this order", "ہم اس ترتیب سے کیوں کھول رہے ہیں"),
+    body: l(
+      "Every product on AdeelSab comes from independent sellers — we don't buy or hold stock ourselves. Resellers can only sell what's already listed, so we're onboarding local sellers first. The reseller program opens once the catalogue is deep enough to be worth your time.",
+      "AdeelSab پر ہر پروڈکٹ آزاد سیلرز کی ہے — ہم خود اسٹاک نہیں خریدتے یا رکھتے۔ ری سیلرز صرف وہی بیچ سکتے ہیں جو پہلے سے لسٹڈ ہو، اس لیے پہلے لوکل سیلرز کو شامل کیا جا رہا ہے۔ ری سیلر پروگرام تب کھلے گا جب کیٹلاگ اتنا بڑا ہو کہ آپ کا وقت ضائع نہ ہو۔",
+    ),
+  },
+  compare: {
+    title: l("Compare the three paths", "تینوں راستوں کا موازنہ"),
+    head: [l("", ""), l("Local Sellers", "لوکل سیلرز"), l("Resellers", "ری سیلرز"), l("Dropshippers", "ڈراپ شپرز")],
+    rows: [
+      {
+        label: l("Who it's for", "کس کے لیے"),
+        cells: [
+          l("Shops, wholesalers, brands", "دکاندار، ہول سیلرز، برانڈز"),
+          l("Anyone with customers to sell to", "ہر وہ شخص جس کے پاس گاہک ہوں"),
+          l("Owners of online stores", "آن لائن اسٹور کے مالکان"),
+        ],
+      },
+      {
+        label: l("Stock needed", "اسٹاک درکار"),
+        cells: [l("Yes — your own", "ہاں — اپنا"), l("No", "نہیں"), l("No", "نہیں")],
+      },
+      {
+        label: l("Upfront investment", "پیشگی سرمایہ"),
+        cells: [l("None to join", "شامل ہونے کے لیے کوئی نہیں"), l("None", "کوئی نہیں"), l("None", "کوئی نہیں")],
+      },
+      {
+        label: l("How you earn", "کمائی کیسے"),
+        cells: [
+          l("Your selling price, minus commission", "آپ کی قیمت فروخت، کمیشن منہا کر کے"),
+          l("The published margin on each sale", "ہر فروخت پر شائع شدہ مارجن"),
+          l("Your store price, minus supplier price", "آپ کے اسٹور کی قیمت، سپلائر قیمت منہا کر کے"),
+        ],
+      },
+      {
+        label: l("Status", "صورتحال"),
+        cells: [l("Now onboarding", "رجسٹریشن جاری ہے"), l("Waitlist open", "ویٹ لسٹ کھلی ہے"), l("Phase 2", "دوسرا مرحلہ")],
+      },
+    ],
+  },
+};
+
+/* ───────────────────────────── Local sellers ───────────────────────────── */
+
+export const localSellers = {
+  meta: {
+    title: "Sell Online as a Local Seller",
+    description:
+      "Sell your shop's products across Pakistan on AdeelSab. Free listing creation, full commission table, RTO charges, payout schedule and delivery coverage — stated plainly.",
+  },
+  hero: {
+    eyebrow: l("For shop owners, wholesalers & local brands", "دکانداروں، ہول سیلرز اور مقامی برانڈز کے لیے"),
+    title: l("Your shop, open to all of Pakistan", "آپ کی دکان، پورے پاکستان کے لیے کھلی"),
+    lead: l(
+      "Keep running your shop the way you do today. We bring the orders, deliver them, collect the cash and pay you — and we tell you every cost before you sign.",
+      "اپنی دکان ویسے ہی چلائیں جیسے آج چلاتے ہیں۔ آرڈرز ہم لائیں گے، ڈیلیور کریں گے، کیش وصول کر کے آپ کو ادائیگی کریں گے — اور ہر خرچ دستخط سے پہلے بتائیں گے۔",
+    ),
+    cta: l("Join as a local seller", "بطور لوکل سیلر شامل ہوں"),
+    whatsapp: l("Ask us in Urdu on WhatsApp", "واٹس ایپ پر اردو میں پوچھیں"),
+  },
+  objectionsIntro: {
+    eyebrow: l("Your questions, answered first", "آپ کے سوالات، پہلے جوابات"),
+    title: l("The six things every shop owner asks us", "چھ باتیں جو ہر دکاندار ہم سے پوچھتا ہے"),
+  },
+  complicated: {
+    q: l("“Selling online is complicated.”", "”آن لائن بیچنا مشکل ہے۔“"),
+    title: l("You don't have to do the online part", "آن لائن کام آپ کو نہیں کرنا"),
+    body: l(
+      "No website, no app skills, no photo studio. Send us your products on WhatsApp and our team builds your store for you.",
+      "نہ ویب سائٹ، نہ ایپ کی مہارت، نہ فوٹو اسٹوڈیو۔ واٹس ایپ پر اپنی پروڈکٹس بھیجیں، ہماری ٹیم آپ کا اسٹور خود بنائے گی۔",
+    ),
+    points: [
+      {
+        title: l("Free listing creation", "مفت لسٹنگ"),
+        body: l("We write titles and descriptions and set up your listings.", "ہم عنوان اور تفصیل لکھ کر آپ کی لسٹنگز سیٹ اپ کرتے ہیں۔"),
+      },
+      {
+        title: l("Onboarding call in Urdu", "اردو میں آن بورڈنگ کال"),
+        body: l("A real person walks you through everything, step by step.", "ایک اصل انسان آپ کو قدم بہ قدم سب کچھ سمجھاتا ہے۔"),
+      },
+      {
+        title: l("Phone photos are enough", "موبائل تصاویر کافی ہیں"),
+        body: l("Our guide shows how to take clear photos with any phone.", "ہماری گائیڈ بتاتی ہے کہ کسی بھی فون سے صاف تصاویر کیسے لیں۔"),
+      },
+    ],
+    guide: l("Read: product photography with a phone", "پڑھیں: موبائل سے پروڈکٹ فوٹوگرافی"),
+  },
+  returns: {
+    q: l("“Returns will cost me.”", "”واپسی کا خرچ مجھ پر پڑے گا۔“"),
+    title: l("Here is exactly what a return costs", "واپسی کا اصل خرچ یہ ہے"),
+    body: l(
+      "With cash on delivery, some customers refuse parcels at the door. When that happens the parcel is returned to you (return to origin, or RTO) and a return charge applies. We publish it here rather than surprising you with it later.",
+      "کیش آن ڈیلیوری میں کچھ گاہک دروازے پر پارسل لینے سے انکار کر دیتے ہیں۔ ایسی صورت میں پارسل آپ کو واپس آتا ہے (RTO) اور واپسی چارج لگتا ہے۔ ہم اسے یہاں شائع کرتے ہیں تاکہ بعد میں کوئی سرپرائز نہ ہو۔",
+    ),
+    tableZone: l("Delivery zone", "ڈیلیوری زون"),
+    tableCharge: l("RTO charge per parcel", "فی پارسل RTO چارج"),
+    points: [
+      l(
+        "Returned parcels come back to you — the product stays yours.",
+        "واپس ہونے والے پارسل آپ کو واپس ملتے ہیں — پروڈکٹ آپ کی ہی رہتی ہے۔",
+      ),
+      l(
+        "The charge depends on where the parcel was going — see the table.",
+        "چارج اس بات پر منحصر ہے کہ پارسل کہاں جا رہا تھا — ٹیبل دیکھیں۔",
+      ),
+    ],
+    guide: l("Read: how to reduce RTO on COD orders", "پڑھیں: COD آرڈرز میں RTO کیسے کم کریں"),
+    more: l("Full return and RTO policy", "مکمل واپسی اور RTO پالیسی"),
+  },
+  commission: {
+    q: l("“There'll be hidden commissions.”", "”چھپے ہوئے کمیشن ہوں گے۔“"),
+    title: l("Every commission rate, on one table", "ہر کمیشن ریٹ، ایک ٹیبل میں"),
+    body: l(
+      "This is the full list. If a fee isn't on our pricing page, we don't charge it.",
+      "یہ مکمل فہرست ہے۔ جو فیس ہمارے قیمتوں کے صفحے پر نہیں، وہ ہم نہیں لیتے۔",
+    ),
+    more: l("See every fee on the pricing page", "قیمتوں کے صفحے پر ہر فیس دیکھیں"),
+  },
+  money: {
+    q: l("“When do I get my money?”", "”مجھے پیسے کب ملیں گے؟“"),
+    title: l("A fixed payout schedule, to the account you choose", "طے شدہ شیڈول پر، آپ کے منتخب اکاؤنٹ میں ادائیگی"),
+    schedule: [
+      {
+        title: l("Order delivered", "آرڈر ڈیلیور"),
+        body: l("The customer receives the parcel and pays cash.", "گاہک پارسل وصول کر کے کیش ادا کرتا ہے۔"),
+      },
+      {
+        title: l("Cash remitted", "کیش منتقل"),
+        body: l("Collected cash reaches us within {codDays} days.", "وصول شدہ کیش {codDays} دن میں ہم تک پہنچتا ہے۔"),
+      },
+      {
+        title: l("Payout released", "ادائیگی جاری"),
+        body: l(
+          "Your earnings are paid {payoutDays} days after delivery, minimum {minPayout}.",
+          "آپ کی کمائی ڈیلیوری کے {payoutDays} دن بعد ادا کی جاتی ہے، کم از کم {minPayout}۔",
+        ),
+      },
+    ],
+    more: l("Payout details", "ادائیگی کی تفصیلات"),
+  },
+  reach: {
+    q: l("“Will it reach my customers?”", "”کیا یہ میرے گاہکوں تک پہنچے گا؟“"),
+    title: l("Same-city by our riders. Everywhere else by national couriers.", "اسی شہر میں ہمارے رائیڈرز۔ باقی ہر جگہ قومی کوریئرز۔"),
+    more: l("Delivery times and rates", "ڈیلیوری کا وقت اور ریٹس"),
+  },
+  ntn: {
+    q: l("“Do I need an NTN?”", "”کیا مجھے NTN چاہیے؟“"),
+    title: l("You can join without one — here's what to know", "آپ اس کے بغیر شامل ہو سکتے ہیں — یہ جاننا ضروری ہے"),
+    points: [
+      l(
+        "You can join the waitlist and start onboarding without an NTN.",
+        "آپ NTN کے بغیر ویٹ لسٹ میں شامل ہو کر آن بورڈنگ شروع کر سکتے ہیں۔",
+      ),
+      l(
+        "For individuals, registering with FBR is free through the IRIS portal, and your CNIC number is used as your NTN.",
+        "افراد کے لیے FBR کے IRIS پورٹل پر رجسٹریشن مفت ہے اور آپ کا شناختی کارڈ نمبر ہی آپ کا NTN ہوتا ہے۔",
+      ),
+      l(
+        "Being on FBR's Active Taxpayers List (ATL) usually means lower withholding tax on business transactions.",
+        "FBR کی ایکٹو ٹیکس پیئرز لسٹ (ATL) میں ہونے سے عام طور پر کاروباری لین دین پر ود ہولڈنگ ٹیکس کم ہوتا ہے۔",
+      ),
+    ],
+    disclaimer: l(
+      "Tax rules change with each Finance Act. This is general information, not tax advice — confirm your situation with a tax adviser.",
+      "ٹیکس قوانین ہر فنانس ایکٹ کے ساتھ بدلتے ہیں۔ یہ عمومی معلومات ہے، ٹیکس مشورہ نہیں — اپنی صورتحال کسی ٹیکس ماہر سے تصدیق کریں۔",
+    ),
+    guide: l("Read: NTN and tax basics for online sellers", "پڑھیں: آن لائن سیلرز کے لیے NTN اور ٹیکس کی بنیادی باتیں"),
+  },
+  onboarding: {
+    eyebrow: l("Onboarding", "آن بورڈنگ"),
+    title: l("Five steps from waitlist to your first order", "ویٹ لسٹ سے پہلے آرڈر تک پانچ قدم"),
+    steps: [
+      {
+        title: l("Join the waitlist", "ویٹ لسٹ میں شامل ہوں"),
+        body: l("Share your name, WhatsApp and city.", "اپنا نام، واٹس ایپ اور شہر بتائیں۔"),
+      },
+      {
+        title: l("Onboarding call", "آن بورڈنگ کال"),
+        body: l("We call you in Urdu or English and answer every question.", "ہم اردو یا انگریزی میں کال کر کے ہر سوال کا جواب دیتے ہیں۔"),
+      },
+      {
+        title: l("Verify and sign", "تصدیق اور دستخط"),
+        body: l("Verify your CNIC and payout account, and sign the seller agreement.", "شناختی کارڈ اور ادائیگی اکاؤنٹ کی تصدیق کریں اور سیلر معاہدے پر دستخط کریں۔"),
+      },
+      {
+        title: l("Listings go live", "لسٹنگز لائیو"),
+        body: l("We build your listings; you approve prices and stock.", "ہم لسٹنگز بناتے ہیں؛ آپ قیمت اور اسٹاک منظور کرتے ہیں۔"),
+      },
+      {
+        title: l("First order", "پہلا آرڈر"),
+        body: l("Pack it, hand it to the rider or courier, and get paid on schedule.", "پیک کریں، رائیڈر یا کوریئر کو دیں اور شیڈول پر ادائیگی پائیں۔"),
+      },
+    ],
+  },
+  bring: {
+    title: l("What to keep ready", "کیا تیار رکھیں"),
+    items: [
+      l("Your CNIC (front and back)", "شناختی کارڈ (آگے اور پیچھے)"),
+      l("Bank account, JazzCash or Easypaisa details in your name", "آپ کے نام پر بینک، JazzCash یا Easypaisa کی تفصیلات"),
+      l("Photos of your products — a phone camera is fine", "پروڈکٹس کی تصاویر — موبائل کیمرا کافی ہے"),
+      l("Your prices and how many of each item you have", "آپ کی قیمتیں اور ہر آئٹم کی تعداد"),
+    ],
+  },
+  callback: {
+    title: l("Prefer to talk it through?", "بات کر کے سمجھنا چاہتے ہیں؟"),
+    body: l(
+      "Leave your WhatsApp number and our seller team will call you back in Urdu. No forms to understand, no pressure to sign.",
+      "اپنا واٹس ایپ نمبر دیں، ہماری سیلر ٹیم آپ کو اردو میں کال بیک کرے گی۔ نہ مشکل فارم، نہ دستخط کا دباؤ۔",
+    ),
+    cta: l("Message us on WhatsApp", "واٹس ایپ پر پیغام بھیجیں"),
+    hours: l("Office hours: {officeHours}", "دفتری اوقات: {officeHours}"),
+  },
+  ctaTitle: l("Open your shop to all of Pakistan", "اپنی دکان پورے پاکستان کے لیے کھولیں"),
+};
+
+/* ───────────────────────────── Resellers ───────────────────────────── */
+
+export const resellers = {
+  meta: {
+    title: "Become a Reseller — Waitlist",
+    description:
+      "Sell products from AdeelSab's catalogue with zero inventory and published margins. The reseller program opens once the catalogue is ready — join the waitlist to be notified.",
+  },
+  hero: {
+    eyebrow: l("Reseller program · Waitlist", "ری سیلر پروگرام · ویٹ لسٹ"),
+    title: l("Earn from products you never have to stock", "ان پروڈکٹس سے کمائیں جن کا اسٹاک رکھنا نہ پڑے"),
+    lead: l(
+      "We're being straight with you: the reseller catalogue is still being built, and no products are available to resell yet. Join the waitlist and we'll message you the day it opens.",
+      "ہم آپ کو صاف بتا رہے ہیں: ری سیلر کیٹلاگ ابھی تیار ہو رہا ہے اور ابھی کوئی پروڈکٹ ری سیل کے لیے دستیاب نہیں۔ ویٹ لسٹ میں شامل ہوں، جس دن یہ کھلے گا ہم آپ کو پیغام بھیجیں گے۔",
+    ),
+    cta: l("Notify me when it opens", "کھلنے پر مجھے اطلاع دیں"),
+    status: l("Catalogue in progress", "کیٹلاگ تیار ہو رہا ہے"),
+    statusBody: l(
+      "Resellers can only sell what sellers have listed, so local sellers are onboarded first.",
+      "ری سیلرز صرف وہی بیچ سکتے ہیں جو سیلرز نے لسٹ کیا ہو، اس لیے پہلے لوکل سیلرز شامل کیے جا رہے ہیں۔",
+    ),
+  },
+  zero: {
+    eyebrow: l("Zero investment", "صفر سرمایہ"),
+    title: l("How reselling works on AdeelSab", "AdeelSab پر ری سیلنگ کیسے کام کرتی ہے"),
+    lead: l(
+      "You bring the customers. The seller supplies the product. We handle delivery, cash collection and your payout.",
+      "گاہک آپ لائیں۔ پروڈکٹ سیلر دے۔ ڈیلیوری، کیش وصولی اور آپ کی ادائیگی ہماری ذمہ داری۔",
+    ),
+    steps: [
+      {
+        title: l("Pick a product", "پروڈکٹ چنیں"),
+        body: l("Browse reseller-enabled listings, each with its margin shown.", "ری سیلر اینیبلڈ لسٹنگز دیکھیں، ہر ایک پر مارجن لکھا ہوا۔"),
+      },
+      {
+        title: l("Share it", "شیئر کریں"),
+        body: l("Send it to your customers on WhatsApp, Facebook or Instagram.", "واٹس ایپ، فیس بک یا انسٹاگرام پر اپنے گاہکوں کو بھیجیں۔"),
+      },
+      {
+        title: l("Place the order", "آرڈر لگائیں"),
+        body: l("Enter your customer's address. We deliver and collect the cash.", "گاہک کا پتہ درج کریں۔ ڈیلیوری اور کیش وصولی ہم کریں گے۔"),
+      },
+      {
+        title: l("Earn your margin", "اپنا مارجن کمائیں"),
+        body: l("Your margin is paid {payoutDays} days after delivery.", "آپ کا مارجن ڈیلیوری کے {payoutDays} دن بعد ادا ہوتا ہے۔"),
+      },
+    ],
+  },
+  margins: {
+    eyebrow: l("Published margins", "شائع شدہ مارجن"),
+    title: l("You see what you earn before you share", "شیئر کرنے سے پہلے معلوم کہ کتنا کمائیں گے"),
+    points: [
+      {
+        title: l("Set by the seller, shown to you", "سیلر طے کرتا ہے، آپ کو دکھایا جاتا ہے"),
+        body: l(
+          "Each seller decides which products resellers can sell and the margin they'll share.",
+          "ہر سیلر طے کرتا ہے کہ ری سیلرز کون سی پروڈکٹس بیچ سکتے ہیں اور کتنا مارجن دیا جائے گا۔",
+        ),
+      },
+      {
+        title: l("No negotiation", "کوئی مول تول نہیں"),
+        body: l(
+          "The margin is fixed on the listing. You don't have to call anyone or bargain.",
+          "مارجن لسٹنگ پر طے ہوتا ہے۔ کسی کو کال کرنے یا بحث کرنے کی ضرورت نہیں۔",
+        ),
+      },
+      {
+        title: l("Earned on delivered orders", "ڈیلیور شدہ آرڈرز پر کمائی"),
+        body: l(
+          "Your margin is confirmed once the customer receives and pays for the order.",
+          "گاہک کے آرڈر وصول کر کے ادائیگی کرنے پر آپ کا مارجن پکا ہو جاتا ہے۔",
+        ),
+      },
+    ],
+  },
+  calculator: {
+    title: l("Margin calculator", "مارجن کیلکولیٹر"),
+    lead: l(
+      "Try your own numbers. This is an estimate — real margins are shown on each listing when the program opens.",
+      "اپنے اعداد آزمائیں۔ یہ اندازہ ہے — پروگرام کھلنے پر اصل مارجن ہر لسٹنگ پر دکھایا جائے گا۔",
+    ),
+    price: l("Product price (Rs)", "پروڈکٹ کی قیمت (روپے)"),
+    margin: l("Published margin (%)", "شائع شدہ مارجن (%)"),
+    orders: l("Delivered orders per month", "ماہانہ ڈیلیور شدہ آرڈرز"),
+    perSale: l("You earn per sale", "فی فروخت آپ کی کمائی"),
+    perMonth: l("Estimated per month", "ماہانہ اندازاً"),
+    note: l(
+      "Estimates only. Earnings are paid on delivered orders; refused or returned orders earn no margin.",
+      "صرف اندازہ۔ کمائی ڈیلیور شدہ آرڈرز پر ملتی ہے؛ واپس یا مسترد شدہ آرڈرز پر مارجن نہیں ملتا۔",
+    ),
+  },
+  categories: {
+    eyebrow: l("Category preview", "کیٹیگریز کی جھلک"),
+    title: l("Categories we're building for resellers", "وہ کیٹیگریز جو ری سیلرز کے لیے تیار کی جا رہی ہیں"),
+    lead: l(
+      "These are the categories we're onboarding sellers in first. Products appear when the program opens.",
+      "ان کیٹیگریز میں پہلے سیلرز شامل کیے جا رہے ہیں۔ پروگرام کھلنے پر پروڈکٹس نظر آئیں گی۔",
+    ),
+  },
+  payout: {
+    title: l("When you get paid", "آپ کو ادائیگی کب ملتی ہے"),
+    body: l(
+      "Margins are paid {payoutDays} days after the order is delivered, to your bank account, JazzCash or Easypaisa. Minimum payout: {minPayout}.",
+      "مارجن آرڈر ڈیلیور ہونے کے {payoutDays} دن بعد آپ کے بینک اکاؤنٹ، JazzCash یا Easypaisa میں ادا کیا جاتا ہے۔ کم از کم ادائیگی: {minPayout}۔",
+    ),
+  },
+  formTitle: l("Be first when reselling opens", "ری سیلنگ کھلتے ہی سب سے پہلے جانیں"),
+  formLead: l(
+    "We'll message you on WhatsApp the day the reseller catalogue goes live. No spam, no sign-up fee.",
+    "جس دن ری سیلر کیٹلاگ لائیو ہوگا ہم آپ کو واٹس ایپ پر پیغام بھیجیں گے۔ نہ اسپام، نہ سائن اپ فیس۔",
+  ),
+};
+
+/* ───────────────────────────── Dropshippers ───────────────────────────── */
+
+export const dropshippers = {
+  meta: {
+    title: "Dropshipping — Coming in Phase 2",
+    description:
+      "AdeelSab dropshipping is coming in Phase 2: real-time stock sync, white-label packaging, tracking API and Shopify/WooCommerce integration. Join the early-access list.",
+  },
+  hero: {
+    eyebrow: l("Dropshippers", "ڈراپ شپرز"),
+    title: l("Connect your store to Pakistani suppliers", "اپنے اسٹور کو پاکستانی سپلائرز سے جوڑیں"),
+    lead: l(
+      "Dropshipping arrives in Phase 2, after the marketplace launches. Here's what we're building — join the early-access list to hear first.",
+      "ڈراپ شپنگ مارکیٹ پلیس لانچ کے بعد دوسرے مرحلے میں آئے گی۔ یہ ہے جو ہم بنا رہے ہیں — سب سے پہلے جاننے کے لیے ابتدائی رسائی کی فہرست میں شامل ہوں۔",
+    ),
+  },
+  featuresTitle: l("What's coming", "کیا آ رہا ہے"),
+  features: [
+    {
+      title: l("Real-time stock sync", "اسٹاک کی لمحہ بہ لمحہ اپ ڈیٹ"),
+      body: l("Supplier stock levels update in your store automatically, so you never sell what's out of stock.", "سپلائر کا اسٹاک آپ کے اسٹور میں خود اپ ڈیٹ ہوگا تاکہ ختم شدہ مال نہ بکے۔"),
+    },
+    {
+      title: l("White-label packaging", "وائٹ لیبل پیکجنگ"),
+      body: l("Parcels ship without supplier branding, so customers see your store, not ours.", "پارسلز سپلائر کی برانڈنگ کے بغیر جائیں گے تاکہ گاہک آپ کا اسٹور دیکھے۔"),
+    },
+    {
+      title: l("Tracking API", "ٹریکنگ API"),
+      body: l("Order status and courier tracking pushed back into your own systems.", "آرڈر کی صورتحال اور کوریئر ٹریکنگ آپ کے اپنے سسٹم میں۔"),
+    },
+    {
+      title: l("Shopify & WooCommerce", "Shopify اور WooCommerce"),
+      body: l("Import products and route orders from the platforms you already use.", "جن پلیٹ فارمز کو آپ پہلے سے استعمال کرتے ہیں وہیں سے پروڈکٹس اور آرڈرز۔"),
+    },
+  ],
+  formTitle: l("Get early access", "ابتدائی رسائی حاصل کریں"),
+  formLead: l(
+    "Tell us about your store. We'll contact you when Phase 2 opens for testing.",
+    "اپنے اسٹور کے بارے میں بتائیں۔ دوسرا مرحلہ ٹیسٹنگ کے لیے کھلنے پر ہم رابطہ کریں گے۔",
+  ),
+  meanwhile: l(
+    "Have your own stock? You can start selling at launch as a local seller.",
+    "آپ کا اپنا اسٹاک ہے؟ آپ لانچ پر بطور لوکل سیلر بیچنا شروع کر سکتے ہیں۔",
+  ),
+  meanwhileCta: l("See the local seller program", "لوکل سیلر پروگرام دیکھیں"),
+};

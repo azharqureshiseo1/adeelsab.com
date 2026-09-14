@@ -4,13 +4,13 @@ import { partners } from "@/content/data/shipping";
 import { cn } from "@/lib/utils";
 
 /** Courier partner logos — greyscale, colour on hover. The strongest credibility element on the page. */
-export function PartnerLogos({ withLines, className }: { withLines?: boolean; className?: string }) {
+export function PartnerLogos({ withLines, stacked, className }: { withLines?: boolean; stacked?: boolean; className?: string }) {
   return (
-    <ul className={cn("grid gap-4 sm:grid-cols-3", className)}>
+    <ul className={cn("grid gap-4", stacked ? "grid-cols-1 sm:grid-cols-3 xl:grid-cols-1" : "sm:grid-cols-3", className)}>
       {partners.map((p) => (
         <li
           key={p.slug}
-          className="group rounded-card border border-ink-200 bg-white p-6 text-center shadow-soft transition-shadow hover:shadow-lift"
+          className="group flex flex-col justify-center rounded-card border border-ink-200 bg-white p-6 text-center shadow-soft transition-shadow hover:shadow-lift"
         >
           <Image
             src={p.logo}
