@@ -16,7 +16,7 @@ function FleetCities() {
 
 /** Fills `{token}` placeholders in site copy. Unconfirmed values render a visible TODO marker. */
 export const factVars = {
-  payoutDays: <Fact f={facts.payoutCycleDays} />,
+  deliveryCharge: <Fact f={facts.deliveryCharge} />,
   minPayout: <Fact f={facts.minPayout} />,
   rtoCharge: <Fact f={facts.rtoCharge} />,
   codDays: <Fact f={facts.codRemittanceDays} />,
@@ -39,7 +39,7 @@ export const factVars = {
 /** Plain-text equivalents for metadata and JSON-LD, where markup can't be used. */
 export function factText(text: string): string {
   const map: Record<string, string | null> = {
-    payoutDays: facts.payoutCycleDays.value,
+    deliveryCharge: facts.deliveryCharge.value,
     minPayout: facts.minPayout.value,
     rtoCharge: facts.rtoCharge.value,
     codDays: facts.codRemittanceDays.value,

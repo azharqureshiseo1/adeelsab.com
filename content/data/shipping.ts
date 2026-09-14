@@ -33,13 +33,12 @@ export const timelines: Record<Zone["key"], string | null> = {
 
 export type WeightBand = { label: string; rates: Record<Zone["key"], number | null> };
 
-/** Rates in PKR per parcel, by weight band and destination zone. */
+/**
+ * Delivery charge in PKR per parcel. AdeelSab charges one flat rate (Rs 350) for every
+ * parcel, in every zone. Add rows here if weight bands are ever introduced.
+ */
 export const rateCard: WeightBand[] = [
-  { label: "Up to 0.5 kg", rates: { intraCity: null, majorCities: null, restOfPakistan: null } },
-  { label: "0.5 – 1 kg", rates: { intraCity: null, majorCities: null, restOfPakistan: null } },
-  { label: "1 – 2 kg", rates: { intraCity: null, majorCities: null, restOfPakistan: null } },
-  { label: "2 – 5 kg", rates: { intraCity: null, majorCities: null, restOfPakistan: null } },
-  { label: "Each additional kg", rates: { intraCity: null, majorCities: null, restOfPakistan: null } },
+  { label: "Every parcel", rates: { intraCity: 350, majorCities: 350, restOfPakistan: 350 } },
 ];
 
 /** Return-to-origin charge, PKR per parcel, by zone. */

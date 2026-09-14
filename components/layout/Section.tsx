@@ -42,6 +42,7 @@ export function SectionHeading({
   align = "left",
   dark,
   className,
+  vars,
 }: {
   id?: string;
   eyebrow?: L;
@@ -50,6 +51,8 @@ export function SectionHeading({
   align?: "left" | "center";
   dark?: boolean;
   className?: string;
+  /** Fills `{tokens}` in the title and lead (e.g. factVars). */
+  vars?: Record<string, React.ReactNode>;
 }) {
   return (
     <div className={cn("max-w-2xl", align === "center" && "mx-auto text-center", className)}>
@@ -64,11 +67,11 @@ export function SectionHeading({
         </p>
       )}
       <h2 id={id} className="h2">
-        <T v={title} />
+        <T v={title} vars={vars} />
       </h2>
       {lead && (
         <p className={cn("mt-4 text-[17px] md:text-lg", dark ? "text-ink-200" : "text-ink-500")}>
-          <T v={lead} />
+          <T v={lead} vars={vars} />
         </p>
       )}
     </div>

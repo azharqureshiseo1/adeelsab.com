@@ -16,7 +16,10 @@ export const facts = {
   mobileAppAtLaunch: todo("Mobile app at launch? (yes/no)"),
 
   // Money
-  payoutCycleDays: todo("Payout cycle (days after delivery)"),
+  /** Payouts are weekly — written directly into the copy in site.ts ("every week" / "ہر ہفتے"). */
+  payoutSchedule: known("Weekly"),
+  /** Flat delivery charge per parcel, anywhere in Pakistan. Also set in shipping.ts → rateCard. */
+  deliveryCharge: known("Rs 350"),
   minPayout: todo("Minimum payout threshold (Rs)"),
   codRemittanceDays: todo("COD remittance (days after delivery)"),
   rtoCharge: todo("RTO charge per returned parcel"),

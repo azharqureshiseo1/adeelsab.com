@@ -19,8 +19,8 @@ To find every remaining marker on the running site, open DevTools and run `docum
 | 1 | **Target launch date** | `facts.ts` → `launchDate` | Founding Seller timeline and FAQ |
 | 2 | **Own-fleet cities at launch** | `content/data/cities.ts` → set `ownFleet: true` per city | Home capability band, delivery section, coverage map, FAQ |
 | 3 | **Commission % by category** (14 categories) | `content/data/categories.ts` → `commission` | Commission table on `/pricing` and `/sell/local-sellers` |
-| 4 | **Payout timeline** and **minimum payout** | `facts.ts` → `payoutCycleDays`, `minPayout` | Home, FAQ, `/payouts`, `/pricing`, resellers |
-| 5 | **Weight-banded shipping rate card** (5 bands × 3 zones) | `content/data/shipping.ts` → `rateCard` | `/delivery#rates` |
+| 4 | ✅ **Payout timeline: weekly** (written into the copy as "every week" / "ہر ہفتے"). Still needed: **minimum payout**. | `content/site.ts` (payout strings); `facts.ts` → `minPayout` | Home, FAQ, `/payouts`, `/pricing`, resellers |
+| 5 | ✅ **Delivery charge: flat Rs 350 per parcel**, every city. Confirm whether bulky or heavy parcels are an exception. | `facts.ts` → `deliveryCharge`; `shipping.ts` → `rateCard`; also written in `content/seller-hub/packaging-guide.*.mdx` | `/delivery#rates`, `/pricing`, FAQ, packaging guide |
 | 6 | **RTO charge structure** | `shipping.ts` → `rtoCharges` (per zone) **and** `facts.ts` → `rtoCharge` (summary text) | `/delivery#rto`, local sellers, pricing, FAQ |
 | 7 | **COD remittance schedule** | `facts.ts` → `codRemittanceDays` | `/delivery#cod`, `/payouts`, FAQ |
 | 8 | ✅ **SECP registration no.** (0353167) and **FBR registration no.** (J816970) | `facts.ts` → `secpNumber`, `ntn` | Footer, home trust bar, Organization JSON-LD |
@@ -72,7 +72,6 @@ These describe **how the service works**. They were written to match the brief, 
 - [ ] **Return pickup process** (4 steps: customer requests with photos → seller notified → pickup → back to seller). `content/site.ts` → `delivery.returns`
 - [ ] **Below-minimum payouts carry over** to the next cycle. `payouts.threshold`
 - [ ] **Disputes hold only the disputed order's earnings.** `payouts.hold`
-- [ ] **Volumetric weight** is used for shipping, with a 5,000 divisor mentioned in the packaging guide. `delivery.rates.note`, `content/seller-hub/packaging-guide.*.mdx`
 - [ ] **Who pays shipping**: customer, seller or split, deducted from payout. `delivery.whoPays`
 - [ ] **Payout rails**: bank (IBAN), JazzCash, Easypaisa, in the seller's name. `payoutRails`
 - [ ] **Reseller margin** is paid on delivered orders only. `resellerListings`, `resellers.margins`

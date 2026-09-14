@@ -16,7 +16,7 @@ function interpolate(text: string, vars?: Vars): React.ReactNode {
  * shows the active one (see globals.css), so this works in server and client
  * components without hooks and without forcing dynamic rendering.
  *
- * `vars` fills `{tokens}` in the copy, e.g. <T v={copy.x} vars={{ days: <Fact f={facts.payoutCycleDays} /> }} />
+ * `vars` fills `{tokens}` in the copy, e.g. <T v={copy.x} vars={{ fee: <Fact f={facts.deliveryCharge} /> }} />
  */
 export function T({ v, vars }: { v: L; vars?: Vars }) {
   return (

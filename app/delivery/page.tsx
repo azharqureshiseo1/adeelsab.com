@@ -142,7 +142,13 @@ export default function DeliveryPage() {
 
       {/* Rate card */}
       <Section id="rates" tone="muted" labelledBy="rates-title">
-        <SectionHeading id="rates-title" eyebrow={d.rates.eyebrow} title={d.rates.title} lead={d.rates.lead} />
+        <SectionHeading
+          id="rates-title"
+          eyebrow={d.rates.eyebrow}
+          title={d.rates.title}
+          lead={d.rates.lead}
+          vars={factVars}
+        />
         <div className="mt-8">
           <RateCard />
         </div>

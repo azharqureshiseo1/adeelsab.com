@@ -335,8 +335,8 @@ export const home = {
       },
       { stat: l("COD", "COD"), label: l("cash on delivery across Pakistan", "پورے پاکستان میں کیش آن ڈیلیوری") },
       {
-        stat: l("{payoutDays}", "{payoutDays}"),
-        label: l("day payout cycle after delivery", "دن میں ڈیلیوری کے بعد ادائیگی"),
+        stat: l("Weekly", "ہفتہ وار"),
+        label: l("payouts to your bank, JazzCash or Easypaisa", "بینک، JazzCash یا Easypaisa میں ادائیگی"),
       },
       { stat: l("اردو", "اردو"), label: l("seller support in Urdu and English", "اردو اور انگریزی میں سیلر سپورٹ") },
     ],
@@ -484,8 +484,8 @@ export const faqs = {
   payoutTiming: {
     q: l("When do I get my money?", "مجھے پیسے کب ملیں گے؟"),
     a: l(
-      "Payouts are released {payoutDays} days after an order is delivered, to your bank account, JazzCash or Easypaisa. The minimum payout is {minPayout}.",
-      "آرڈر ڈیلیور ہونے کے {payoutDays} دن بعد ادائیگی آپ کے بینک اکاؤنٹ، JazzCash یا Easypaisa میں کی جاتی ہے۔ کم از کم ادائیگی {minPayout} ہے۔",
+      "Payouts are made every week for your delivered orders, to your bank account, JazzCash or Easypaisa. The minimum payout is {minPayout}.",
+      "ڈیلیور شدہ آرڈرز کی ادائیگی ہر ہفتے آپ کے بینک اکاؤنٹ، JazzCash یا Easypaisa میں کی جاتی ہے۔ کم از کم ادائیگی {minPayout} ہے۔",
     ),
   },
   rto: {
@@ -498,8 +498,8 @@ export const faqs = {
   shipping: {
     q: l("Who pays for shipping?", "شپنگ کا خرچ کون دیتا ہے؟"),
     a: l(
-      "You decide per product: the customer pays, you pay (to offer free delivery), or you split it. Rates are weight-banded and published on our delivery page.",
-      "ہر پروڈکٹ کے لیے آپ طے کریں: گاہک دے، آپ دیں (مفت ڈیلیوری کے لیے)، یا دونوں آدھا آدھا۔ ریٹس وزن کے حساب سے ہیں اور ڈیلیوری کے صفحے پر شائع ہیں۔",
+      "You decide per product: the customer pays, you pay (to offer free delivery), or you split it. Delivery costs a flat {deliveryCharge} per parcel, anywhere in Pakistan.",
+      "ہر پروڈکٹ کے لیے آپ طے کریں: گاہک دے، آپ دیں (مفت ڈیلیوری کے لیے)، یا دونوں آدھا آدھا۔ ڈیلیوری کا خرچ پاکستان میں کہیں بھی فی پارسل {deliveryCharge} ہے۔",
     ),
   },
   cod: {
@@ -943,8 +943,8 @@ export const localSellers = {
       {
         title: l("Payout released", "ادائیگی جاری"),
         body: l(
-          "Your earnings are paid {payoutDays} days after delivery, minimum {minPayout}.",
-          "آپ کی کمائی ڈیلیوری کے {payoutDays} دن بعد ادا کی جاتی ہے، کم از کم {minPayout}۔",
+          "Your earnings for delivered orders are paid every week, minimum {minPayout}.",
+          "ڈیلیور شدہ آرڈرز کی کمائی ہر ہفتے ادا کی جاتی ہے، کم از کم {minPayout}۔",
         ),
       },
     ],
@@ -1096,10 +1096,7 @@ export const resellers = {
       },
       {
         title: l("Earn your margin", "اپنا مارجن کمائیں"),
-        body: l(
-          "Your margin is paid {payoutDays} days after delivery.",
-          "آپ کا مارجن ڈیلیوری کے {payoutDays} دن بعد ادا ہوتا ہے۔",
-        ),
+        body: l("Your margin is paid every week.", "آپ کا مارجن ہر ہفتے ادا ہوتا ہے۔"),
       },
     ],
   },
@@ -1157,8 +1154,8 @@ export const resellers = {
   payout: {
     title: l("When you get paid", "آپ کو ادائیگی کب ملتی ہے"),
     body: l(
-      "Margins are paid {payoutDays} days after the order is delivered, to your bank account, JazzCash or Easypaisa. Minimum payout: {minPayout}.",
-      "مارجن آرڈر ڈیلیور ہونے کے {payoutDays} دن بعد آپ کے بینک اکاؤنٹ، JazzCash یا Easypaisa میں ادا کیا جاتا ہے۔ کم از کم ادائیگی: {minPayout}۔",
+      "Margins on delivered orders are paid every week, to your bank account, JazzCash or Easypaisa. Minimum payout: {minPayout}.",
+      "ڈیلیور شدہ آرڈرز کا مارجن ہر ہفتے آپ کے بینک اکاؤنٹ، JazzCash یا Easypaisa میں ادا کیا جاتا ہے۔ کم از کم ادائیگی: {minPayout}۔",
     ),
   },
   formTitle: l("Be first when reselling opens", "ری سیلنگ کھلتے ہی سب سے پہلے جانیں"),
@@ -1233,7 +1230,7 @@ export const delivery = {
   meta: {
     title: "Delivery, COD & Returns",
     description:
-      "How AdeelSab delivers across Pakistan: AdeelSab Couriers for same-city orders, TCS, Leopards, PostEx and M&P nationwide. Coverage map, delivery times, weight-banded rate card, COD remittance and RTO charges.",
+      "How AdeelSab delivers across Pakistan: AdeelSab Couriers for same-city orders, TCS, Leopards, PostEx and M&P nationwide. Coverage map, delivery times, flat Rs 350 delivery charge, COD remittance and RTO charges.",
   },
   hero: {
     eyebrow: l("Delivery & COD", "ڈیلیوری اور COD"),
@@ -1245,7 +1242,7 @@ export const delivery = {
     jump: [
       { href: "#coverage", label: l("Coverage", "کوریج") },
       { href: "#times", label: l("Delivery times", "ڈیلیوری کا وقت") },
-      { href: "#rates", label: l("Rate card", "ریٹ کارڈ") },
+      { href: "#rates", label: l("Delivery charge", "ڈیلیوری چارج") },
       { href: "#cod", label: l("COD", "COD") },
       { href: "#rto", label: l("RTO charges", "RTO چارجز") },
       { href: "#returns", label: l("Returns", "واپسی") },
@@ -1279,16 +1276,16 @@ export const delivery = {
     ),
   },
   rates: {
-    eyebrow: l("Rate card", "ریٹ کارڈ"),
-    title: l("Shipping rates by weight", "وزن کے حساب سے شپنگ ریٹس"),
+    eyebrow: l("Delivery charge", "ڈیلیوری چارج"),
+    title: l("One delivery charge, anywhere in Pakistan", "پاکستان میں کہیں بھی، ایک ہی ڈیلیوری چارج"),
     lead: l(
-      "Rates are per parcel in Pakistani rupees, based on the packed weight and the destination.",
-      "ریٹس فی پارسل پاکستانی روپوں میں ہیں، پیک شدہ وزن اور منزل کے حساب سے۔",
+      "A flat {deliveryCharge} per parcel, whether the customer is in your city or on the other side of the country.",
+      "فی پارسل {deliveryCharge}، چاہے گاہک آپ کے شہر میں ہو یا ملک کے دوسرے کونے میں۔",
     ),
-    weight: l("Packed weight", "پیک شدہ وزن"),
+    weight: l("Parcel", "پارسل"),
     note: l(
-      "Weight is the heavier of actual weight and volumetric weight. See the packaging guide for how to keep parcels light and safe.",
-      "وزن اصل وزن یا حجمی وزن میں سے جو زیادہ ہو وہ لیا جاتا ہے۔ پارسل ہلکے اور محفوظ رکھنے کے لیے پیکجنگ گائیڈ دیکھیں۔",
+      "No weight bands and no city-by-city pricing to work out. See the packaging guide for how to keep parcels safe in transit.",
+      "نہ وزن کی حدود، نہ ہر شہر کا الگ حساب۔ پارسل محفوظ رکھنے کے لیے پیکجنگ گائیڈ دیکھیں۔",
     ),
     guide: l("Read the packaging guide", "پیکجنگ گائیڈ پڑھیں"),
   },
@@ -1441,7 +1438,7 @@ export const pricing = {
     },
     {
       name: l("Shipping", "شپنگ"),
-      amount: l("Weight-banded rate card", "وزن کے حساب سے ریٹ کارڈ"),
+      amount: l("{deliveryCharge} per parcel", "فی پارسل {deliveryCharge}"),
       when: l(
         "Only when you choose to pay shipping (free or split delivery)",
         "صرف جب آپ شپنگ خود دینا چنیں (مفت یا آدھی ڈیلیوری)",
@@ -1472,8 +1469,8 @@ export const pricing = {
   ),
   payoutTitle: l("How and when you're paid", "ادائیگی کیسے اور کب ہوتی ہے"),
   payoutBody: l(
-    "Payouts are released {payoutDays} days after delivery, with a minimum payout of {minPayout}.",
-    "ادائیگیاں ڈیلیوری کے {payoutDays} دن بعد جاری ہوتی ہیں، کم از کم ادائیگی {minPayout}۔",
+    "Payouts are made every week, with a minimum payout of {minPayout}.",
+    "ادائیگیاں ہر ہفتے کی جاتی ہیں، کم از کم ادائیگی {minPayout}۔",
   ),
   payoutCta: l("Payout details", "ادائیگی کی تفصیلات"),
   faqTitle: l("Pricing questions", "قیمتوں سے متعلق سوالات"),
@@ -1502,7 +1499,7 @@ export const payouts = {
   summary: [
     {
       label: l("Payout cycle", "ادائیگی سائیکل"),
-      value: l("{payoutDays} days after delivery", "ڈیلیوری کے {payoutDays} دن بعد"),
+      value: l("Weekly", "ہفتہ وار"),
     },
     { label: l("Minimum payout", "کم از کم ادائیگی"), value: l("{minPayout}", "{minPayout}") },
     {
