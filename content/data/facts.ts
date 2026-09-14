@@ -19,7 +19,7 @@ export const facts = {
   minPayout: todo("Minimum payout threshold (Rs)"),
   codRemittanceDays: todo("COD remittance (days after delivery)"),
   rtoCharge: todo("RTO charge per returned parcel"),
-  listingFee: { value: "Rs 0", todo: "" } as Fact,
+  listingFee: todo("Listing fee per product (Rs)"),
   holdPeriodDays: todo("Dispute hold period (days)"),
 
   // Founding Seller Program
