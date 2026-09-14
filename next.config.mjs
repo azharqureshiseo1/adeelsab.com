@@ -4,6 +4,10 @@ import { fileURLToPath } from "node:url";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Set BUILD_STANDALONE=1 to emit .next/standalone — a self-contained server
+  // that runs with `node server.js`, with no npm install or build on the host.
+  // Used for zip-upload deployments; the normal build is unaffected.
+  ...(process.env.BUILD_STANDALONE ? { output: "standalone" } : {}),
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
