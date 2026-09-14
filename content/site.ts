@@ -510,4 +510,196 @@ export const faqs = {
       "آپ کا مال آپ کے پاس ہی رہتا ہے۔ ہم نہ اسٹاک خریدتے ہیں نہ رکھتے ہیں، اس لیے نہ کچھ بھیجنا ہے نہ واپس لینا۔ آپ جب چاہیں قیمت بدلیں، لسٹنگ روکیں یا ہٹا دیں۔ لسٹنگ فیس {listingFee} ہے۔",
     ),
   },
+  // Founding Seller
+  foundingFree: {
+    q: l("Does it cost anything to join?", "کیا شامل ہونے کی کوئی فیس ہے؟"),
+    a: l(
+      "Joining the waitlist is free and doesn't commit you to anything. You only agree to terms when you sign the seller agreement during onboarding.",
+      "ویٹ لسٹ میں شامل ہونا مفت ہے اور اس سے آپ پر کوئی پابندی نہیں آتی۔ شرائط پر اتفاق صرف آن بورڈنگ کے دوران سیلر معاہدے پر دستخط سے ہوتا ہے۔",
+    ),
+  },
+  foundingAfter: {
+    q: l("What happens when the Founding Seller period ends?", "فاؤنڈنگ سیلر مدت ختم ہونے کے بعد کیا ہوگا؟"),
+    a: l(
+      "After {months} months your commission moves to the standard rate for your category, as published on our pricing page. Your badge and store stay as they are.",
+      "{months} ماہ بعد آپ کا کمیشن آپ کی کیٹیگری کے معیاری ریٹ پر آ جائے گا جو ہمارے قیمتوں کے صفحے پر شائع ہے۔ آپ کا بیج اور اسٹور ویسے ہی رہیں گے۔",
+    ),
+  },
+  foundingCapFull: {
+    q: l("What if the program is full?", "اگر پروگرام بھر جائے تو؟"),
+    a: l(
+      "The program is capped at {cap} sellers. If it fills before you join, you can still register and sell from launch day on standard terms.",
+      "پروگرام میں صرف {cap} سیلرز کی گنجائش ہے۔ اگر آپ کے شامل ہونے سے پہلے بھر جائے تو بھی آپ رجسٹر ہو کر لانچ کے دن سے معیاری شرائط پر بیچ سکتے ہیں۔",
+    ),
+  },
+  foundingNtn: {
+    q: l("Can I join without an NTN?", "کیا NTN کے بغیر شامل ہو سکتا ہوں؟"),
+    a: l(
+      "Yes, you can join the waitlist without one. Our NTN and tax basics guide in the Seller Hub explains what registration means for online sellers and how to get it.",
+      "جی ہاں، آپ اس کے بغیر ویٹ لسٹ میں شامل ہو سکتے ہیں۔ سیلر ہب میں NTN اور ٹیکس کی بنیادی گائیڈ بتاتی ہے کہ آن لائن سیلرز کے لیے رجسٹریشن کا کیا مطلب ہے اور یہ کیسے حاصل کریں۔",
+    ),
+  },
+  foundingLaunch: {
+    q: l("When does AdeelSab launch?", "AdeelSab کب لانچ ہوگا؟"),
+    a: l(
+      "Our target launch date is {launchDate}. Founding Sellers are told the confirmed date first, with enough time to get listings and stock ready.",
+      "ہماری متوقع لانچ تاریخ {launchDate} ہے۔ فاؤنڈنگ سیلرز کو حتمی تاریخ سب سے پہلے بتائی جائے گی تاکہ لسٹنگز اور اسٹاک تیار کرنے کا وقت ملے۔",
+    ),
+  },
+};
+
+/* ───────────────────────────── Founding Seller ───────────────────────────── */
+
+export const founding = {
+  meta: {
+    title: "Founding Seller Program",
+    description:
+      "Join AdeelSab before launch: reduced commission, free listing creation, priority WhatsApp support, featured launch placement and a Founding Seller badge.",
+  },
+  hero: {
+    eyebrow: l("Founding Seller Program · Pre-launch", "فاؤنڈنگ سیلر پروگرام · لانچ سے پہلے"),
+    title: l("Launch with us. Get terms we won't offer again.", "ہمارے ساتھ لانچ کریں۔ ایسی شرائط جو دوبارہ نہیں ملیں گی۔"),
+    sub: l(
+      "We're choosing the first sellers customers will see on day one. Join now and we'll set up your store for free — and charge you less while you grow.",
+      "ہم وہ پہلے سیلرز منتخب کر رہے ہیں جنہیں گاہک پہلے دن دیکھیں گے۔ ابھی شامل ہوں — ہم آپ کا اسٹور مفت سیٹ اپ کریں گے اور شروع میں کم کمیشن لیں گے۔",
+    ),
+    cta: l("Reserve my place", "میری جگہ محفوظ کریں"),
+    counterLabel: l("Founding Sellers registered", "رجسٹرڈ فاؤنڈنگ سیلرز"),
+    capLabel: l("Places in the program", "پروگرام میں کل جگہیں"),
+    counterNote: l("Updated by our team, not a live counter.", "یہ تعداد ہماری ٹیم اپ ڈیٹ کرتی ہے، یہ لائیو کاؤنٹر نہیں۔"),
+  },
+  what: {
+    eyebrow: l("What it is", "یہ کیا ہے"),
+    title: l("A deal for the sellers who build the marketplace with us", "ان سیلرز کے لیے خاص پیشکش جو ہمارے ساتھ مارکیٹ پلیس بناتے ہیں"),
+    body: l(
+      "A marketplace is only as good as what customers find on day one. Founding Sellers are the shops and wholesalers who list before launch, so customers arrive to a full catalogue. In return, you get lower costs, hands-on setup and visibility no later seller will get.",
+      "مارکیٹ پلیس اتنی ہی اچھی ہوتی ہے جتنا گاہکوں کو پہلے دن ملے۔ فاؤنڈنگ سیلرز وہ دکاندار اور ہول سیلرز ہیں جو لانچ سے پہلے لسٹ کرتے ہیں تاکہ گاہک مکمل کیٹلاگ دیکھیں۔ بدلے میں آپ کو کم خرچ، مکمل سیٹ اپ مدد اور وہ نمایاں جگہ ملتی ہے جو بعد والے سیلرز کو نہیں ملے گی۔",
+    ),
+  },
+  benefits: {
+    eyebrow: l("What you get", "آپ کو کیا ملے گا"),
+    title: l("Five benefits for joining early", "جلد شامل ہونے کے پانچ فوائد"),
+    lead: l(
+      "Here is exactly what Founding Sellers get. Nothing is hidden in the fine print.",
+      "یہ ہے وہ سب کچھ جو فاؤنڈنگ سیلرز کو ملتا ہے۔ کچھ بھی باریک حروف میں چھپا نہیں۔",
+    ),
+    items: [
+      {
+        title: l("Reduced commission", "کم کمیشن"),
+        body: l(
+          "Pay {foundingRate} commission for your first {months} months after launch, instead of the standard rate for your category.",
+          "لانچ کے بعد پہلے {months} ماہ اپنی کیٹیگری کے معیاری ریٹ کے بجائے صرف {foundingRate} کمیشن دیں۔",
+        ),
+      },
+      {
+        title: l("Free listing creation", "مفت لسٹنگ"),
+        body: l(
+          "Send photos and prices on WhatsApp. Our team writes your titles and descriptions and sets up every listing for you.",
+          "واٹس ایپ پر تصاویر اور قیمتیں بھیجیں۔ ہماری ٹیم عنوان اور تفصیل لکھ کر آپ کی ہر لسٹنگ خود سیٹ اپ کرے گی۔",
+        ),
+      },
+      {
+        title: l("Priority support", "ترجیحی سپورٹ"),
+        body: l(
+          "A direct WhatsApp line to our seller team, in Urdu or English. Founding Sellers are answered first.",
+          "ہماری سیلر ٹیم سے براہ راست واٹس ایپ رابطہ، اردو یا انگریزی میں۔ فاؤنڈنگ سیلرز کو سب سے پہلے جواب۔",
+        ),
+      },
+      {
+        title: l("Featured launch placement", "لانچ پر نمایاں جگہ"),
+        body: l(
+          "Your products appear in the launch placements customers see first when AdeelSab opens.",
+          "AdeelSab کھلنے پر آپ کی پروڈکٹس ان جگہوں پر ہوں گی جو گاہک سب سے پہلے دیکھیں گے۔",
+        ),
+      },
+      {
+        title: l("Founding Seller badge", "فاؤنڈنگ سیلر بیج"),
+        body: l(
+          "A badge on your store page that tells customers you've been with AdeelSab from the start.",
+          "آپ کے اسٹور پیج پر بیج جو گاہکوں کو بتائے کہ آپ شروع سے AdeelSab کے ساتھ ہیں۔",
+        ),
+      },
+    ],
+  },
+  who: {
+    eyebrow: l("Who it's for", "یہ کس کے لیے ہے"),
+    title: l("Sellers with real stock, ready to ship", "اصل اسٹاک والے سیلرز جو ڈیلیوری کے لیے تیار ہوں"),
+    yes: [
+      l("Shop owners in markets and bazaars", "بازاروں اور مارکیٹوں کے دکاندار"),
+      l("Wholesalers and distributors", "ہول سیلرز اور ڈسٹری بیوٹرز"),
+      l("Manufacturers and local brands", "مینوفیکچررز اور مقامی برانڈز"),
+      l("Home-based businesses with consistent stock", "گھریلو کاروبار جن کے پاس باقاعدہ اسٹاک ہو"),
+    ],
+    notTitle: l("Not the right fit yet", "ابھی مناسب نہیں"),
+    not: l(
+      "If you don't hold stock, the reseller and dropshipper programs are built for you — they open after launch.",
+      "اگر آپ کے پاس اپنا اسٹاک نہیں تو ری سیلر اور ڈراپ شپر پروگرام آپ کے لیے ہیں — یہ لانچ کے بعد کھلیں گے۔",
+    ),
+  },
+  needs: {
+    eyebrow: l("What we need from you", "ہمیں آپ سے کیا چاہیے"),
+    title: l("Four things to get started", "شروع کرنے کے لیے چار چیزیں"),
+    items: [
+      {
+        title: l("Your CNIC", "آپ کا شناختی کارڈ"),
+        body: l("To verify the business owner.", "کاروبار کے مالک کی تصدیق کے لیے۔"),
+      },
+      {
+        title: l("A payout account in your name", "آپ کے نام پر ادائیگی اکاؤنٹ"),
+        body: l("Bank account, JazzCash or Easypaisa.", "بینک اکاؤنٹ، JazzCash یا Easypaisa۔"),
+      },
+      {
+        title: l("Product photos and prices", "پروڈکٹ تصاویر اور قیمتیں"),
+        body: l("Phone photos are fine — we'll guide you.", "موبائل کی تصاویر کافی ہیں — ہم رہنمائی کریں گے۔"),
+      },
+      {
+        title: l("Stock you can pack and hand over", "ایسا اسٹاک جو آپ پیک کر کے دے سکیں"),
+        body: l(
+          "Orders must be ready when our rider or courier arrives.",
+          "رائیڈر یا کوریئر کے آنے پر آرڈر تیار ہونا چاہیے۔",
+        ),
+      },
+    ],
+  },
+  timeline: {
+    eyebrow: l("Timeline to launch", "لانچ تک کا شیڈول"),
+    title: l("What happens after you join", "شامل ہونے کے بعد کیا ہوتا ہے"),
+    steps: [
+      {
+        title: l("Join the waitlist", "ویٹ لسٹ میں شامل ہوں"),
+        body: l("One minute. Your place is reserved in the order you join.", "ایک منٹ۔ آپ کی جگہ شامل ہونے کی ترتیب سے محفوظ ہوتی ہے۔"),
+      },
+      {
+        title: l("Onboarding call", "آن بورڈنگ کال"),
+        body: l(
+          "We call you on WhatsApp, verify your details and walk you through the seller agreement.",
+          "ہم واٹس ایپ پر کال کر کے آپ کی تفصیلات تصدیق کرتے ہیں اور سیلر معاہدہ سمجھاتے ہیں۔",
+        ),
+      },
+      {
+        title: l("Listings built", "لسٹنگز تیار"),
+        body: l(
+          "Our team creates your listings. You check prices and stock before anything goes live.",
+          "ہماری ٹیم آپ کی لسٹنگز بناتی ہے۔ کچھ بھی لائیو ہونے سے پہلے آپ قیمت اور اسٹاک چیک کرتے ہیں۔",
+        ),
+      },
+      {
+        title: l("Launch day", "لانچ کا دن"),
+        body: l("Target: {launchDate}. Your store opens with the marketplace.", "متوقع: {launchDate}۔ مارکیٹ پلیس کے ساتھ آپ کا اسٹور کھلے گا۔"),
+      },
+    ],
+  },
+  formSection: {
+    title: l("Reserve your Founding Seller place", "اپنی فاؤنڈنگ سیلر جگہ محفوظ کریں"),
+    lead: l(
+      "Places are limited to {cap} sellers and reserved in the order you join.",
+      "جگہیں صرف {cap} سیلرز کے لیے ہیں اور شامل ہونے کی ترتیب سے محفوظ ہوتی ہیں۔",
+    ),
+  },
+  faqTitle: l("Founding Seller questions", "فاؤنڈنگ سیلر سے متعلق سوالات"),
+  ctaTitle: l("The first sellers set the standard", "پہلے سیلرز معیار طے کرتے ہیں"),
+  ctaLead: l(
+    "Reserve your place now — it takes a minute, and there's no commitment until you sign.",
+    "ابھی اپنی جگہ محفوظ کریں — ایک منٹ لگتا ہے اور دستخط تک کوئی پابندی نہیں۔",
+  ),
 };
