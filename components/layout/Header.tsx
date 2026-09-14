@@ -23,7 +23,7 @@ export function Header() {
           <Logo height={36} className="hidden md:block" priority />
         </Link>
 
-        <nav aria-label="Main" className="ms-4 hidden items-center gap-0.5 lg:flex xl:ms-8">
+        <nav aria-label="Main" className="ms-6 hidden items-center gap-0.5 whitespace-nowrap xl:flex">
           <SellDropdown label={<T v={nav.sellWithUs} />}>
             {nav.sellMenu.map((item) => (
               <Link key={item.href} href={item.href} className="block rounded-xl px-4 py-3 transition-colors hover:bg-ink-50">

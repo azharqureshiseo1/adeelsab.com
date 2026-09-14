@@ -13,7 +13,7 @@ export function TodoMark({ label, className }: { label: string; className?: stri
       data-todo={label}
       title={`TODO: ${label}`}
       className={cn(
-        "latin rounded-md border border-dashed border-warning/60 bg-[#FFF6E5] px-1.5 py-0.5 text-[0.8em] font-semibold whitespace-nowrap text-warning",
+        "latin rounded-md border border-dashed border-warning/60 bg-[#FFF6E5] px-1.5 py-0.5 text-[0.8em] leading-snug font-semibold tracking-normal break-words text-warning [box-decoration-break:clone]",
         className,
       )}
     >

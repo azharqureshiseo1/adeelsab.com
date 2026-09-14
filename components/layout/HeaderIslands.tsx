@@ -142,7 +142,7 @@ export function MobileDrawer({
         aria-label={t(labels.open)}
         aria-expanded={open}
         aria-controls="mobile-nav"
-        className="inline-flex size-11 items-center justify-center rounded-full text-ink-900 hover:bg-ink-100 lg:hidden"
+        className="inline-flex size-11 items-center justify-center rounded-full text-ink-900 hover:bg-ink-100 xl:hidden"
       >
         <Menu size={24} strokeWidth={1.75} aria-hidden />
       </button>
@@ -152,7 +152,7 @@ export function MobileDrawer({
         aria-modal="true"
         aria-label={t(labels.open)}
         hidden={!open}
-        className="fixed inset-0 z-50 flex flex-col overflow-y-auto bg-white lg:hidden"
+        className="fixed inset-0 z-50 flex flex-col overflow-y-auto bg-white xl:hidden"
       >
         <div className="flex h-16 shrink-0 items-center justify-between border-b border-ink-200 px-5">
           {logo}
