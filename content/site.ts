@@ -1144,3 +1144,167 @@ export const dropshippers = {
   ),
   meanwhileCta: l("See the local seller program", "لوکل سیلر پروگرام دیکھیں"),
 };
+
+/* ───────────────────────────── Delivery ───────────────────────────── */
+
+export const delivery = {
+  meta: {
+    title: "Delivery, COD & Returns",
+    description:
+      "How AdeelSab delivers across Pakistan: own fleet for same-city orders, TCS, Leopards and PostEx nationwide. Coverage map, delivery times, weight-banded rate card, COD remittance and RTO charges.",
+  },
+  hero: {
+    eyebrow: l("Delivery & COD", "ڈیلیوری اور COD"),
+    title: l("Every parcel, every city, every rupee accounted for", "ہر پارسل، ہر شہر، ہر روپے کا حساب"),
+    lead: l(
+      "This page lists how we deliver, how long it takes, what it costs, how cash reaches you, and what happens when a parcel comes back. No part of it is hidden.",
+      "اس صفحے پر لکھا ہے کہ ہم کیسے ڈیلیور کرتے ہیں، کتنا وقت لگتا ہے، کتنا خرچ آتا ہے، کیش آپ تک کیسے پہنچتا ہے اور پارسل واپس آنے پر کیا ہوتا ہے۔ کچھ بھی چھپا نہیں۔",
+    ),
+    jump: [
+      { href: "#coverage", label: l("Coverage", "کوریج") },
+      { href: "#times", label: l("Delivery times", "ڈیلیوری کا وقت") },
+      { href: "#rates", label: l("Rate card", "ریٹ کارڈ") },
+      { href: "#cod", label: l("COD", "COD") },
+      { href: "#rto", label: l("RTO charges", "RTO چارجز") },
+      { href: "#returns", label: l("Returns", "واپسی") },
+    ],
+  },
+  coverage: {
+    eyebrow: l("Coverage", "کوریج"),
+    title: l("Two networks, one checkout", "دو نیٹ ورکس، ایک چیک آؤٹ"),
+    body: l(
+      "When the customer is in the same city as you, our own riders collect and deliver. Everywhere else, the order ships through a national courier partner. You don't choose or manage the courier — we route every order.",
+      "جب گاہک آپ کے شہر میں ہو تو ہمارے اپنے رائیڈرز آرڈر اٹھا کر ڈیلیور کرتے ہیں۔ باقی ہر جگہ آرڈر قومی کوریئر پارٹنر کے ذریعے جاتا ہے۔ آپ کو کوریئر چننے یا سنبھالنے کی ضرورت نہیں — ہر آرڈر ہم روٹ کرتے ہیں۔",
+    ),
+  },
+  times: {
+    eyebrow: l("Delivery times", "ڈیلیوری کا وقت"),
+    title: l("How long delivery takes", "ڈیلیوری میں کتنا وقت لگتا ہے"),
+    zone: l("Destination", "منزل"),
+    carrier: l("Delivered by", "ڈیلیوری از"),
+    time: l("Typical delivery time", "عام ڈیلیوری وقت"),
+    cod: l("COD", "COD"),
+    note: l(
+      "Times are counted from pickup. Public holidays, weather and remote areas can add time.",
+      "وقت پک اپ سے شمار ہوتا ہے۔ سرکاری تعطیلات، موسم اور دور دراز علاقوں میں زیادہ وقت لگ سکتا ہے۔",
+    ),
+  },
+  partners: {
+    eyebrow: l("Courier partners", "کوریئر پارٹنرز"),
+    title: l("Delivered by networks your customers already trust", "ان نیٹ ورکس کے ذریعے جن پر آپ کے گاہک پہلے سے بھروسہ کرتے ہیں"),
+  },
+  rates: {
+    eyebrow: l("Rate card", "ریٹ کارڈ"),
+    title: l("Shipping rates by weight", "وزن کے حساب سے شپنگ ریٹس"),
+    lead: l(
+      "Rates are per parcel in Pakistani rupees, based on the packed weight and the destination.",
+      "ریٹس فی پارسل پاکستانی روپوں میں ہیں، پیک شدہ وزن اور منزل کے حساب سے۔",
+    ),
+    weight: l("Packed weight", "پیک شدہ وزن"),
+    note: l(
+      "Weight is the heavier of actual weight and volumetric weight. See the packaging guide for how to keep parcels light and safe.",
+      "وزن اصل وزن یا حجمی وزن میں سے جو زیادہ ہو وہ لیا جاتا ہے۔ پارسل ہلکے اور محفوظ رکھنے کے لیے پیکجنگ گائیڈ دیکھیں۔",
+    ),
+    guide: l("Read the packaging guide", "پیکجنگ گائیڈ پڑھیں"),
+  },
+  whoPays: {
+    eyebrow: l("Who pays shipping", "شپنگ کون دیتا ہے"),
+    title: l("You decide, per product", "ہر پروڈکٹ کے لیے آپ طے کریں"),
+    options: [
+      {
+        title: l("Customer pays", "گاہک ادا کرے"),
+        body: l(
+          "The shipping rate is added at checkout. You receive your full item price, minus commission.",
+          "شپنگ ریٹ چیک آؤٹ پر شامل ہوتا ہے۔ آپ کو پوری پروڈکٹ قیمت ملتی ہے، کمیشن منہا کر کے۔",
+        ),
+      },
+      {
+        title: l("You pay — free delivery", "آپ ادا کریں — مفت ڈیلیوری"),
+        body: l(
+          "Customers see free delivery. The shipping rate is deducted from that order's payout.",
+          "گاہک کو مفت ڈیلیوری نظر آتی ہے۔ شپنگ ریٹ اس آرڈر کی ادائیگی سے منہا ہوتا ہے۔",
+        ),
+      },
+      {
+        title: l("Split it", "آدھا آدھا"),
+        body: l(
+          "Set how much the customer pays for delivery. The rest is deducted from that order's payout.",
+          "طے کریں کہ گاہک ڈیلیوری کے لیے کتنا دے۔ باقی اس آرڈر کی ادائیگی سے منہا ہوتا ہے۔",
+        ),
+      },
+    ],
+  },
+  cod: {
+    eyebrow: l("Cash on delivery", "کیش آن ڈیلیوری"),
+    title: l("COD everywhere we deliver", "جہاں ڈیلیوری، وہاں COD"),
+    points: [
+      {
+        title: l("Coverage", "کوریج"),
+        body: l(
+          "Cash on delivery is available in every city and town our fleet and courier partners deliver to.",
+          "کیش آن ڈیلیوری ہر اس شہر اور قصبے میں دستیاب ہے جہاں ہمارا فلیٹ اور کوریئر پارٹنرز ڈیلیور کرتے ہیں۔",
+        ),
+      },
+      {
+        title: l("Remittance schedule", "رقم کی منتقلی کا شیڈول"),
+        body: l(
+          "Cash collected by riders and couriers is remitted {codDays} days after delivery, then paid out on your payout cycle.",
+          "رائیڈرز اور کوریئرز کا وصول کردہ کیش ڈیلیوری کے {codDays} دن بعد منتقل ہوتا ہے، پھر آپ کے ادائیگی سائیکل پر ادا کیا جاتا ہے۔",
+        ),
+      },
+      {
+        title: l("COD fee", "COD فیس"),
+        body: l("COD handling fee per order: {codFee}.", "فی آرڈر COD ہینڈلنگ فیس: {codFee}۔"),
+      },
+    ],
+  },
+  rto: {
+    eyebrow: l("RTO — return to origin", "RTO — واپسی"),
+    title: l("What happens when a parcel comes back", "جب پارسل واپس آئے تو کیا ہوتا ہے"),
+    lead: l(
+      "Most Pakistani sellers learn about RTO charges after their first bad month. You're reading about them before your first order.",
+      "زیادہ تر پاکستانی سیلرز کو RTO چارجز کا پتہ پہلے برے مہینے کے بعد چلتا ہے۔ آپ پہلے آرڈر سے پہلے ہی پڑھ رہے ہیں۔",
+    ),
+    whenTitle: l("When a parcel is returned to you", "پارسل آپ کو کب واپس آتا ہے"),
+    when: [
+      l("The customer refuses the parcel at the door", "گاہک دروازے پر پارسل لینے سے انکار کر دے"),
+      l("The customer can't be reached after {attempts} delivery attempts", "{attempts} ڈیلیوری کوششوں کے بعد بھی گاہک سے رابطہ نہ ہو"),
+      l("The address is incomplete or wrong", "پتہ نامکمل یا غلط ہو"),
+    ],
+    chargeTitle: l("What it costs", "اس کا خرچ"),
+    chargeBody: l(
+      "The RTO charge below applies to each returned parcel. The product comes back to you; it is not lost or written off.",
+      "نیچے دیا گیا RTO چارج ہر واپس آنے والے پارسل پر لاگو ہوتا ہے۔ پروڈکٹ آپ کو واپس ملتی ہے؛ ضائع نہیں ہوتی۔",
+    ),
+    guide: l("How to reduce RTO on COD orders", "COD آرڈرز میں RTO کیسے کم کریں"),
+  },
+  returns: {
+    eyebrow: l("Customer returns", "گاہک کی واپسی"),
+    title: l("Return pickup, in four steps", "واپسی پک اپ، چار قدموں میں"),
+    lead: l(
+      "When a delivered item is returned — for example because it's damaged or not as described — this is how it comes back.",
+      "جب ڈیلیور شدہ آئٹم واپس کیا جائے — مثلاً خراب ہو یا تفصیل کے مطابق نہ ہو — تو یوں واپس آتا ہے۔",
+    ),
+    steps: [
+      {
+        title: l("Return requested", "واپسی کی درخواست"),
+        body: l("The customer requests a return within {returnDays} days of delivery, with a reason and photos.", "گاہک ڈیلیوری کے {returnDays} دن کے اندر وجہ اور تصاویر کے ساتھ واپسی کی درخواست کرتا ہے۔"),
+      },
+      {
+        title: l("You're notified", "آپ کو اطلاع"),
+        body: l("You see the request and the customer's photos before anything is collected.", "کچھ اٹھانے سے پہلے آپ درخواست اور گاہک کی تصاویر دیکھتے ہیں۔"),
+      },
+      {
+        title: l("Pickup", "پک اپ"),
+        body: l("A rider or courier collects the item from the customer.", "رائیڈر یا کوریئر گاہک سے آئٹم اٹھاتا ہے۔"),
+      },
+      {
+        title: l("Back to you", "آپ تک واپس"),
+        body: l("The item is delivered back to you. Return shipping is paid by: {returnPayer}.", "آئٹم آپ کو واپس پہنچایا جاتا ہے۔ واپسی شپنگ کی ادائیگی: {returnPayer}۔"),
+      },
+    ],
+    disputes: l("Disagree with a return? See how disputes work.", "واپسی سے اختلاف ہے؟ دیکھیں تنازعات کیسے حل ہوتے ہیں۔"),
+  },
+  faqTitle: l("Delivery questions", "ڈیلیوری سے متعلق سوالات"),
+  ctaTitle: l("Let us handle delivery. You handle the selling.", "ڈیلیوری ہم سنبھالیں۔ آپ فروخت سنبھالیں۔"),
+};

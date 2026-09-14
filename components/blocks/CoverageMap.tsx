@@ -64,8 +64,9 @@ export function CoverageMap({ className, showList = true }: { className?: string
               )}
               {c.major && (
                 <text
-                  x={x + 8}
+                  x={c.labelLeft ? x - 8 : x + 8}
                   y={y + 4}
+                  textAnchor={c.labelLeft ? "end" : "start"}
                   fontSize="12"
                   fontWeight="600"
                   fill="var(--color-ink-800)"

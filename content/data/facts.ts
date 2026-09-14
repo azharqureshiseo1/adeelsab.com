@@ -21,6 +21,10 @@ export const facts = {
   rtoCharge: todo("RTO charge per returned parcel"),
   listingFee: todo("Listing fee per product (Rs)"),
   holdPeriodDays: todo("Dispute hold period (days)"),
+  codFee: todo("COD handling fee, if any"),
+  deliveryAttempts: todo("Delivery attempts before RTO"),
+  returnWindowDays: todo("Customer return window (days)"),
+  returnShippingPayer: todo("Who pays return shipping for customer returns"),
 
   // Founding Seller Program
   foundingCap: todo("Founding Seller cap (e.g. first 500)"),
