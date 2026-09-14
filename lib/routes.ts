@@ -1,0 +1,22 @@
+/** Every static route, with sitemap priority. MDX slugs are added in app/sitemap.ts. */
+export const staticRoutes: { path: string; priority: number; changeFrequency: "weekly" | "monthly" | "yearly" }[] = [
+  { path: "/", priority: 1, changeFrequency: "weekly" },
+  { path: "/founding-seller", priority: 0.95, changeFrequency: "weekly" },
+  { path: "/sell", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/sell/local-sellers", priority: 0.9, changeFrequency: "weekly" },
+  { path: "/sell/resellers", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/sell/dropshippers", priority: 0.5, changeFrequency: "monthly" },
+  { path: "/reseller-listings", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/delivery", priority: 0.85, changeFrequency: "weekly" },
+  { path: "/pricing", priority: 0.85, changeFrequency: "weekly" },
+  { path: "/payouts", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/how-it-works", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/seller-hub", priority: 0.7, changeFrequency: "weekly" },
+  { path: "/about", priority: 0.5, changeFrequency: "monthly" },
+  { path: "/careers", priority: 0.4, changeFrequency: "monthly" },
+  { path: "/contact", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/blog", priority: 0.5, changeFrequency: "weekly" },
+  { path: "/legal/privacy", priority: 0.2, changeFrequency: "yearly" },
+  { path: "/legal/terms", priority: 0.2, changeFrequency: "yearly" },
+  { path: "/legal/seller-agreement", priority: 0.3, changeFrequency: "yearly" },
+];

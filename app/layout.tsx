@@ -8,6 +8,7 @@ import { LangProvider } from "@/components/layout/LangProvider";
 import { RevealObserver } from "@/components/layout/RevealObserver";
 import { WhatsAppFab } from "@/components/blocks/WhatsAppFab";
 import { Analytics } from "@/components/Analytics";
+import { SiteJsonLd } from "@/components/SiteJsonLd";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -29,6 +30,19 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://adeelsab.com"),
   title: { default: "AdeelSab — Sell across Pakistan", template: "%s · AdeelSab" },
   description: "Pakistan's pre-launch multi-vendor marketplace. Join the Founding Seller waitlist.",
+  applicationName: "AdeelSab",
+  icons: {
+    icon: [{ url: "/favicon.ico", sizes: "any" }, { url: "/icon-192.png", type: "image/png", sizes: "192x192" }],
+    apple: "/apple-touch-icon.png",
+  },
+  openGraph: {
+    siteName: "AdeelSab",
+    locale: "en_PK",
+    type: "website",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "AdeelSab — Sell across Pakistan" }],
+  },
+  twitter: { card: "summary_large_image", images: ["/og-image.png"] },
+  formatDetection: { telephone: false },
 };
 
 export const viewport: Viewport = {
@@ -42,6 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" dir="ltr" className={`${inter.variable} ${nastaliq.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: langInitScript }} />
+        <SiteJsonLd />
       </head>
       <body className="flex min-h-screen flex-col">
         <LangProvider>
