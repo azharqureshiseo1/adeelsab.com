@@ -2,6 +2,11 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Noto_Nastaliq_Urdu } from "next/font/google";
 import "./globals.css";
 import { langInitScript } from "@/lib/i18n";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { LangProvider } from "@/components/layout/LangProvider";
+import { RevealObserver } from "@/components/layout/RevealObserver";
+import { WhatsAppFab } from "@/components/blocks/WhatsAppFab";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -37,7 +42,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script dangerouslySetInnerHTML={{ __html: langInitScript }} />
       </head>
-      <body>{children}</body>
+      <body className="flex min-h-screen flex-col">
+        <LangProvider>
+          <Header />
+          <main id="main" className="flex-1">
+            {children}
+          </main>
+          <Footer />
+          <WhatsAppFab />
+          <RevealObserver />
+        </LangProvider>
+      </body>
     </html>
   );
 }
