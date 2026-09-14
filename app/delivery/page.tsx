@@ -26,7 +26,8 @@ import { HowItWorks } from "@/components/blocks/HowItWorks";
 import { FAQ } from "@/components/blocks/FAQ";
 import { CTABand } from "@/components/blocks/CTABand";
 import { timelines, zones } from "@/content/data/shipping";
-import { delivery as d, faqs, nav } from "@/content/site";
+import { delivery as d, faqs, nav, photos } from "@/content/site";
+import { Photo } from "@/components/ui/Photo";
 import { factVars } from "@/lib/facts";
 import { pageMeta } from "@/lib/seo";
 
@@ -71,6 +72,7 @@ export default function DeliveryPage() {
             ))}
           </nav>
         }
+        aside={<Photo photo={photos.rider} priority className="aspect-[4/3]" />}
       />
 
       {/* Coverage */}
@@ -135,7 +137,7 @@ export default function DeliveryPage() {
       {/* Partners */}
       <Section labelledBy="partners-title">
         <SectionHeading id="partners-title" eyebrow={d.partners.eyebrow} title={d.partners.title} />
-        <PartnerLogos withLines className="mt-8" />
+        <PartnerLogos withLines columns={4} className="mt-8" />
       </Section>
 
       {/* Rate card */}
@@ -144,12 +146,17 @@ export default function DeliveryPage() {
         <div className="mt-8">
           <RateCard />
         </div>
-        <p className="text-small mt-3 text-ink-500">
-          <T v={d.rates.note} />
-        </p>
-        <GuideLink href="/seller-hub/packaging-guide">
-          <T v={d.rates.guide} />
-        </GuideLink>
+        <div className="mt-6 grid gap-8 md:grid-cols-[1.2fr_1fr] md:items-center">
+          <div>
+            <p className="text-ink-700">
+              <T v={d.rates.note} />
+            </p>
+            <GuideLink href="/seller-hub/packaging-guide">
+              <T v={d.rates.guide} />
+            </GuideLink>
+          </div>
+          <Photo photo={photos.packaging} className="aspect-[16/9]" sizes="(min-width: 768px) 45vw, 100vw" />
+        </div>
       </Section>
 
       {/* Who pays shipping */}

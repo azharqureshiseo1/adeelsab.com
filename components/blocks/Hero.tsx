@@ -65,7 +65,7 @@ export function Hero({ eyebrow, title, sub, primary, secondary, micro, image, va
               height={image.height}
               priority
               sizes="(min-width: 1024px) 520px, 100vw"
-              className="aspect-[6/5] h-auto w-full object-cover"
+              className="aspect-[4/3] h-auto w-full object-cover object-[42%_50%]"
             />
           </div>
         </div>

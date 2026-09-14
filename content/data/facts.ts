@@ -8,6 +8,7 @@
 export type Fact = { value: string | null; todo: string };
 
 const todo = (label: string): Fact => ({ value: null, todo: label });
+const known = (value: string): Fact => ({ value, todo: "" });
 
 export const facts = {
   // Launch
@@ -35,22 +36,24 @@ export const facts = {
   foundingRegistered: todo("Registered Founding Sellers (hand-updated)"),
 
   // Company & trust
-  secpNumber: todo("SECP registration number"),
-  ntn: todo("NTN"),
-  officeAddress: todo("Registered office address"),
-  whatsappDisplay: todo("WhatsApp support number"),
-  supportEmail: todo("Merchant support email"),
-  businessEmail: todo("Business enquiries email"),
+  secpNumber: known("0353167"),
+  /** FBR registration number (shown as "FBR Reg. No."). */
+  ntn: known("J816970"),
+  officeAddress: known("H-115, S-4, Canal Forts 2, Khaira Pull, Jallo, Lahore, Pakistan"),
+  /** DEMO number — replace with the real WhatsApp support line before launch (and NEXT_PUBLIC_WHATSAPP). */
+  whatsappDisplay: known("+92 300 0000000"),
+  supportEmail: known("support@adeelsab.com"),
+  // One inbox for now; split when a separate business address exists.
+  businessEmail: known("support@adeelsab.com"),
   officeHours: todo("Office hours (PKT)"),
   founderName: todo("Founder name"),
   founderBio: todo("Founder one-line bio"),
 
-  // Social
-  facebook: todo("Facebook handle"),
-  instagram: todo("Instagram handle"),
-  tiktok: todo("TikTok handle"),
-  linkedin: todo("LinkedIn page"),
-  youtube: todo("YouTube channel"),
+  // Social — full profile URLs
+  facebook: known("https://www.facebook.com/adeelsab.pk"),
+  instagram: known("https://www.instagram.com/adeelsab.pk"),
+  tiktok: known("https://www.tiktok.com/@adeelsab.pk"),
+  threads: known("https://www.threads.com/@adeelsab.pk"),
 } satisfies Record<string, Fact>;
 
 export type FactKey = keyof typeof facts;

@@ -117,11 +117,17 @@ export const footer = {
     { href: "/legal/terms", label: l("Terms of Use", "شرائط استعمال") },
     { href: "/legal/seller-agreement", label: l("Seller Agreement", "سیلر معاہدہ") },
   ],
-  registration: l("SECP Reg. {secp} · NTN {ntn}", "SECP رجسٹریشن {secp} · NTN {ntn}"),
+  registration: l("SECP Reg. No. {secp} · FBR Reg. No. {ntn}", "SECP رجسٹریشن نمبر {secp} · FBR رجسٹریشن نمبر {ntn}"),
   address: l("Office: {address}", "دفتر: {address}"),
   follow: l("Follow us", "ہمیں فالو کریں"),
   madeIn: l("Made in Pakistan 🇵🇰", "پاکستان میں تیار کردہ 🇵🇰"),
   rights: l("All rights reserved.", "جملہ حقوق محفوظ ہیں۔"),
+  developedBy: l("Developed by", "تیار کردہ:"),
+  developer: { name: "Refine Core Private Limited", url: "https://refinecore.pk/" },
+  registeredWith: l("Registered with", "رجسٹرڈ"),
+  deliveryBy: l("Delivery partners", "ڈیلیوری پارٹنرز"),
+  paymentsBy: l("Payments", "ادائیگیاں"),
+  email: l("Email", "ای میل"),
 };
 
 export const whatsappFab = {
@@ -250,12 +256,6 @@ export const home = {
       "اپنی پروڈکٹس ایک بار لسٹ کریں۔ ہم ملک بھر میں ڈیلیوری کرتے ہیں، کیش آن ڈیلیوری وصول کرتے ہیں اور طے شدہ شیڈول پر آپ کو ادائیگی کرتے ہیں — نہ ویب سائٹ، نہ کوریئر اکاؤنٹس، نہ پیسوں کے پیچھے بھاگنا۔",
     ),
     micro: l("Free to join the waitlist · Support in Urdu", "ویٹ لسٹ میں شامل ہونا مفت · اردو میں مدد"),
-    imageAlt: l(
-      "A shop owner arranging products on the shelves of their store",
-      "دکاندار اپنی دکان میں شیلف پر پروڈکٹس ترتیب دے رہا ہے",
-    ),
-    cardTitle: l("Order delivered · COD collected", "آرڈر ڈیلیور · COD وصول"),
-    cardSub: l("Payout scheduled to your account", "آپ کے اکاؤنٹ میں ادائیگی شیڈول"),
   },
   paths: {
     eyebrow: l("Three ways to earn", "کمانے کے تین طریقے"),
@@ -327,8 +327,11 @@ export const home = {
         label: l("for same-city delivery in {fleetCities}", "{fleetCities} میں اسی شہر کی ڈیلیوری کے لیے"),
       },
       {
-        stat: l("3", "3"),
-        label: l("national courier partners — TCS, Leopards, PostEx", "قومی کوریئر پارٹنرز — TCS، Leopards، PostEx"),
+        stat: l("4", "4"),
+        label: l(
+          "national courier partners — TCS, Leopards, PostEx, M&P",
+          "قومی کوریئر پارٹنرز — TCS، Leopards، PostEx، M&P",
+        ),
       },
       { stat: l("COD", "COD"), label: l("cash on delivery across Pakistan", "پورے پاکستان میں کیش آن ڈیلیوری") },
       {
@@ -419,7 +422,7 @@ export const home = {
       },
       {
         title: l("Nationwide", "ملک بھر میں"),
-        body: l("Through TCS, Leopards and PostEx", "TCS، Leopards اور PostEx کے ذریعے"),
+        body: l("Through TCS, Leopards, PostEx and M&P", "TCS، Leopards، PostEx اور M&P کے ذریعے"),
       },
       {
         title: l("Cash on delivery", "کیش آن ڈیلیوری"),
@@ -457,7 +460,8 @@ export const home = {
       "ایک رجسٹرڈ پاکستانی کمپنی جسے آپ کال، میسج یا وزٹ کر سکتے ہیں۔",
     ),
     secp: l("SECP registration", "SECP رجسٹریشن"),
-    ntn: l("National Tax Number", "نیشنل ٹیکس نمبر"),
+    ntn: l("FBR registration", "FBR رجسٹریشن"),
+    email: l("Email", "ای میل"),
     office: l("Office", "دفتر"),
     whatsapp: l("WhatsApp", "واٹس ایپ"),
     founderAlt: l("Portrait of the AdeelSab founder", "AdeelSab کے بانی کی تصویر"),
@@ -502,8 +506,8 @@ export const faqs = {
   cod: {
     q: l("Do you offer cash on delivery?", "کیا کیش آن ڈیلیوری دستیاب ہے؟"),
     a: l(
-      "Yes, across Pakistan — through our own fleet for same-city orders and through TCS, Leopards and PostEx nationwide. Cash collected is remitted to you {codDays} days after delivery.",
-      "جی ہاں، پورے پاکستان میں — اسی شہر کے آرڈرز ہمارے اپنے فلیٹ سے اور ملک بھر میں TCS، Leopards اور PostEx کے ذریعے۔ وصول شدہ رقم ڈیلیوری کے {codDays} دن بعد آپ کو منتقل کی جاتی ہے۔",
+      "Yes, across Pakistan — through AdeelSab Couriers, our own fleet, for same-city orders and through TCS, Leopards, PostEx and M&P nationwide. Cash collected is remitted to you {codDays} days after delivery.",
+      "جی ہاں، پورے پاکستان میں — اسی شہر کے آرڈرز ہمارے اپنے فلیٹ AdeelSab Couriers سے اور ملک بھر میں TCS، Leopards، PostEx اور M&P کے ذریعے۔ وصول شدہ رقم ڈیلیوری کے {codDays} دن بعد آپ کو منتقل کی جاتی ہے۔",
     ),
   },
   unsold: {
@@ -765,7 +769,7 @@ export const coverage = {
     "پاکستان کا نقشہ جس میں شہروں کے حساب سے AdeelSab ڈیلیوری کوریج دکھائی گئی ہے",
   ),
   legendFleet: l("Own fleet (same-city delivery)", "اپنا فلیٹ (اسی شہر میں ڈیلیوری)"),
-  legend3pl: l("Nationwide via TCS · Leopards · PostEx", "ملک بھر میں TCS · Leopards · PostEx کے ذریعے"),
+  legend3pl: l("Nationwide via TCS · Leopards · PostEx · M&P", "ملک بھر میں TCS · Leopards · PostEx · M&P کے ذریعے"),
   fleetPending: l(
     "Own-fleet cities will be marked here once confirmed.",
     "اپنے فلیٹ والے شہر تصدیق کے بعد یہاں دکھائے جائیں گے۔",
@@ -1230,7 +1234,7 @@ export const delivery = {
   meta: {
     title: "Delivery, COD & Returns",
     description:
-      "How AdeelSab delivers across Pakistan: own fleet for same-city orders, TCS, Leopards and PostEx nationwide. Coverage map, delivery times, weight-banded rate card, COD remittance and RTO charges.",
+      "How AdeelSab delivers across Pakistan: AdeelSab Couriers for same-city orders, TCS, Leopards, PostEx and M&P nationwide. Coverage map, delivery times, weight-banded rate card, COD remittance and RTO charges.",
   },
   hero: {
     eyebrow: l("Delivery & COD", "ڈیلیوری اور COD"),
@@ -1937,4 +1941,52 @@ export const legal = {
     "اگر انگریزی اور اردو نسخوں میں فرق ہو تو انگریزی نسخہ لاگو ہوگا۔",
   ),
   crumb: l("Legal", "قانونی"),
+};
+
+/* ───────────────────────────── Photography ───────────────────────────── */
+
+/** Every photo on the site, with bilingual alt text. Files live in /public/images (1280×720). */
+export const photos = {
+  merchant: {
+    src: "/images/merchant-wholesale-market.webp",
+    width: 1280,
+    height: 720,
+    alt: l(
+      "A wholesale shop owner in a busy Pakistani market checking an order on his phone, with AdeelSab parcels on the counter",
+      "مصروف پاکستانی مارکیٹ میں ہول سیل دکاندار فون پر آرڈر دیکھ رہا ہے، کاؤنٹر پر AdeelSab کے پارسل",
+    ),
+  },
+  packingOrder: {
+    src: "/images/seller-packing-order.webp",
+    width: 1280,
+    height: 720,
+    alt: l(
+      "A seller packing an order into an AdeelSab box in his shop",
+      "سیلر اپنی دکان میں AdeelSab کے ڈبے میں آرڈر پیک کر رہا ہے",
+    ),
+  },
+  packaging: {
+    src: "/images/branded-packaging.webp",
+    width: 1280,
+    height: 720,
+    alt: l(
+      "AdeelSab branded parcels, packing tape and a shipping label on a packing table",
+      "پیکنگ ٹیبل پر AdeelSab برانڈڈ پارسل، پیکنگ ٹیپ اور شپنگ لیبل",
+    ),
+  },
+  rider: {
+    src: "/images/adeelsab-rider.webp",
+    width: 1280,
+    height: 720,
+    alt: l(
+      "An AdeelSab Couriers rider in uniform standing beside his delivery motorbike",
+      "AdeelSab Couriers کا رائیڈر یونیفارم میں اپنی ڈیلیوری موٹر سائیکل کے ساتھ کھڑا ہے",
+    ),
+  },
+  team: {
+    src: "/images/team-office.webp",
+    width: 1280,
+    height: 720,
+    alt: l("The AdeelSab team working together in the office", "AdeelSab ٹیم دفتر میں مل کر کام کر رہی ہے"),
+  },
 };

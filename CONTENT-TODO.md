@@ -23,12 +23,12 @@ To find every remaining marker on the running site, open DevTools and run `docum
 | 5 | **Weight-banded shipping rate card** (5 bands × 3 zones) | `content/data/shipping.ts` → `rateCard` | `/delivery#rates` |
 | 6 | **RTO charge structure** | `shipping.ts` → `rtoCharges` (per zone) **and** `facts.ts` → `rtoCharge` (summary text) | `/delivery#rto`, local sellers, pricing, FAQ |
 | 7 | **COD remittance schedule** | `facts.ts` → `codRemittanceDays` | `/delivery#cod`, `/payouts`, FAQ |
-| 8 | **SECP registration no.** and **NTN** | `facts.ts` → `secpNumber`, `ntn` | Footer, home trust bar |
-| 9 | **Physical office address** | `facts.ts` → `officeAddress` **and** legal MDX (privacy, terms) | Footer, trust bar, `/contact`, Organization JSON-LD |
-| 10 | **WhatsApp support number** (display format) | `facts.ts` → `whatsappDisplay` **and** env `NEXT_PUBLIC_WHATSAPP` (digits only) | Trust bar, `/contact`, every WhatsApp link |
-| 11 | **Support email** and **business-enquiry email** | `facts.ts` → `supportEmail`, `businessEmail`; legal MDX; `content/data/roles.ts` → `careersEmail` | `/contact`, `/careers`, legal pages |
+| 8 | ✅ **SECP registration no.** (0353167) and **FBR registration no.** (J816970) | `facts.ts` → `secpNumber`, `ntn` | Footer, home trust bar, Organization JSON-LD |
+| 9 | ✅ **Physical office address** (H-115, S-4, Canal Forts 2, Khaira Pull, Jallo, Lahore) | `facts.ts` → `officeAddress` **and** legal MDX (privacy, terms) | Footer, trust bar, `/contact`, Organization JSON-LD |
+| 10 | ⚠️ **WhatsApp support number**: currently a **DEMO** number (+92 300 0000000). Replace before launch. | `facts.ts` → `whatsappDisplay` **and** env `NEXT_PUBLIC_WHATSAPP` (digits only). Then add `telephone` back to `components/SiteJsonLd.tsx`. | Trust bar, `/contact`, every WhatsApp link |
+| 11 | ✅ **Support email** (support@adeelsab.com, also used for business enquiries and privacy requests). Still needed: careers email. | `facts.ts` → `supportEmail`, `businessEmail`; legal MDX; `content/data/roles.ts` → `careersEmail` | `/contact`, `/careers`, legal pages |
 | 12 | **Founder name, photo, one-line bio** | `facts.ts` → `founderName`, `founderBio`; photo → `public/images/placeholder-founder.webp` | Home trust bar, `/about` |
-| 13 | **Social media handles** (full URLs) | `facts.ts` → `facebook`, `instagram`, `tiktok`, `linkedin`, `youtube` | Footer, Organization `sameAs` |
+| 13 | ✅ **Social media**: Facebook, Instagram, TikTok, Threads (@adeelsab.pk) | `facts.ts` → `facebook`, `instagram`, `tiktok`, `threads` | Footer, Organization `sameAs` |
 | 14 | **Founding Seller Program**: cap, commission-holiday length, reduced rate, current registered count | `facts.ts` → `foundingCap`, `foundingCommissionMonths`, `foundingCommissionRate`, `foundingRegistered` | Home, `/founding-seller` (counter), commission table note |
 | 15 | **Mobile app at launch?** | `facts.ts` → `mobileAppAtLaunch` | Not shown yet. If **yes**, add app-store links to the footer (`components/layout/Footer.tsx`) and CTAs. |
 
@@ -60,8 +60,8 @@ All three legal pages show a **"Draft pending legal review"** banner. Remove it 
 
 | Placeholder | Files |
 |---|---|
-| Registered company name | `content/legal/privacy.*.mdx`, `terms.*.mdx` |
-| Privacy contact email, response time, data retention period | `content/legal/privacy.*.mdx` |
+| Registered company name (as it appears on the SECP certificate) | `content/legal/privacy.*.mdx`, `terms.*.mdx` |
+| Response time and data retention period (the contact email is filled) | `content/legal/privacy.*.mdx` |
 | City for court jurisdiction | `content/legal/terms.*.mdx` |
 | **Full Seller Agreement text** | `content/legal/seller-agreement.*.mdx` (the page is currently a summary of what the agreement covers) |
 | Review all three documents end to end | Privacy, Terms, Seller Agreement, in EN and UR |
@@ -78,7 +78,9 @@ These describe **how the service works**. They were written to match the brief, 
 - [ ] **Payout rails**: bank (IBAN), JazzCash, Easypaisa, in the seller's name. `payoutRails`
 - [ ] **Reseller margin** is paid on delivered orders only. `resellerListings`, `resellers.margins`
 - [ ] **Careers culture points.** `careers.culture`
-- [ ] **Courier partner descriptions** (TCS, Leopards, PostEx), and written permission to show their logos. `content/data/shipping.ts` → `partners`
+- [ ] **Courier partner descriptions** (TCS, Leopards, PostEx, M&P), and written permission to show their logos. `content/data/shipping.ts` → `partners`
+- [ ] **Stripe** is shown under Payments in the footer. Stripe does not onboard Pakistan-registered businesses directly, so confirm how it is used (e.g. through a foreign entity), or remove it from `paymentLogos` in `content/data/shipping.ts`.
+- [ ] **M&P** was added as a fourth courier partner (the home stat now says "4 national courier partners"). Confirm the partnership.
 
 ## E. Urdu review
 
@@ -87,7 +89,7 @@ These describe **how the service works**. They were written to match the brief, 
 
 ## F. Brand and partner assets
 
-- [ ] **Logos:** replace the interim `public/brand/adeelsab-logo-dark.png` and `adeelsab-logo-orange.png` with the supplied originals (2170 × 725, transparent), then run `npm run brand:assets` to regenerate the favicon, icons and OG image.
-- [ ] **Partner logos:** `public/partners/tcs.svg`, `leopards.svg`, `postex.svg` are placeholder wordmarks. Replace them with official files from each partner.
-- [ ] **Photography:** see [TODO-IMAGES.md](TODO-IMAGES.md).
+- ✅ **Logos:** real logos, AdeelSab Couriers logos and the bag mark are in `assets/brand/`. Web versions, favicon, icons and OG image are generated with `npm run brand:assets`.
+- ✅ **Partner, payment and regulator logos:** TCS, Leopards, PostEx, M&P, JazzCash, Easypaisa, Stripe, SECP and FBR are in `assets/logos/`.
+- [ ] **Photography:** 5 real photos added. Still needed: the founder portrait. See [TODO-IMAGES.md](TODO-IMAGES.md).
 - [ ] **Environment:** set `NEXT_PUBLIC_WHATSAPP` and `NEXT_PUBLIC_GA_ID` (see [DEPLOY.md](DEPLOY.md)).

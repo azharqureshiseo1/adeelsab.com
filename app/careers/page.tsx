@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Photo } from "@/components/ui/Photo";
 import { Briefcase, Heart, Languages, Store } from "lucide-react";
 import { T } from "@/components/T";
 import { Badge } from "@/components/ui/Badge";
@@ -10,7 +10,7 @@ import { Section } from "@/components/layout/Section";
 import { PageHero } from "@/components/blocks/PageHero";
 import { CTABand } from "@/components/blocks/CTABand";
 import { careersEmail, roles } from "@/content/data/roles";
-import { careers as c } from "@/content/site";
+import { careers as c, photos } from "@/content/site";
 import { pageMeta } from "@/lib/seo";
 import { whatsappLink } from "@/lib/utils";
 
@@ -72,16 +72,8 @@ export default function CareersPage() {
           })}
         </ul>
         <div className="mt-12 grid gap-4 sm:grid-cols-2">
-          {["/images/placeholder-team.webp", "/images/placeholder-office.webp"].map((src) => (
-            <Image
-              key={src}
-              src={src}
-              alt={c.roles.photosAlt.en}
-              width={1200}
-              height={800}
-              sizes="(min-width: 640px) 50vw, 100vw"
-              className="h-auto w-full rounded-card border border-ink-200 object-cover"
-            />
+          {[photos.team, photos.rider].map((photo) => (
+            <Photo key={photo.src} photo={photo} className="aspect-[16/9]" sizes="(min-width: 640px) 50vw, 100vw" />
           ))}
         </div>
       </Section>

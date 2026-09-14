@@ -1,20 +1,42 @@
 import Image from "next/image";
-import { BadgeCheck, Building2, MapPin, MessageCircle } from "lucide-react";
+import { Mail, MapPin, MessageCircle } from "lucide-react";
 import { T } from "@/components/T";
 import { Fact } from "@/components/ui/Fact";
 import { IconTile } from "@/components/ui/Card";
 import { facts } from "@/content/data/facts";
+import { regulatorLogos } from "@/content/data/shipping";
 import { home } from "@/content/site";
 
-/** Registration details, address, WhatsApp and founder. All values come from facts.ts (TODO until confirmed). */
+/** Registration details, address, contact and founder. All values come from facts.ts (TODO until confirmed). */
 export function TrustBar() {
   const { trust } = home;
+  const [secp, fbr] = regulatorLogos;
+
+  const logoTile = (logo: (typeof regulatorLogos)[number]) => (
+    <span className="inline-flex h-11 min-w-11 shrink-0 items-center justify-center rounded-xl border border-ink-200 bg-white px-1.5">
+      <Image
+        src={logo.src}
+        alt={`${logo.name} logo`}
+        width={logo.width}
+        height={logo.height}
+        className="h-8 w-auto max-w-[84px] object-contain"
+      />
+    </span>
+  );
+  const iconTile = (Icon: typeof Mail) => (
+    <IconTile className="size-11">
+      <Icon size={22} strokeWidth={1.75} />
+    </IconTile>
+  );
+
   const rows = [
-    { icon: BadgeCheck, label: trust.secp, f: facts.secpNumber },
-    { icon: Building2, label: trust.ntn, f: facts.ntn },
-    { icon: MapPin, label: trust.office, f: facts.officeAddress },
-    { icon: MessageCircle, label: trust.whatsapp, f: facts.whatsappDisplay },
+    { tile: logoTile(secp), label: trust.secp, f: facts.secpNumber },
+    { tile: logoTile(fbr), label: trust.ntn, f: facts.ntn },
+    { tile: iconTile(MapPin), label: trust.office, f: facts.officeAddress },
+    { tile: iconTile(Mail), label: trust.email, f: facts.supportEmail, href: `mailto:${facts.supportEmail.value}` },
+    { tile: iconTile(MessageCircle), label: trust.whatsapp, f: facts.whatsappDisplay },
   ];
+
   return (
     <div className="grid gap-8 lg:grid-cols-[2fr_1fr] lg:items-center">
       <div>
@@ -25,17 +47,21 @@ export function TrustBar() {
           <T v={trust.lead} />
         </p>
         <dl className="mt-8 grid gap-5 sm:grid-cols-2">
-          {rows.map(({ icon: Icon, label, f }) => (
+          {rows.map(({ tile, label, f, href }) => (
             <div key={label.en} className="flex items-start gap-4">
-              <IconTile className="size-11">
-                <Icon size={22} strokeWidth={1.75} />
-              </IconTile>
-              <div>
+              {tile}
+              <div className="min-w-0">
                 <dt className="text-small text-ink-500">
                   <T v={label} />
                 </dt>
-                <dd className="mt-0.5 font-semibold text-ink-900">
-                  <Fact f={f} />
+                <dd className="mt-0.5 font-semibold break-words text-ink-900">
+                  {href && f.value ? (
+                    <a href={href} className="latin text-brand-700 hover:underline">
+                      {f.value}
+                    </a>
+                  ) : (
+                    <Fact f={f} />
+                  )}
                 </dd>
               </div>
             </div>

@@ -8,7 +8,7 @@ import { Section } from "@/components/layout/Section";
 import { PageHero } from "@/components/blocks/PageHero";
 import { CTABand } from "@/components/blocks/CTABand";
 import { facts } from "@/content/data/facts";
-import { about as a } from "@/content/site";
+import { about as a, photos } from "@/content/site";
 import { pageMeta } from "@/lib/seo";
 
 export const dynamic = "force-static";
@@ -118,10 +118,10 @@ export default function AboutPage() {
             </Link>
           </div>
           <Image
-            src="/images/placeholder-team.webp"
-            alt={a.team.teamAlt.en}
-            width={1200}
-            height={800}
+            src={photos.team.src}
+            alt={photos.team.alt.en}
+            width={photos.team.width}
+            height={photos.team.height}
             sizes="(min-width: 1024px) 600px, 100vw"
             className="h-auto w-full rounded-card border border-ink-200 object-cover"
           />

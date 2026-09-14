@@ -40,7 +40,7 @@ npm run dev
 | `npm run start` | Serve the production build (reads `PORT`) |
 | `npm run lint` / `npm run typecheck` | ESLint / `tsc --noEmit` |
 | `npm run format` | Prettier |
-| `npm run brand:assets` | Regenerate favicon, app icons and OG image from the logo PNGs |
+| `npm run brand:assets` | Build web-sized logos, photos, icons and OG image from the originals in `assets/` |
 
 Deployment: see **[DEPLOY.md](DEPLOY.md)**.
 
@@ -76,8 +76,9 @@ content/
   blog/*.mdx             3 posts × EN/UR
   legal/*.mdx            privacy, terms, seller agreement × EN/UR
 lib/                     i18n, seo, utils, analytics, supabase, mailer, validate, env, content, facts, routes
-public/                  brand/, partners/, images/, icons, og-image.png
-scripts/                 brand-assets.mjs, placeholder-images.mjs
+assets/                  full-size originals: brand/, photos/, logos/ (not served)
+public/                  brand/, images/, logos/ (generated), icons, og-image.png
+scripts/                 brand-assets.mjs
 supabase/schema.sql      waitlist_leads table + RLS
 ```
 
@@ -100,12 +101,16 @@ The sitemap, static params, table of contents and reading time are generated aut
 
 ## Brand assets
 
-The logo PNGs in `public/brand/` are **interim approximations**. Drop in the supplied files with exactly these names:
+Full-size originals (logos, AdeelSab Couriers logos, the bag mark, photos, and partner/payment/regulator logos) live in **`assets/`**, which is never served. Run:
+
+```bash
+npm run brand:assets
+```
+
+This writes web-sized copies to `public/brand/`, `public/images/` and `public/logos/`, and regenerates `favicon.ico`, the app icons and `og-image.png`. Details and a usage map are in [TODO-IMAGES.md](TODO-IMAGES.md). The script uses `sharp`, which ships with Next.js.
 
 - `adeelsab-logo-dark.png`: black "Adeel" + orange "Sab" (default; header and light sections)
 - `adeelsab-logo-orange.png`: all orange (dark backgrounds only; footer and dark CTA bands)
-
-Then run `npm run brand:assets` to regenerate `favicon.ico` (bag mark only), `icon-192/512.png`, `apple-touch-icon.png` and `og-image.png`. The script uses `sharp`, which ships with Next.js.
 
 **Colour rules:** orange is an accent, never a large flat fill. Use at most three `--brand-gradient` instances per page. Small orange text uses `brand-700` (an added AA-contrast shade). There is no dark mode.
 

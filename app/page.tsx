@@ -12,7 +12,8 @@ import { PartnerLogos } from "@/components/blocks/PartnerLogos";
 import { TrustBar } from "@/components/blocks/TrustBar";
 import { FAQ } from "@/components/blocks/FAQ";
 import { CTABand } from "@/components/blocks/CTABand";
-import { common, faqs, home } from "@/content/site";
+import Image from "next/image";
+import { common, faqs, home, photos } from "@/content/site";
 import { factVars } from "@/lib/facts";
 import { pageMeta } from "@/lib/seo";
 
@@ -34,12 +35,7 @@ export default function HomePage() {
         micro={home.hero.micro}
         primary={{ href: "/founding-seller", label: common.ctaFounding }}
         secondary={{ href: "/how-it-works", label: common.ctaHowItWorks }}
-        image={{
-          src: "/images/placeholder-hero-merchant.webp",
-          alt: home.hero.imageAlt.en,
-          width: 1200,
-          height: 1000,
-        }}
+        image={{ ...photos.merchant, alt: photos.merchant.alt.en }}
       />
 
       {/* 2 · Three paths */}
@@ -130,10 +126,18 @@ export default function HomePage() {
             </Button>
           </div>
           <div>
+            <Image
+              src={photos.rider.src}
+              alt={photos.rider.alt.en}
+              width={photos.rider.width}
+              height={photos.rider.height}
+              sizes="(min-width: 1024px) 560px, 100vw"
+              className="mb-6 aspect-[16/9] h-auto w-full rounded-card border border-ink-200 object-cover shadow-soft"
+            />
             <p className="text-small mb-4 font-semibold tracking-wide text-ink-500 uppercase">
               <T v={delivery.partnersLabel} />
             </p>
-            <PartnerLogos withLines />
+            <PartnerLogos />
           </div>
         </div>
       </Section>

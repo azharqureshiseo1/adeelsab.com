@@ -22,7 +22,8 @@ import { WaitlistForm } from "@/components/blocks/WaitlistForm";
 import { FAQ } from "@/components/blocks/FAQ";
 import { CTABand } from "@/components/blocks/CTABand";
 import { facts } from "@/content/data/facts";
-import { faqs, founding, nav } from "@/content/site";
+import { faqs, founding, nav, photos } from "@/content/site";
+import { Photo } from "@/components/ui/Photo";
 import { factVars } from "@/lib/facts";
 import { pageMeta } from "@/lib/seo";
 
@@ -75,11 +76,16 @@ export default function FoundingSellerPage() {
       />
 
       {/* What the programme is */}
-      <Section labelledBy="what-title" narrow>
-        <SectionHeading id="what-title" eyebrow={what.eyebrow} title={what.title} />
-        <p className="mt-5 text-lg text-ink-700">
-          <T v={what.body} />
-        </p>
+      <Section labelledBy="what-title">
+        <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-16">
+          <div>
+            <SectionHeading id="what-title" eyebrow={what.eyebrow} title={what.title} />
+            <p className="mt-5 text-lg text-ink-700">
+              <T v={what.body} />
+            </p>
+          </div>
+          <Photo photo={photos.packaging} className="aspect-[4/3]" />
+        </div>
       </Section>
 
       {/* Benefits */}

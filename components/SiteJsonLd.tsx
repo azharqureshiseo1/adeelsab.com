@@ -5,23 +5,19 @@ import { siteUrl } from "@/lib/utils";
 
 /** Organization + WebSite structured data. Unconfirmed facts are omitted, never guessed. */
 export function SiteJsonLd() {
-  const sameAs = [facts.facebook, facts.instagram, facts.tiktok, facts.linkedin, facts.youtube]
+  const sameAs = [facts.facebook, facts.instagram, facts.tiktok, facts.threads]
     .map((f) => f.value)
     .filter((v): v is string => Boolean(v));
 
+  // The WhatsApp number is still a demo placeholder, so it is not published to search engines.
+  // Add `telephone` here once the real support number is set.
   const contactPoint = [
-    facts.whatsappDisplay.value && {
+    facts.supportEmail.value && {
       "@type": "ContactPoint",
       contactType: "customer support",
-      telephone: facts.whatsappDisplay.value,
+      email: facts.supportEmail.value,
       areaServed: "PK",
       availableLanguage: ["English", "Urdu"],
-    },
-    facts.businessEmail.value && {
-      "@type": "ContactPoint",
-      contactType: "sales",
-      email: facts.businessEmail.value,
-      areaServed: "PK",
     },
   ].filter(Boolean);
 
@@ -36,7 +32,17 @@ export function SiteJsonLd() {
     areaServed: { "@type": "Country", name: "Pakistan" },
   };
   if (facts.officeAddress.value) {
-    organization.address = { "@type": "PostalAddress", streetAddress: facts.officeAddress.value, addressCountry: "PK" };
+    organization.address = {
+      "@type": "PostalAddress",
+      streetAddress: "H-115, S-4, Canal Forts 2, Khaira Pull, Jallo",
+      addressLocality: "Lahore",
+      addressRegion: "Punjab",
+      addressCountry: "PK",
+    };
+    organization.identifier = [
+      facts.secpNumber.value && { "@type": "PropertyValue", propertyID: "SECP", value: facts.secpNumber.value },
+      facts.ntn.value && { "@type": "PropertyValue", propertyID: "FBR", value: facts.ntn.value },
+    ].filter(Boolean);
   }
   if (contactPoint.length) organization.contactPoint = contactPoint;
   if (sameAs.length) organization.sameAs = sameAs;

@@ -12,7 +12,8 @@ import { PayoutRails } from "@/components/blocks/PayoutRails";
 import { CoverageMap } from "@/components/blocks/CoverageMap";
 import { PartnerLogos } from "@/components/blocks/PartnerLogos";
 import { CTABand } from "@/components/blocks/CTABand";
-import { common, localSellers as ls, nav } from "@/content/site";
+import { common, localSellers as ls, nav, photos } from "@/content/site";
+import { Photo } from "@/components/ui/Photo";
 import { factVars } from "@/lib/facts";
 import type { L } from "@/lib/i18n";
 import { pageMeta } from "@/lib/seo";
@@ -98,6 +99,7 @@ export default function LocalSellersPage() {
             </Button>
           </>
         }
+        aside={<Photo photo={photos.packingOrder} priority className="aspect-[4/3]" />}
       />
 
       <Section labelledBy="objections-title">
@@ -191,7 +193,7 @@ export default function LocalSellersPage() {
           <Objection n={5} id="o-reach" q={ls.reach.q} title={ls.reach.title}>
             <div className="grid gap-6 xl:grid-cols-[1.2fr_1fr]">
               <CoverageMap showList={false} />
-              <PartnerLogos stacked />
+              <PartnerLogos />
             </div>
             <GuideLink href="/delivery" label={ls.reach.more} />
           </Objection>

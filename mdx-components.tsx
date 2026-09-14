@@ -19,6 +19,8 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     a: ({ href = "", children }) =>
       href.startsWith("/") ? (
         <Link href={href}>{children}</Link>
+      ) : /^(mailto:|tel:|#)/.test(href) ? (
+        <a href={href}>{children}</a>
       ) : (
         <a href={href} target="_blank" rel="noopener noreferrer">
           {children}
