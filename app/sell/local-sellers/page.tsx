@@ -23,7 +23,19 @@ export const dynamic = "force-static";
 export const metadata = pageMeta({ ...ls.meta, path: "/sell/local-sellers" });
 
 /** Objection block: the seller's worry as a quote, then our answer. */
-function Objection({ n, q, title, id, children }: { n: number; q: L; title: L; id: string; children: React.ReactNode }) {
+function Objection({
+  n,
+  q,
+  title,
+  id,
+  children,
+}: {
+  n: number;
+  q: L;
+  title: L;
+  id: string;
+  children: React.ReactNode;
+}) {
   return (
     <div className="grid gap-6 border-t border-ink-200 py-12 first:border-t-0 first:pt-0 md:py-16 lg:grid-cols-[1fr_2fr] lg:gap-12">
       <div>
@@ -42,7 +54,10 @@ function Objection({ n, q, title, id, children }: { n: number; q: L; title: L; i
 
 function GuideLink({ href, label }: { href: string; label: L }) {
   return (
-    <Link href={href} className="mt-5 inline-flex min-h-11 items-center gap-2 font-semibold text-brand-700 hover:underline">
+    <Link
+      href={href}
+      className="mt-5 inline-flex min-h-11 items-center gap-2 font-semibold text-brand-700 hover:underline"
+    >
       <FileText size={18} strokeWidth={1.75} aria-hidden />
       <T v={label} />
       <ArrowRight size={16} className="flip-rtl" aria-hidden />
@@ -73,7 +88,11 @@ export default function LocalSellersPage() {
             <Button href="#join" size="lg">
               <T v={ls.hero.cta} />
             </Button>
-            <Button href={whatsappLink("Assalam o Alaikum, I have a shop and want to sell on AdeelSab.")} size="lg" variant="secondary">
+            <Button
+              href={whatsappLink("Assalam o Alaikum, I have a shop and want to sell on AdeelSab.")}
+              size="lg"
+              variant="secondary"
+            >
               <WhatsAppGlyph className="size-5 text-success" />
               <T v={ls.hero.whatsapp} />
             </Button>

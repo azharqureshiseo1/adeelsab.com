@@ -29,10 +29,13 @@ export function WaitlistForm({
     source,
     compact,
     copy: { ...waitlistForm, title: titles[audience] },
-    cityOptions: [...cities.map((c) => ({ value: c.slug, label: { en: c.name, ur: c.ur } })), {
-      value: OTHER_CITY.slug,
-      label: { en: OTHER_CITY.name, ur: OTHER_CITY.ur },
-    }],
+    cityOptions: [
+      ...cities.map((c) => ({ value: c.slug, label: { en: c.name, ur: c.ur } })),
+      {
+        value: OTHER_CITY.slug,
+        label: { en: OTHER_CITY.name, ur: OTHER_CITY.ur },
+      },
+    ],
     categoryOptions: [
       ...categories.map((c) => ({ value: c.slug, label: { en: c.en, ur: c.ur } })),
       { value: "other", label: waitlistForm.otherCategory },

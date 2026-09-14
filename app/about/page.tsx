@@ -18,7 +18,12 @@ export const metadata = pageMeta({ ...a.meta, path: "/about" });
 export default function AboutPage() {
   return (
     <>
-      <PageHero crumbs={[{ label: a.hero.eyebrow, href: "/about" }]} eyebrow={a.hero.eyebrow} title={a.hero.title} lead={a.hero.lead} />
+      <PageHero
+        crumbs={[{ label: a.hero.eyebrow, href: "/about" }]}
+        eyebrow={a.hero.eyebrow}
+        title={a.hero.title}
+        lead={a.hero.lead}
+      />
 
       <Section labelledBy="story-title">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
@@ -104,7 +109,10 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <Link href="/careers" className="mt-8 inline-flex min-h-11 items-center gap-1.5 font-semibold text-brand-700">
+            <Link
+              href="/careers"
+              className="mt-8 inline-flex min-h-11 items-center gap-1.5 font-semibold text-brand-700"
+            >
               <T v={a.team.careers} />
               <ArrowRight size={16} className="flip-rtl" aria-hidden />
             </Link>

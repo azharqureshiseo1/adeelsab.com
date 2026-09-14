@@ -2,7 +2,13 @@ import { T } from "@/components/T";
 import type { L } from "@/lib/i18n";
 
 /** Horizontal steps on desktop, vertical timeline on mobile. */
-export function HowItWorks({ steps, vars }: { steps: { title: L; body: L }[]; vars?: Record<string, React.ReactNode> }) {
+export function HowItWorks({
+  steps,
+  vars,
+}: {
+  steps: { title: L; body: L }[];
+  vars?: Record<string, React.ReactNode>;
+}) {
   return (
     <ol className="relative mt-10 grid gap-8 md:mt-12 lg:grid-cols-4 lg:gap-6">
       {/* timeline rail */}

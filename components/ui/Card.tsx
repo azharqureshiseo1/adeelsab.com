@@ -16,9 +16,7 @@ export function Card({
     <Tag
       className={cn(
         "relative rounded-card border bg-white p-6 md:p-7",
-        emphasis
-          ? "border-ink-200 border-t-4 border-t-brand-500 shadow-lift"
-          : "border-ink-200 shadow-soft",
+        emphasis ? "border-ink-200 border-t-4 border-t-brand-500 shadow-lift" : "border-ink-200 shadow-soft",
         className,
       )}
     >

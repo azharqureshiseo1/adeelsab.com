@@ -17,7 +17,12 @@ export const metadata = pageMeta({ ...h.meta, path: "/how-it-works" });
 export default function HowItWorksPage() {
   return (
     <>
-      <PageHero crumbs={[{ label: h.hero.eyebrow, href: "/how-it-works" }]} eyebrow={h.hero.eyebrow} title={h.hero.title} lead={h.hero.lead} />
+      <PageHero
+        crumbs={[{ label: h.hero.eyebrow, href: "/how-it-works" }]}
+        eyebrow={h.hero.eyebrow}
+        title={h.hero.title}
+        lead={h.hero.lead}
+      />
 
       <Section labelledBy="sflow-title">
         <h2 id="sflow-title" className="h2">
@@ -39,7 +44,11 @@ export default function HowItWorksPage() {
             <h2 id="split-title" className="h2 mb-8">
               <T v={h.splitTitle} />
             </h2>
-            <Table head={h.splitHead.map((x) => <T key={x.en} v={x} />)}>
+            <Table
+              head={h.splitHead.map((x) => (
+                <T key={x.en} v={x} />
+              ))}
+            >
               {h.split.map((row) => (
                 <tr key={row.task.en}>
                   <th scope="row" className="text-start font-medium text-ink-900">
@@ -70,7 +79,10 @@ export default function HowItWorksPage() {
             <ul className="mt-4 divide-y divide-ink-200">
               {h.links.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="flex min-h-12 items-center justify-between gap-3 font-semibold text-ink-800 hover:text-brand-700">
+                  <Link
+                    href={link.href}
+                    className="flex min-h-12 items-center justify-between gap-3 font-semibold text-ink-800 hover:text-brand-700"
+                  >
                     <T v={link.label} />
                     <ArrowRight size={16} className="flip-rtl" aria-hidden />
                   </Link>

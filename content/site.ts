@@ -157,7 +157,10 @@ export const waitlistForm = {
   title: l("Join the Founding Seller waitlist", "فاؤنڈنگ سیلر ویٹ لسٹ میں شامل ہوں"),
   titleReseller: l("Get notified when reselling opens", "ری سیلنگ شروع ہونے پر اطلاع پائیں"),
   titleDropshipper: l("Get early access to dropshipping", "ڈراپ شپنگ تک ابتدائی رسائی حاصل کریں"),
-  intro: l("Takes under a minute. We'll contact you on WhatsApp.", "ایک منٹ سے کم وقت لگے گا۔ ہم واٹس ایپ پر رابطہ کریں گے۔"),
+  intro: l(
+    "Takes under a minute. We'll contact you on WhatsApp.",
+    "ایک منٹ سے کم وقت لگے گا۔ ہم واٹس ایپ پر رابطہ کریں گے۔",
+  ),
   fields: {
     fullName: l("Full name", "پورا نام"),
     fullNamePh: l("e.g. Muhammad Adeel", "مثلاً محمد عدیل"),
@@ -558,7 +561,10 @@ export const founding = {
   },
   hero: {
     eyebrow: l("Founding Seller Program · Pre-launch", "فاؤنڈنگ سیلر پروگرام · لانچ سے پہلے"),
-    title: l("Launch with us. Get terms we won't offer again.", "ہمارے ساتھ لانچ کریں۔ ایسی شرائط جو دوبارہ نہیں ملیں گی۔"),
+    title: l(
+      "Launch with us. Get terms we won't offer again.",
+      "ہمارے ساتھ لانچ کریں۔ ایسی شرائط جو دوبارہ نہیں ملیں گی۔",
+    ),
     sub: l(
       "We're choosing the first sellers customers will see on day one. Join now and we'll set up your store for free — and charge you less while you grow.",
       "ہم وہ پہلے سیلرز منتخب کر رہے ہیں جنہیں گاہک پہلے دن دیکھیں گے۔ ابھی شامل ہوں — ہم آپ کا اسٹور مفت سیٹ اپ کریں گے اور شروع میں کم کمیشن لیں گے۔",
@@ -566,11 +572,17 @@ export const founding = {
     cta: l("Reserve my place", "میری جگہ محفوظ کریں"),
     counterLabel: l("Founding Sellers registered", "رجسٹرڈ فاؤنڈنگ سیلرز"),
     capLabel: l("Places in the program", "پروگرام میں کل جگہیں"),
-    counterNote: l("Updated by our team, not a live counter.", "یہ تعداد ہماری ٹیم اپ ڈیٹ کرتی ہے، یہ لائیو کاؤنٹر نہیں۔"),
+    counterNote: l(
+      "Updated by our team, not a live counter.",
+      "یہ تعداد ہماری ٹیم اپ ڈیٹ کرتی ہے، یہ لائیو کاؤنٹر نہیں۔",
+    ),
   },
   what: {
     eyebrow: l("What it is", "یہ کیا ہے"),
-    title: l("A deal for the sellers who build the marketplace with us", "ان سیلرز کے لیے خاص پیشکش جو ہمارے ساتھ مارکیٹ پلیس بناتے ہیں"),
+    title: l(
+      "A deal for the sellers who build the marketplace with us",
+      "ان سیلرز کے لیے خاص پیشکش جو ہمارے ساتھ مارکیٹ پلیس بناتے ہیں",
+    ),
     body: l(
       "A marketplace is only as good as what customers find on day one. Founding Sellers are the shops and wholesalers who list before launch, so customers arrive to a full catalogue. In return, you get lower costs, hands-on setup and visibility no later seller will get.",
       "مارکیٹ پلیس اتنی ہی اچھی ہوتی ہے جتنا گاہکوں کو پہلے دن ملے۔ فاؤنڈنگ سیلرز وہ دکاندار اور ہول سیلرز ہیں جو لانچ سے پہلے لسٹ کرتے ہیں تاکہ گاہک مکمل کیٹلاگ دیکھیں۔ بدلے میں آپ کو کم خرچ، مکمل سیٹ اپ مدد اور وہ نمایاں جگہ ملتی ہے جو بعد والے سیلرز کو نہیں ملے گی۔",
@@ -667,7 +679,10 @@ export const founding = {
     steps: [
       {
         title: l("Join the waitlist", "ویٹ لسٹ میں شامل ہوں"),
-        body: l("One minute. Your place is reserved in the order you join.", "ایک منٹ۔ آپ کی جگہ شامل ہونے کی ترتیب سے محفوظ ہوتی ہے۔"),
+        body: l(
+          "One minute. Your place is reserved in the order you join.",
+          "ایک منٹ۔ آپ کی جگہ شامل ہونے کی ترتیب سے محفوظ ہوتی ہے۔",
+        ),
       },
       {
         title: l("Onboarding call", "آن بورڈنگ کال"),
@@ -685,7 +700,10 @@ export const founding = {
       },
       {
         title: l("Launch day", "لانچ کا دن"),
-        body: l("Target: {launchDate}. Your store opens with the marketplace.", "متوقع: {launchDate}۔ مارکیٹ پلیس کے ساتھ آپ کا اسٹور کھلے گا۔"),
+        body: l(
+          "Target: {launchDate}. Your store opens with the marketplace.",
+          "متوقع: {launchDate}۔ مارکیٹ پلیس کے ساتھ آپ کا اسٹور کھلے گا۔",
+        ),
       },
     ],
   },
@@ -725,7 +743,10 @@ export const payoutRails = {
   items: [
     {
       name: l("Bank account", "بینک اکاؤنٹ"),
-      body: l("Any Pakistani bank account in the seller's name (IBAN).", "سیلر کے نام پر کسی بھی پاکستانی بینک کا اکاؤنٹ (IBAN)۔"),
+      body: l(
+        "Any Pakistani bank account in the seller's name (IBAN).",
+        "سیلر کے نام پر کسی بھی پاکستانی بینک کا اکاؤنٹ (IBAN)۔",
+      ),
     },
     {
       name: l("JazzCash", "JazzCash"),
@@ -745,7 +766,10 @@ export const coverage = {
   ),
   legendFleet: l("Own fleet (same-city delivery)", "اپنا فلیٹ (اسی شہر میں ڈیلیوری)"),
   legend3pl: l("Nationwide via TCS · Leopards · PostEx", "ملک بھر میں TCS · Leopards · PostEx کے ذریعے"),
-  fleetPending: l("Own-fleet cities will be marked here once confirmed.", "اپنے فلیٹ والے شہر تصدیق کے بعد یہاں دکھائے جائیں گے۔"),
+  fleetPending: l(
+    "Own-fleet cities will be marked here once confirmed.",
+    "اپنے فلیٹ والے شہر تصدیق کے بعد یہاں دکھائے جائیں گے۔",
+  ),
   citiesTitle: l("Cities on the map", "نقشے پر شہر"),
   mapNote: l(
     "Courier partners also deliver to towns and villages beyond the cities shown.",
@@ -806,7 +830,11 @@ export const sellHub = {
       },
       {
         label: l("Status", "صورتحال"),
-        cells: [l("Now onboarding", "رجسٹریشن جاری ہے"), l("Waitlist open", "ویٹ لسٹ کھلی ہے"), l("Phase 2", "دوسرا مرحلہ")],
+        cells: [
+          l("Now onboarding", "رجسٹریشن جاری ہے"),
+          l("Waitlist open", "ویٹ لسٹ کھلی ہے"),
+          l("Phase 2", "دوسرا مرحلہ"),
+        ],
       },
     ],
   },
@@ -844,15 +872,24 @@ export const localSellers = {
     points: [
       {
         title: l("Free listing creation", "مفت لسٹنگ"),
-        body: l("We write titles and descriptions and set up your listings.", "ہم عنوان اور تفصیل لکھ کر آپ کی لسٹنگز سیٹ اپ کرتے ہیں۔"),
+        body: l(
+          "We write titles and descriptions and set up your listings.",
+          "ہم عنوان اور تفصیل لکھ کر آپ کی لسٹنگز سیٹ اپ کرتے ہیں۔",
+        ),
       },
       {
         title: l("Onboarding call in Urdu", "اردو میں آن بورڈنگ کال"),
-        body: l("A real person walks you through everything, step by step.", "ایک اصل انسان آپ کو قدم بہ قدم سب کچھ سمجھاتا ہے۔"),
+        body: l(
+          "A real person walks you through everything, step by step.",
+          "ایک اصل انسان آپ کو قدم بہ قدم سب کچھ سمجھاتا ہے۔",
+        ),
       },
       {
         title: l("Phone photos are enough", "موبائل تصاویر کافی ہیں"),
-        body: l("Our guide shows how to take clear photos with any phone.", "ہماری گائیڈ بتاتی ہے کہ کسی بھی فون سے صاف تصاویر کیسے لیں۔"),
+        body: l(
+          "Our guide shows how to take clear photos with any phone.",
+          "ہماری گائیڈ بتاتی ہے کہ کسی بھی فون سے صاف تصاویر کیسے لیں۔",
+        ),
       },
     ],
     guide: l("Read: product photography with a phone", "پڑھیں: موبائل سے پروڈکٹ فوٹوگرافی"),
@@ -912,7 +949,10 @@ export const localSellers = {
   },
   reach: {
     q: l("“Will it reach my customers?”", "”کیا یہ میرے گاہکوں تک پہنچے گا؟“"),
-    title: l("Same-city by our riders. Everywhere else by national couriers.", "اسی شہر میں ہمارے رائیڈرز۔ باقی ہر جگہ قومی کوریئرز۔"),
+    title: l(
+      "Same-city by our riders. Everywhere else by national couriers.",
+      "اسی شہر میں ہمارے رائیڈرز۔ باقی ہر جگہ قومی کوریئرز۔",
+    ),
     more: l("Delivery times and rates", "ڈیلیوری کا وقت اور ریٹس"),
   },
   ntn: {
@@ -948,19 +988,31 @@ export const localSellers = {
       },
       {
         title: l("Onboarding call", "آن بورڈنگ کال"),
-        body: l("We call you in Urdu or English and answer every question.", "ہم اردو یا انگریزی میں کال کر کے ہر سوال کا جواب دیتے ہیں۔"),
+        body: l(
+          "We call you in Urdu or English and answer every question.",
+          "ہم اردو یا انگریزی میں کال کر کے ہر سوال کا جواب دیتے ہیں۔",
+        ),
       },
       {
         title: l("Verify and sign", "تصدیق اور دستخط"),
-        body: l("Verify your CNIC and payout account, and sign the seller agreement.", "شناختی کارڈ اور ادائیگی اکاؤنٹ کی تصدیق کریں اور سیلر معاہدے پر دستخط کریں۔"),
+        body: l(
+          "Verify your CNIC and payout account, and sign the seller agreement.",
+          "شناختی کارڈ اور ادائیگی اکاؤنٹ کی تصدیق کریں اور سیلر معاہدے پر دستخط کریں۔",
+        ),
       },
       {
         title: l("Listings go live", "لسٹنگز لائیو"),
-        body: l("We build your listings; you approve prices and stock.", "ہم لسٹنگز بناتے ہیں؛ آپ قیمت اور اسٹاک منظور کرتے ہیں۔"),
+        body: l(
+          "We build your listings; you approve prices and stock.",
+          "ہم لسٹنگز بناتے ہیں؛ آپ قیمت اور اسٹاک منظور کرتے ہیں۔",
+        ),
       },
       {
         title: l("First order", "پہلا آرڈر"),
-        body: l("Pack it, hand it to the rider or courier, and get paid on schedule.", "پیک کریں، رائیڈر یا کوریئر کو دیں اور شیڈول پر ادائیگی پائیں۔"),
+        body: l(
+          "Pack it, hand it to the rider or courier, and get paid on schedule.",
+          "پیک کریں، رائیڈر یا کوریئر کو دیں اور شیڈول پر ادائیگی پائیں۔",
+        ),
       },
     ],
   },
@@ -968,7 +1020,10 @@ export const localSellers = {
     title: l("What to keep ready", "کیا تیار رکھیں"),
     items: [
       l("Your CNIC (front and back)", "شناختی کارڈ (آگے اور پیچھے)"),
-      l("Bank account, JazzCash or Easypaisa details in your name", "آپ کے نام پر بینک، JazzCash یا Easypaisa کی تفصیلات"),
+      l(
+        "Bank account, JazzCash or Easypaisa details in your name",
+        "آپ کے نام پر بینک، JazzCash یا Easypaisa کی تفصیلات",
+      ),
       l("Photos of your products — a phone camera is fine", "پروڈکٹس کی تصاویر — موبائل کیمرا کافی ہے"),
       l("Your prices and how many of each item you have", "آپ کی قیمتیں اور ہر آئٹم کی تعداد"),
     ],
@@ -1017,19 +1072,31 @@ export const resellers = {
     steps: [
       {
         title: l("Pick a product", "پروڈکٹ چنیں"),
-        body: l("Browse reseller-enabled listings, each with its margin shown.", "ری سیلر اینیبلڈ لسٹنگز دیکھیں، ہر ایک پر مارجن لکھا ہوا۔"),
+        body: l(
+          "Browse reseller-enabled listings, each with its margin shown.",
+          "ری سیلر اینیبلڈ لسٹنگز دیکھیں، ہر ایک پر مارجن لکھا ہوا۔",
+        ),
       },
       {
         title: l("Share it", "شیئر کریں"),
-        body: l("Send it to your customers on WhatsApp, Facebook or Instagram.", "واٹس ایپ، فیس بک یا انسٹاگرام پر اپنے گاہکوں کو بھیجیں۔"),
+        body: l(
+          "Send it to your customers on WhatsApp, Facebook or Instagram.",
+          "واٹس ایپ، فیس بک یا انسٹاگرام پر اپنے گاہکوں کو بھیجیں۔",
+        ),
       },
       {
         title: l("Place the order", "آرڈر لگائیں"),
-        body: l("Enter your customer's address. We deliver and collect the cash.", "گاہک کا پتہ درج کریں۔ ڈیلیوری اور کیش وصولی ہم کریں گے۔"),
+        body: l(
+          "Enter your customer's address. We deliver and collect the cash.",
+          "گاہک کا پتہ درج کریں۔ ڈیلیوری اور کیش وصولی ہم کریں گے۔",
+        ),
       },
       {
         title: l("Earn your margin", "اپنا مارجن کمائیں"),
-        body: l("Your margin is paid {payoutDays} days after delivery.", "آپ کا مارجن ڈیلیوری کے {payoutDays} دن بعد ادا ہوتا ہے۔"),
+        body: l(
+          "Your margin is paid {payoutDays} days after delivery.",
+          "آپ کا مارجن ڈیلیوری کے {payoutDays} دن بعد ادا ہوتا ہے۔",
+        ),
       },
     ],
   },
@@ -1118,19 +1185,31 @@ export const dropshippers = {
   features: [
     {
       title: l("Real-time stock sync", "اسٹاک کی لمحہ بہ لمحہ اپ ڈیٹ"),
-      body: l("Supplier stock levels update in your store automatically, so you never sell what's out of stock.", "سپلائر کا اسٹاک آپ کے اسٹور میں خود اپ ڈیٹ ہوگا تاکہ ختم شدہ مال نہ بکے۔"),
+      body: l(
+        "Supplier stock levels update in your store automatically, so you never sell what's out of stock.",
+        "سپلائر کا اسٹاک آپ کے اسٹور میں خود اپ ڈیٹ ہوگا تاکہ ختم شدہ مال نہ بکے۔",
+      ),
     },
     {
       title: l("White-label packaging", "وائٹ لیبل پیکجنگ"),
-      body: l("Parcels ship without supplier branding, so customers see your store, not ours.", "پارسلز سپلائر کی برانڈنگ کے بغیر جائیں گے تاکہ گاہک آپ کا اسٹور دیکھے۔"),
+      body: l(
+        "Parcels ship without supplier branding, so customers see your store, not ours.",
+        "پارسلز سپلائر کی برانڈنگ کے بغیر جائیں گے تاکہ گاہک آپ کا اسٹور دیکھے۔",
+      ),
     },
     {
       title: l("Tracking API", "ٹریکنگ API"),
-      body: l("Order status and courier tracking pushed back into your own systems.", "آرڈر کی صورتحال اور کوریئر ٹریکنگ آپ کے اپنے سسٹم میں۔"),
+      body: l(
+        "Order status and courier tracking pushed back into your own systems.",
+        "آرڈر کی صورتحال اور کوریئر ٹریکنگ آپ کے اپنے سسٹم میں۔",
+      ),
     },
     {
       title: l("Shopify & WooCommerce", "Shopify اور WooCommerce"),
-      body: l("Import products and route orders from the platforms you already use.", "جن پلیٹ فارمز کو آپ پہلے سے استعمال کرتے ہیں وہیں سے پروڈکٹس اور آرڈرز۔"),
+      body: l(
+        "Import products and route orders from the platforms you already use.",
+        "جن پلیٹ فارمز کو آپ پہلے سے استعمال کرتے ہیں وہیں سے پروڈکٹس اور آرڈرز۔",
+      ),
     },
   ],
   formTitle: l("Get early access", "ابتدائی رسائی حاصل کریں"),
@@ -1191,7 +1270,10 @@ export const delivery = {
   },
   partners: {
     eyebrow: l("Courier partners", "کوریئر پارٹنرز"),
-    title: l("Delivered by networks your customers already trust", "ان نیٹ ورکس کے ذریعے جن پر آپ کے گاہک پہلے سے بھروسہ کرتے ہیں"),
+    title: l(
+      "Delivered by networks your customers already trust",
+      "ان نیٹ ورکس کے ذریعے جن پر آپ کے گاہک پہلے سے بھروسہ کرتے ہیں",
+    ),
   },
   rates: {
     eyebrow: l("Rate card", "ریٹ کارڈ"),
@@ -1268,7 +1350,10 @@ export const delivery = {
     whenTitle: l("When a parcel is returned to you", "پارسل آپ کو کب واپس آتا ہے"),
     when: [
       l("The customer refuses the parcel at the door", "گاہک دروازے پر پارسل لینے سے انکار کر دے"),
-      l("The customer can't be reached after {attempts} delivery attempts", "{attempts} ڈیلیوری کوششوں کے بعد بھی گاہک سے رابطہ نہ ہو"),
+      l(
+        "The customer can't be reached after {attempts} delivery attempts",
+        "{attempts} ڈیلیوری کوششوں کے بعد بھی گاہک سے رابطہ نہ ہو",
+      ),
       l("The address is incomplete or wrong", "پتہ نامکمل یا غلط ہو"),
     ],
     chargeTitle: l("What it costs", "اس کا خرچ"),
@@ -1288,11 +1373,17 @@ export const delivery = {
     steps: [
       {
         title: l("Return requested", "واپسی کی درخواست"),
-        body: l("The customer requests a return within {returnDays} days of delivery, with a reason and photos.", "گاہک ڈیلیوری کے {returnDays} دن کے اندر وجہ اور تصاویر کے ساتھ واپسی کی درخواست کرتا ہے۔"),
+        body: l(
+          "The customer requests a return within {returnDays} days of delivery, with a reason and photos.",
+          "گاہک ڈیلیوری کے {returnDays} دن کے اندر وجہ اور تصاویر کے ساتھ واپسی کی درخواست کرتا ہے۔",
+        ),
       },
       {
         title: l("You're notified", "آپ کو اطلاع"),
-        body: l("You see the request and the customer's photos before anything is collected.", "کچھ اٹھانے سے پہلے آپ درخواست اور گاہک کی تصاویر دیکھتے ہیں۔"),
+        body: l(
+          "You see the request and the customer's photos before anything is collected.",
+          "کچھ اٹھانے سے پہلے آپ درخواست اور گاہک کی تصاویر دیکھتے ہیں۔",
+        ),
       },
       {
         title: l("Pickup", "پک اپ"),
@@ -1300,10 +1391,16 @@ export const delivery = {
       },
       {
         title: l("Back to you", "آپ تک واپس"),
-        body: l("The item is delivered back to you. Return shipping is paid by: {returnPayer}.", "آئٹم آپ کو واپس پہنچایا جاتا ہے۔ واپسی شپنگ کی ادائیگی: {returnPayer}۔"),
+        body: l(
+          "The item is delivered back to you. Return shipping is paid by: {returnPayer}.",
+          "آئٹم آپ کو واپس پہنچایا جاتا ہے۔ واپسی شپنگ کی ادائیگی: {returnPayer}۔",
+        ),
       },
     ],
-    disputes: l("Disagree with a return? See how disputes work.", "واپسی سے اختلاف ہے؟ دیکھیں تنازعات کیسے حل ہوتے ہیں۔"),
+    disputes: l(
+      "Disagree with a return? See how disputes work.",
+      "واپسی سے اختلاف ہے؟ دیکھیں تنازعات کیسے حل ہوتے ہیں۔",
+    ),
   },
   faqTitle: l("Delivery questions", "ڈیلیوری سے متعلق سوالات"),
   ctaTitle: l("Let us handle delivery. You handle the selling.", "ڈیلیوری ہم سنبھالیں۔ آپ فروخت سنبھالیں۔"),
@@ -1342,7 +1439,10 @@ export const pricing = {
     {
       name: l("Shipping", "شپنگ"),
       amount: l("Weight-banded rate card", "وزن کے حساب سے ریٹ کارڈ"),
-      when: l("Only when you choose to pay shipping (free or split delivery)", "صرف جب آپ شپنگ خود دینا چنیں (مفت یا آدھی ڈیلیوری)"),
+      when: l(
+        "Only when you choose to pay shipping (free or split delivery)",
+        "صرف جب آپ شپنگ خود دینا چنیں (مفت یا آدھی ڈیلیوری)",
+      ),
       href: "/delivery#rates",
     },
     {
@@ -1397,9 +1497,15 @@ export const payouts = {
     title: l("From delivery to your account", "ڈیلیوری سے آپ کے اکاؤنٹ تک"),
   },
   summary: [
-    { label: l("Payout cycle", "ادائیگی سائیکل"), value: l("{payoutDays} days after delivery", "ڈیلیوری کے {payoutDays} دن بعد") },
+    {
+      label: l("Payout cycle", "ادائیگی سائیکل"),
+      value: l("{payoutDays} days after delivery", "ڈیلیوری کے {payoutDays} دن بعد"),
+    },
     { label: l("Minimum payout", "کم از کم ادائیگی"), value: l("{minPayout}", "{minPayout}") },
-    { label: l("COD remittance", "COD رقم کی منتقلی"), value: l("{codDays} days after delivery", "ڈیلیوری کے {codDays} دن بعد") },
+    {
+      label: l("COD remittance", "COD رقم کی منتقلی"),
+      value: l("{codDays} days after delivery", "ڈیلیوری کے {codDays} دن بعد"),
+    },
     { label: l("Transfer fee", "ٹرانسفر فیس"), value: l("{payoutFee}", "{payoutFee}") },
   ],
   threshold: {
@@ -1457,11 +1563,17 @@ export const resellerListings = {
   steps: [
     {
       title: l("Seller enables the listing", "سیلر لسٹنگ اینیبل کرتا ہے"),
-      body: l("The seller switches on reselling for a product and sets the margin they'll share.", "سیلر کسی پروڈکٹ پر ری سیلنگ آن کر کے مارجن طے کرتا ہے۔"),
+      body: l(
+        "The seller switches on reselling for a product and sets the margin they'll share.",
+        "سیلر کسی پروڈکٹ پر ری سیلنگ آن کر کے مارجن طے کرتا ہے۔",
+      ),
     },
     {
       title: l("Reseller sells it", "ری سیلر بیچتا ہے"),
-      body: l("Resellers see the published margin, share the product and place orders for their customers.", "ری سیلرز شائع شدہ مارجن دیکھ کر پروڈکٹ شیئر کرتے ہیں اور اپنے گاہکوں کے آرڈر لگاتے ہیں۔"),
+      body: l(
+        "Resellers see the published margin, share the product and place orders for their customers.",
+        "ری سیلرز شائع شدہ مارجن دیکھ کر پروڈکٹ شیئر کرتے ہیں اور اپنے گاہکوں کے آرڈر لگاتے ہیں۔",
+      ),
     },
     {
       title: l("Delivered, both paid", "ڈیلیور، دونوں کو ادائیگی"),
@@ -1474,7 +1586,10 @@ export const resellerListings = {
   forSellers: {
     title: l("For sellers", "سیلرز کے لیے"),
     points: [
-      l("Opt in per product — you stay in control of what's resold", "ہر پروڈکٹ پر خود فیصلہ — کیا ری سیل ہو، آپ کے ہاتھ میں"),
+      l(
+        "Opt in per product — you stay in control of what's resold",
+        "ہر پروڈکٹ پر خود فیصلہ — کیا ری سیل ہو، آپ کے ہاتھ میں",
+      ),
       l("Set the margin once; no one can negotiate it down", "مارجن ایک بار طے کریں؛ کوئی کم نہیں کروا سکتا"),
       l("Reach customers you'd never reach yourself", "ان گاہکوں تک پہنچیں جن تک خود نہ پہنچ پاتے"),
       l("Pay the margin only on delivered orders", "مارجن صرف ڈیلیور شدہ آرڈرز پر"),
@@ -1517,7 +1632,12 @@ export const howItWorks = {
   splitHead: [l("Task", "کام"), l("You", "آپ"), l("AdeelSab", "AdeelSab")],
   split: [
     { task: l("Stock and pricing", "اسٹاک اور قیمت"), you: true, us: false },
-    { task: l("Product listings", "پروڈکٹ لسٹنگز"), you: false, us: true, note: l("Free for Founding Sellers", "فاؤنڈنگ سیلرز کے لیے مفت") },
+    {
+      task: l("Product listings", "پروڈکٹ لسٹنگز"),
+      you: false,
+      us: true,
+      note: l("Free for Founding Sellers", "فاؤنڈنگ سیلرز کے لیے مفت"),
+    },
     { task: l("Packing the order", "آرڈر پیک کرنا"), you: true, us: false },
     { task: l("Pickup and delivery", "پک اپ اور ڈیلیوری"), you: false, us: true },
     { task: l("Cash collection (COD)", "کیش وصولی (COD)"), you: false, us: true },
@@ -1559,7 +1679,10 @@ export const sellerHub = {
     {
       key: "listings",
       title: l("Photos & listings", "تصاویر اور لسٹنگز"),
-      desc: l("Show products clearly so customers buy with confidence", "پروڈکٹس واضح دکھائیں تاکہ گاہک اعتماد سے خریدیں"),
+      desc: l(
+        "Show products clearly so customers buy with confidence",
+        "پروڈکٹس واضح دکھائیں تاکہ گاہک اعتماد سے خریدیں",
+      ),
       slugs: ["product-photography-with-a-phone"],
     },
     {
@@ -1595,7 +1718,8 @@ export const sellerHub = {
 export const blog = {
   meta: {
     title: "Blog",
-    description: "News and ideas from AdeelSab on selling online in Pakistan, cash on delivery, and building a marketplace for local sellers.",
+    description:
+      "News and ideas from AdeelSab on selling online in Pakistan, cash on delivery, and building a marketplace for local sellers.",
   },
   hero: {
     eyebrow: l("Blog", "بلاگ"),
@@ -1651,15 +1775,24 @@ export const about = {
     items: [
       {
         title: l("A marketplace of independent sellers", "آزاد سیلرز کی مارکیٹ پلیس"),
-        body: l("No house brands and no owned stock. Every product comes from a seller like you.", "نہ اپنے برانڈز، نہ اپنا اسٹاک۔ ہر پروڈکٹ آپ جیسے کسی سیلر کی ہے۔"),
+        body: l(
+          "No house brands and no owned stock. Every product comes from a seller like you.",
+          "نہ اپنے برانڈز، نہ اپنا اسٹاک۔ ہر پروڈکٹ آپ جیسے کسی سیلر کی ہے۔",
+        ),
       },
       {
         title: l("Delivery that sellers don't have to manage", "ایسی ڈیلیوری جو سیلر کو سنبھالنی نہ پڑے"),
-        body: l("Our own fleet within cities, and national courier partners everywhere else.", "شہروں میں اپنا فلیٹ، اور باقی ہر جگہ قومی کوریئر پارٹنرز۔"),
+        body: l(
+          "Our own fleet within cities, and national courier partners everywhere else.",
+          "شہروں میں اپنا فلیٹ، اور باقی ہر جگہ قومی کوریئر پارٹنرز۔",
+        ),
       },
       {
         title: l("Reseller-Enabled Listings", "ری سیلر اینیبلڈ لسٹنگز"),
-        body: l("A way for sellers to reach more customers through resellers, on terms they set.", "سیلرز کے لیے ری سیلرز کے ذریعے زیادہ گاہکوں تک پہنچنے کا طریقہ، اپنی شرائط پر۔"),
+        body: l(
+          "A way for sellers to reach more customers through resellers, on terms they set.",
+          "سیلرز کے لیے ری سیلرز کے ذریعے زیادہ گاہکوں تک پہنچنے کا طریقہ، اپنی شرائط پر۔",
+        ),
       },
     ],
   },
@@ -1703,19 +1836,31 @@ export const careers = {
     items: [
       {
         title: l("Close to sellers", "سیلرز کے قریب"),
-        body: l("Everyone spends time with real shop owners. Decisions start from what they need.", "ہر کوئی اصل دکانداروں کے ساتھ وقت گزارتا ہے۔ فیصلے ان کی ضرورت سے شروع ہوتے ہیں۔"),
+        body: l(
+          "Everyone spends time with real shop owners. Decisions start from what they need.",
+          "ہر کوئی اصل دکانداروں کے ساتھ وقت گزارتا ہے۔ فیصلے ان کی ضرورت سے شروع ہوتے ہیں۔",
+        ),
       },
       {
         title: l("Honest by default", "ہمیشہ ایمانداری"),
-        body: l("We publish our fees and don't invent numbers. We work with each other the same way.", "ہم اپنی فیسیں شائع کرتے ہیں اور فرضی اعداد نہیں بناتے۔ آپس میں بھی ایسے ہی کام کرتے ہیں۔"),
+        body: l(
+          "We publish our fees and don't invent numbers. We work with each other the same way.",
+          "ہم اپنی فیسیں شائع کرتے ہیں اور فرضی اعداد نہیں بناتے۔ آپس میں بھی ایسے ہی کام کرتے ہیں۔",
+        ),
       },
       {
         title: l("Real ownership", "حقیقی ذمہ داری"),
-        body: l("Small team, big scope. You'll own problems end to end, not tickets.", "چھوٹی ٹیم، بڑا دائرہ۔ آپ مکمل مسائل کے ذمہ دار ہوں گے، صرف کاموں کے نہیں۔"),
+        body: l(
+          "Small team, big scope. You'll own problems end to end, not tickets.",
+          "چھوٹی ٹیم، بڑا دائرہ۔ آپ مکمل مسائل کے ذمہ دار ہوں گے، صرف کاموں کے نہیں۔",
+        ),
       },
       {
         title: l("Urdu and English", "اردو اور انگریزی"),
-        body: l("We work in both, because our sellers do.", "ہم دونوں زبانوں میں کام کرتے ہیں، کیونکہ ہمارے سیلرز بھی کرتے ہیں۔"),
+        body: l(
+          "We work in both, because our sellers do.",
+          "ہم دونوں زبانوں میں کام کرتے ہیں، کیونکہ ہمارے سیلرز بھی کرتے ہیں۔",
+        ),
       },
     ],
   },
@@ -1735,7 +1880,8 @@ export const careers = {
 export const contact = {
   meta: {
     title: "Contact AdeelSab",
-    description: "Contact AdeelSab on WhatsApp or email. Merchant support for sellers, and business enquiries for partners and press.",
+    description:
+      "Contact AdeelSab on WhatsApp or email. Merchant support for sellers, and business enquiries for partners and press.",
   },
   hero: {
     eyebrow: l("Contact", "رابطہ"),
@@ -1747,7 +1893,10 @@ export const contact = {
   },
   whatsapp: {
     title: l("WhatsApp", "واٹس ایپ"),
-    body: l("For sellers, resellers and anyone joining the waitlist.", "سیلرز، ری سیلرز اور ویٹ لسٹ میں شامل ہونے والوں کے لیے۔"),
+    body: l(
+      "For sellers, resellers and anyone joining the waitlist.",
+      "سیلرز، ری سیلرز اور ویٹ لسٹ میں شامل ہونے والوں کے لیے۔",
+    ),
     cta: l("Chat on WhatsApp", "واٹس ایپ پر بات کریں"),
   },
   routes: [
@@ -1762,10 +1911,7 @@ export const contact = {
     {
       key: "business",
       title: l("Business enquiries", "کاروباری رابطہ"),
-      body: l(
-        "Partnerships, logistics, investors and press.",
-        "شراکت داری، لاجسٹکس، سرمایہ کار اور میڈیا۔",
-      ),
+      body: l("Partnerships, logistics, investors and press.", "شراکت داری، لاجسٹکس، سرمایہ کار اور میڈیا۔"),
     },
   ],
   emailLabel: l("Email", "ای میل"),
@@ -1774,7 +1920,10 @@ export const contact = {
     hours: l("Office hours", "دفتری اوقات"),
     tz: l("Pakistan Standard Time (PKT)", "پاکستان اسٹینڈرڈ ٹائم (PKT)"),
     mapAlt: l("Map showing the AdeelSab office location", "AdeelSab دفتر کا نقشہ"),
-    mapPlaceholder: l("Map will appear here once the office address is confirmed.", "دفتر کا پتہ تصدیق ہونے پر نقشہ یہاں دکھایا جائے گا۔"),
+    mapPlaceholder: l(
+      "Map will appear here once the office address is confirmed.",
+      "دفتر کا پتہ تصدیق ہونے پر نقشہ یہاں دکھایا جائے گا۔",
+    ),
   },
 };
 

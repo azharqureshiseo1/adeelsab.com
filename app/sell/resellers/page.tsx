@@ -87,7 +87,12 @@ export default function ResellersPage() {
 
       {/* Category preview */}
       <Section labelledBy="cats-title">
-        <SectionHeading id="cats-title" eyebrow={r.categories.eyebrow} title={r.categories.title} lead={r.categories.lead} />
+        <SectionHeading
+          id="cats-title"
+          eyebrow={r.categories.eyebrow}
+          title={r.categories.title}
+          lead={r.categories.lead}
+        />
         <ul className="mt-8 flex flex-wrap gap-3">
           {preview.map((c) => (
             <li key={c.slug} className="rounded-full border border-ink-200 bg-white px-4 py-2 font-medium text-ink-800">
@@ -130,7 +135,14 @@ export default function ResellersPage() {
         </div>
       </Section>
 
-      <CTABand form={false} source="/sell/resellers" href="#reseller-waitlist" label={r.hero.cta} title={r.formTitle} lead={r.formLead} />
+      <CTABand
+        form={false}
+        source="/sell/resellers"
+        href="#reseller-waitlist"
+        label={r.hero.cta}
+        title={r.formTitle}
+        lead={r.formLead}
+      />
     </>
   );
 }

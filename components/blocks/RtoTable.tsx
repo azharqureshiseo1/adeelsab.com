@@ -8,7 +8,9 @@ import { formatPKR } from "@/lib/utils";
 /** RTO charge per parcel, by zone. Stated plainly — never softened or omitted. */
 export function RtoTable() {
   return (
-    <Table head={[<T key="z" v={localSellers.returns.tableZone} />, <T key="c" v={localSellers.returns.tableCharge} />]}>
+    <Table
+      head={[<T key="z" v={localSellers.returns.tableZone} />, <T key="c" v={localSellers.returns.tableCharge} />]}
+    >
       {zones.map((z) => {
         const charge = rtoCharges[z.key];
         return (

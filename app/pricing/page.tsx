@@ -20,7 +20,12 @@ export const metadata = pageMeta({ ...p.meta, path: "/pricing" });
 export default function PricingPage() {
   return (
     <>
-      <PageHero crumbs={[{ label: nav.main[1].label, href: "/pricing" }]} eyebrow={p.hero.eyebrow} title={p.hero.title} lead={p.hero.lead} />
+      <PageHero
+        crumbs={[{ label: nav.main[1].label, href: "/pricing" }]}
+        eyebrow={p.hero.eyebrow}
+        title={p.hero.title}
+        lead={p.hero.lead}
+      />
 
       <Section labelledBy="commission-title">
         <h2 id="commission-title" className="h2 mb-8">
@@ -33,7 +38,11 @@ export default function PricingPage() {
         <h2 id="fees-title" className="h2 mb-8">
           <T v={p.feesTitle} />
         </h2>
-        <Table head={p.feesHead.map((h) => <T key={h.en} v={h} />)}>
+        <Table
+          head={p.feesHead.map((h) => (
+            <T key={h.en} v={h} />
+          ))}
+        >
           {p.fees.map((fee) => (
             <tr key={fee.name.en}>
               <th scope="row" className="text-start font-semibold text-ink-900">

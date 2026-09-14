@@ -18,7 +18,12 @@ export const metadata = pageMeta({ ...p.meta, path: "/payouts" });
 export default function PayoutsPage() {
   return (
     <>
-      <PageHero crumbs={[{ label: p.hero.eyebrow, href: "/payouts" }]} eyebrow={p.hero.eyebrow} title={p.hero.title} lead={p.hero.lead} />
+      <PageHero
+        crumbs={[{ label: p.hero.eyebrow, href: "/payouts" }]}
+        eyebrow={p.hero.eyebrow}
+        title={p.hero.title}
+        lead={p.hero.lead}
+      />
 
       <Section labelledBy="schedule-title">
         <SectionHeading id="schedule-title" eyebrow={p.schedule.eyebrow} title={p.schedule.title} />
@@ -59,7 +64,10 @@ export default function PayoutsPage() {
                 </li>
               ))}
             </ul>
-            <Link href="/pricing" className="mt-4 inline-flex min-h-11 items-center gap-1.5 font-semibold text-brand-700">
+            <Link
+              href="/pricing"
+              className="mt-4 inline-flex min-h-11 items-center gap-1.5 font-semibold text-brand-700"
+            >
               <T v={p.deductions.link} />
               <ArrowRight size={16} className="flip-rtl" aria-hidden />
             </Link>
@@ -81,7 +89,10 @@ export default function PayoutsPage() {
             <p className="mt-3 text-[15px] text-ink-700">
               <T v={p.hold.body} vars={factVars} />
             </p>
-            <Link href="/seller-hub/returns-and-disputes" className="mt-4 inline-flex min-h-11 items-center gap-1.5 font-semibold text-brand-700">
+            <Link
+              href="/seller-hub/returns-and-disputes"
+              className="mt-4 inline-flex min-h-11 items-center gap-1.5 font-semibold text-brand-700"
+            >
               <T v={p.hold.link} />
               <ArrowRight size={16} className="flip-rtl" aria-hidden />
             </Link>

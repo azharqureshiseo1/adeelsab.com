@@ -24,7 +24,12 @@ const routeMeta = {
 export default function ContactPage() {
   return (
     <>
-      <PageHero crumbs={[{ label: c.hero.eyebrow, href: "/contact" }]} eyebrow={c.hero.eyebrow} title={c.hero.title} lead={c.hero.lead} />
+      <PageHero
+        crumbs={[{ label: c.hero.eyebrow, href: "/contact" }]}
+        eyebrow={c.hero.eyebrow}
+        title={c.hero.title}
+        lead={c.hero.lead}
+      />
 
       <Section labelledBy="contact-title">
         <h2 id="contact-title" className="sr-only">
@@ -77,7 +82,10 @@ export default function ContactPage() {
                     <T v={c.emailLabel} />:
                   </span>
                   {meta.email.value ? (
-                    <a href={`mailto:${meta.email.value}`} className="latin font-semibold text-brand-700 hover:underline">
+                    <a
+                      href={`mailto:${meta.email.value}`}
+                      className="latin font-semibold text-brand-700 hover:underline"
+                    >
                       {meta.email.value}
                     </a>
                   ) : (

@@ -47,7 +47,10 @@ export function MobileNav() {
         <ul className="mt-6 space-y-1 border-t border-ink-200 pt-6">
           {nav.main.map((item) => (
             <li key={item.href}>
-              <Link href={item.href} className="block rounded-xl px-3 py-3 text-lg font-semibold text-ink-900 hover:bg-ink-50">
+              <Link
+                href={item.href}
+                className="block rounded-xl px-3 py-3 text-lg font-semibold text-ink-900 hover:bg-ink-50"
+              >
                 <T v={item.label} />
               </Link>
             </li>

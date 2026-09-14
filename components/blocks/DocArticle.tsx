@@ -20,7 +20,10 @@ function Toc({ doc }: { doc: LoadedDoc }) {
   const items = doc.toc.filter((t) => t.level === 2);
   if (items.length < 2) return null;
   return (
-    <nav aria-label={doc.locale === "ur" ? "اس صفحے پر" : "On this page"} className="rounded-card border border-ink-200 bg-ink-50 p-5">
+    <nav
+      aria-label={doc.locale === "ur" ? "اس صفحے پر" : "On this page"}
+      className="rounded-card border border-ink-200 bg-ink-50 p-5"
+    >
       <p className="text-small font-semibold tracking-wide text-ink-500 uppercase">
         {doc.locale === "ur" ? common.onThisPage.ur : common.onThisPage.en}
       </p>

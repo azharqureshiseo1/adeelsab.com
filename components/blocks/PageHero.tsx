@@ -28,7 +28,9 @@ export function PageHero({
 }) {
   return (
     <section className={cn("border-b border-ink-200 bg-ink-50", className)}>
-      <Container className={cn("py-12 md:py-16", !!aside && "grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:items-center lg:gap-16")}>
+      <Container
+        className={cn("py-12 md:py-16", !!aside && "grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:items-center lg:gap-16")}
+      >
         <div className="max-w-3xl">
           {crumbs && <Breadcrumbs items={crumbs} />}
           <div className="mt-6 flex flex-wrap items-center gap-3">

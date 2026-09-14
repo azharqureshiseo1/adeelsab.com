@@ -1,0 +1,34 @@
+# Checks pull requests only. Deployment is handled by Hostinger, which builds from
+# the repository on every push to main — do not add a deploy job here.
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - name: Build
+        run: npm run build | tee build.log
+        env:
+          NEXT_PUBLIC_SITE_URL: https://adeelsab.com
+      - name: Only /api/waitlist may be dynamic
+        run: |
+          dynamic=$(grep -E 'ƒ /' build.log | grep -v '/api/waitlist' || true)
+          if [ -n "$dynamic" ]; then
+            echo "These routes became dynamic and will burn CPU on shared hosting:"
+            echo "$dynamic"
+            exit 1
+          fi
+          echo "All pages are statically rendered."

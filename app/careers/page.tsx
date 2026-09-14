@@ -42,7 +42,12 @@ function ApplyButton({ subject }: { subject: string }) {
 export default function CareersPage() {
   return (
     <>
-      <PageHero crumbs={[{ label: c.hero.eyebrow, href: "/careers" }]} eyebrow={c.hero.eyebrow} title={c.hero.title} lead={c.hero.lead} />
+      <PageHero
+        crumbs={[{ label: c.hero.eyebrow, href: "/careers" }]}
+        eyebrow={c.hero.eyebrow}
+        title={c.hero.title}
+        lead={c.hero.lead}
+      />
 
       <Section labelledBy="culture-title">
         <h2 id="culture-title" className="h2">
@@ -88,7 +93,11 @@ export default function CareersPage() {
         {roles.length > 0 ? (
           <ul className="mt-8 space-y-4">
             {roles.map((role) => (
-              <Card as="li" key={role.slug} className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+              <Card
+                as="li"
+                key={role.slug}
+                className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between"
+              >
                 <div>
                   <h3 className="h4">
                     <T v={role.title} />

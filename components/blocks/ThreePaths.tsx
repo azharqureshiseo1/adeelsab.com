@@ -20,7 +20,12 @@ export function ThreePaths() {
           const Icon = icons[item.key as keyof typeof icons];
           const emphasis = i === 0;
           return (
-            <Card key={item.key} as="li" emphasis={emphasis} className={cn("reveal flex flex-col", emphasis && "lg:-mt-2")}>
+            <Card
+              key={item.key}
+              as="li"
+              emphasis={emphasis}
+              className={cn("reveal flex flex-col", emphasis && "lg:-mt-2")}
+            >
               <div className="flex items-start justify-between gap-3">
                 <IconTile>
                   <Icon size={24} strokeWidth={1.75} />

@@ -13,14 +13,7 @@ type FieldProps = {
   className?: string;
 };
 
-function Field({
-  id,
-  label,
-  optionalLabel,
-  error,
-  className,
-  children,
-}: FieldProps & { children: React.ReactNode }) {
+function Field({ id, label, optionalLabel, error, className, children }: FieldProps & { children: React.ReactNode }) {
   return (
     <div className={className}>
       <label htmlFor={id} className="mb-1.5 block text-sm font-semibold text-ink-800">
@@ -38,7 +31,9 @@ function Field({
 }
 
 const state = (error?: L | null) =>
-  error ? "border-danger focus:ring-danger/20" : "border-ink-200 hover:border-ink-400 focus:border-brand-500 focus:ring-brand-500/20";
+  error
+    ? "border-danger focus:ring-danger/20"
+    : "border-ink-200 hover:border-ink-400 focus:border-brand-500 focus:ring-brand-500/20";
 
 export function Input({
   id,

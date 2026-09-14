@@ -40,7 +40,17 @@ export default function SellHubPage() {
             <h2 id="compare-title" className="h3 mb-5">
               <T v={compare.title} />
             </h2>
-            <Table head={compare.head.map((h, i) => (i === 0 ? <span key={i} className="sr-only">—</span> : <T key={i} v={h} />))}>
+            <Table
+              head={compare.head.map((h, i) =>
+                i === 0 ? (
+                  <span key={i} className="sr-only">
+                    —
+                  </span>
+                ) : (
+                  <T key={i} v={h} />
+                ),
+              )}
+            >
               {compare.rows.map((row) => (
                 <tr key={row.label.en}>
                   <th scope="row" className="text-start font-semibold text-ink-900">

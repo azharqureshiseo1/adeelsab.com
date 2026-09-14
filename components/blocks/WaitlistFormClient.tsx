@@ -27,9 +27,24 @@ export type WaitlistFormProps = {
 
 type Status = "idle" | "pending" | "success" | "failure";
 
-const FIELD_ORDER = ["full_name", "whatsapp", "city", "business_type", "category", "monthly_volume", "message"] as const;
+const FIELD_ORDER = [
+  "full_name",
+  "whatsapp",
+  "city",
+  "business_type",
+  "category",
+  "monthly_volume",
+  "message",
+] as const;
 
-export function WaitlistFormClient({ audience, source, compact, copy, cityOptions, categoryOptions }: WaitlistFormProps) {
+export function WaitlistFormClient({
+  audience,
+  source,
+  compact,
+  copy,
+  cityOptions,
+  categoryOptions,
+}: WaitlistFormProps) {
   const { lang, t } = useLang();
   const id = useId();
   const formRef = useRef<HTMLFormElement>(null);
@@ -123,7 +138,9 @@ export function WaitlistFormClient({ audience, source, compact, copy, cityOption
           <T v={copy.success.body} />
         </p>
         <Button
-          href={whatsappLink(`Assalam o Alaikum AdeelSab, I just joined the waitlist. My name is ${values.full_name ?? ""}.`)}
+          href={whatsappLink(
+            `Assalam o Alaikum AdeelSab, I just joined the waitlist. My name is ${values.full_name ?? ""}.`,
+          )}
           variant="whatsapp"
           size="lg"
           className="mt-6"
@@ -287,7 +304,13 @@ export function WaitlistFormClient({ audience, source, compact, copy, cityOption
         <input id={fid("company_website")} name="company_website" type="text" tabIndex={-1} autoComplete="off" />
       </div>
 
-      <Button type="submit" size="lg" className="mt-6 w-full" disabled={status === "pending"} aria-busy={status === "pending"}>
+      <Button
+        type="submit"
+        size="lg"
+        className="mt-6 w-full"
+        disabled={status === "pending"}
+        aria-busy={status === "pending"}
+      >
         {status === "pending" ? <T v={copy.submitting} /> : <T v={copy.submit} />}
       </Button>
 

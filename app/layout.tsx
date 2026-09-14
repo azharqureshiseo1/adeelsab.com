@@ -32,7 +32,10 @@ export const metadata: Metadata = {
   description: "Pakistan's pre-launch multi-vendor marketplace. Join the Founding Seller waitlist.",
   applicationName: "AdeelSab",
   icons: {
-    icon: [{ url: "/favicon.ico", sizes: "any" }, { url: "/icon-192.png", type: "image/png", sizes: "192x192" }],
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+    ],
     apple: "/apple-touch-icon.png",
   },
   openGraph: {

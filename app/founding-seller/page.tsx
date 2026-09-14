@@ -1,4 +1,16 @@
-import { BadgeCheck, Camera, Check, CreditCard, HandCoins, IdCard, Megaphone, MessageCircle, Package, PenLine, X } from "lucide-react";
+import {
+  BadgeCheck,
+  Camera,
+  Check,
+  CreditCard,
+  HandCoins,
+  IdCard,
+  Megaphone,
+  MessageCircle,
+  Package,
+  PenLine,
+  X,
+} from "lucide-react";
 import { T } from "@/components/T";
 import { Button } from "@/components/ui/Button";
 import { Card, IconTile } from "@/components/ui/Card";
@@ -180,10 +192,25 @@ export default function FoundingSellerPage() {
         <h2 id="ffaq-title" className="h2">
           <T v={founding.faqTitle} />
         </h2>
-        <FAQ items={[faqs.foundingFree, faqs.foundingAfter, faqs.foundingCapFull, faqs.foundingNtn, faqs.foundingLaunch, faqs.commission]} />
+        <FAQ
+          items={[
+            faqs.foundingFree,
+            faqs.foundingAfter,
+            faqs.foundingCapFull,
+            faqs.foundingNtn,
+            faqs.foundingLaunch,
+            faqs.commission,
+          ]}
+        />
       </Section>
 
-      <CTABand form={false} href="#waitlist" source="/founding-seller" title={founding.ctaTitle} lead={founding.ctaLead} />
+      <CTABand
+        form={false}
+        href="#waitlist"
+        source="/founding-seller"
+        title={founding.ctaTitle}
+        lead={founding.ctaLead}
+      />
     </>
   );
 }

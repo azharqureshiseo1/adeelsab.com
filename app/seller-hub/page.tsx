@@ -13,7 +13,13 @@ export const dynamic = "force-static";
 
 export const metadata = pageMeta({ ...sellerHub.meta, path: "/seller-hub" });
 
-const icons = { "getting-started": Rocket, listings: Camera, orders: PackageOpen, returns: RotateCcw, money: Scale } as const;
+const icons = {
+  "getting-started": Rocket,
+  listings: Camera,
+  orders: PackageOpen,
+  returns: RotateCcw,
+  money: Scale,
+} as const;
 
 export default async function SellerHubIndex() {
   const docs = await loadAll("seller-hub");
@@ -55,7 +61,10 @@ export default async function SellerHubIndex() {
                     if (!doc) return null;
                     return (
                       <li key={slug}>
-                        <Link href={`/seller-hub/${slug}`} className="group flex items-start justify-between gap-3 py-3.5">
+                        <Link
+                          href={`/seller-hub/${slug}`}
+                          className="group flex items-start justify-between gap-3 py-3.5"
+                        >
                           <span>
                             <span className="block font-semibold text-ink-900 group-hover:text-brand-700">
                               <T v={{ en: doc.en.meta.title, ur: doc.ur.meta.title }} />
@@ -69,7 +78,11 @@ export default async function SellerHubIndex() {
                               </span>
                             </span>
                           </span>
-                          <ArrowRight size={18} className="flip-rtl mt-1 shrink-0 text-ink-400 group-hover:text-brand-700" aria-hidden />
+                          <ArrowRight
+                            size={18}
+                            className="flip-rtl mt-1 shrink-0 text-ink-400 group-hover:text-brand-700"
+                            aria-hidden
+                          />
                         </Link>
                       </li>
                     );

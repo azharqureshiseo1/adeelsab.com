@@ -157,7 +157,9 @@ html[lang="ur"] body,
 }
 /* Nastaliq needs far more leading than Latin. Unlayered, so it beats Tailwind's
    text-size utilities, which set their own line-height on each element. */
-html[lang="ur"] body :is(p, li, dd, dt, td, th, label, summary, figcaption, address, blockquote, input, select, textarea) {
+html[lang="ur"]
+  body
+  :is(p, li, dd, dt, td, th, label, summary, figcaption, address, blockquote, input, select, textarea) {
   line-height: 2;
 }
 html[lang="ur"] body :is(a, button) {

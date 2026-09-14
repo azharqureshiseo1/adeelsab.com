@@ -1,5 +1,17 @@
 import Link from "next/link";
-import { ArrowRight, Banknote, Check, FileText, HandCoins, MapPinned, Receipt, Store, Truck, User, Users } from "lucide-react";
+import {
+  ArrowRight,
+  Banknote,
+  Check,
+  FileText,
+  HandCoins,
+  MapPinned,
+  Receipt,
+  Store,
+  Truck,
+  User,
+  Users,
+} from "lucide-react";
 import { T } from "@/components/T";
 import { Card, IconTile } from "@/components/ui/Card";
 import { Table } from "@/components/ui/Table";
@@ -27,7 +39,10 @@ const codIcons = [MapPinned, Banknote, Receipt];
 
 function GuideLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
-    <Link href={href} className="mt-5 inline-flex min-h-11 items-center gap-2 font-semibold text-brand-700 hover:underline">
+    <Link
+      href={href}
+      className="mt-5 inline-flex min-h-11 items-center gap-2 font-semibold text-brand-700 hover:underline"
+    >
       <FileText size={18} strokeWidth={1.75} aria-hidden />
       {children}
       <ArrowRight size={16} className="flip-rtl" aria-hidden />
@@ -90,7 +105,12 @@ export default function DeliveryPage() {
         <SectionHeading id="times-title" eyebrow={d.times.eyebrow} title={d.times.title} />
         <Table
           className="mt-8"
-          head={[<T key="z" v={d.times.zone} />, <T key="c" v={d.times.carrier} />, <T key="t" v={d.times.time} />, <T key="cod" v={d.times.cod} />]}
+          head={[
+            <T key="z" v={d.times.zone} />,
+            <T key="c" v={d.times.carrier} />,
+            <T key="t" v={d.times.time} />,
+            <T key="cod" v={d.times.cod} />,
+          ]}
         >
           {zones.map((z) => (
             <tr key={z.key}>
@@ -100,9 +120,7 @@ export default function DeliveryPage() {
               <td className="text-ink-700">
                 <T v={z.note} />
               </td>
-              <td className="tabular">
-                {timelines[z.key] ?? <TodoMark label={`Delivery time — ${z.label.en}`} />}
-              </td>
+              <td className="tabular">{timelines[z.key] ?? <TodoMark label={`Delivery time — ${z.label.en}`} />}</td>
               <td>
                 <Check size={20} className="text-success" aria-label="Available" />
               </td>

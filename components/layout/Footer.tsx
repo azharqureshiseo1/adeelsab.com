@@ -68,7 +68,12 @@ export function Footer() {
               {socials.map((s) =>
                 s.f.value ? (
                   <li key={s.name}>
-                    <a href={s.f.value} className="text-ink-400 hover:text-white" rel="noopener noreferrer" target="_blank">
+                    <a
+                      href={s.f.value}
+                      className="text-ink-400 hover:text-white"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
                       {s.name}
                     </a>
                   </li>

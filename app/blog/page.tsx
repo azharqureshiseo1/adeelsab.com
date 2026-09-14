@@ -16,7 +16,12 @@ export default async function BlogIndex() {
   const posts = await loadAll("blog");
   return (
     <>
-      <PageHero crumbs={[{ label: blog.hero.eyebrow, href: "/blog" }]} eyebrow={blog.hero.eyebrow} title={blog.hero.title} lead={blog.hero.lead} />
+      <PageHero
+        crumbs={[{ label: blog.hero.eyebrow, href: "/blog" }]}
+        eyebrow={blog.hero.eyebrow}
+        title={blog.hero.title}
+        lead={blog.hero.lead}
+      />
       <Section labelledBy="posts-title">
         <h2 id="posts-title" className="sr-only">
           <T v={blog.hero.eyebrow} />

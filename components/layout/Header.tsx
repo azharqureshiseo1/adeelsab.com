@@ -30,7 +30,11 @@ export function Header() {
         <nav aria-label="Main" className="ms-6 hidden items-center gap-0.5 whitespace-nowrap xl:flex">
           <SellDropdown label={<T v={nav.sellWithUs} />}>
             {nav.sellMenu.map((item) => (
-              <Link key={item.href} href={item.href} className="block rounded-xl px-4 py-3 transition-colors hover:bg-ink-50">
+              <Link
+                key={item.href}
+                href={item.href}
+                className="block rounded-xl px-4 py-3 transition-colors hover:bg-ink-50"
+              >
                 <span className="block font-semibold text-ink-900">
                   <T v={item.label} />
                 </span>

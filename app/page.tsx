@@ -87,7 +87,10 @@ export default function HomePage() {
             </Card>
           ))}
         </div>
-        <Link href="/reseller-listings" className="mt-8 inline-flex min-h-11 items-center gap-1.5 font-semibold text-brand-700">
+        <Link
+          href="/reseller-listings"
+          className="mt-8 inline-flex min-h-11 items-center gap-1.5 font-semibold text-brand-700"
+        >
           <T v={rl.cta} />
           <ArrowRight size={16} className="flip-rtl" aria-hidden />
         </Link>
@@ -97,7 +100,12 @@ export default function HomePage() {
       <Section tone="muted" labelledBy="delivery-title">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.15fr] lg:items-center lg:gap-16">
           <div>
-            <SectionHeading id="delivery-title" eyebrow={delivery.eyebrow} title={delivery.title} lead={delivery.lead} />
+            <SectionHeading
+              id="delivery-title"
+              eyebrow={delivery.eyebrow}
+              title={delivery.title}
+              lead={delivery.lead}
+            />
             <dl className="mt-8 grid gap-5 sm:grid-cols-2">
               {delivery.points.map((p, i) => {
                 const Icon = deliveryIcons[i];
@@ -157,7 +165,10 @@ export default function HomePage() {
           </div>
           <ul className="space-y-3 self-center">
             {founding.benefits.map((b) => (
-              <li key={b.en} className="flex items-center gap-3 rounded-xl bg-ink-50 px-4 py-3.5 font-medium text-ink-800">
+              <li
+                key={b.en}
+                className="flex items-center gap-3 rounded-xl bg-ink-50 px-4 py-3.5 font-medium text-ink-800"
+              >
                 <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-full bg-brand-500 text-white">
                   <Check size={16} strokeWidth={2.5} aria-hidden />
                 </span>
