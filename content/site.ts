@@ -1532,3 +1532,79 @@ export const howItWorks = {
   ],
   linksTitle: l("Go deeper", "مزید تفصیل"),
 };
+
+/* ───────────────────────────── Seller Hub & blog ───────────────────────────── */
+
+export const sellerHub = {
+  meta: {
+    title: "Seller Hub",
+    description:
+      "Practical guides for Pakistani online sellers: getting started, listing products, phone photography, packaging, returns and disputes, reducing RTO on COD, and NTN basics.",
+  },
+  hero: {
+    eyebrow: l("Seller Hub", "سیلر ہب"),
+    title: l("Guides that help you sell more and return less", "گائیڈز جو زیادہ فروخت اور کم واپسی میں مدد کریں"),
+    lead: l(
+      "Written for Pakistani shop owners, in English and Urdu. Practical, short, and free.",
+      "پاکستانی دکانداروں کے لیے، انگریزی اور اردو میں۔ عملی، مختصر اور مفت۔",
+    ),
+  },
+  categories: [
+    {
+      key: "getting-started",
+      title: l("Getting started", "آغاز"),
+      desc: l("Joining, onboarding and your first listings", "شمولیت، آن بورڈنگ اور پہلی لسٹنگز"),
+      slugs: ["getting-started", "how-to-list-products"],
+    },
+    {
+      key: "listings",
+      title: l("Photos & listings", "تصاویر اور لسٹنگز"),
+      desc: l("Show products clearly so customers buy with confidence", "پروڈکٹس واضح دکھائیں تاکہ گاہک اعتماد سے خریدیں"),
+      slugs: ["product-photography-with-a-phone"],
+    },
+    {
+      key: "orders",
+      title: l("Orders & delivery", "آرڈرز اور ڈیلیوری"),
+      desc: l("Pack safely and keep refused parcels low", "محفوظ پیکنگ اور کم واپسی"),
+      slugs: ["packaging-guide", "reducing-rto-in-cod"],
+    },
+    {
+      key: "returns",
+      title: l("Returns & disputes", "واپسی اور تنازعات"),
+      desc: l("What to do when an order comes back", "آرڈر واپس آئے تو کیا کریں"),
+      slugs: ["returns-and-disputes"],
+    },
+    {
+      key: "money",
+      title: l("Money & tax", "پیسہ اور ٹیکس"),
+      desc: l("NTN, Active Taxpayers List and record keeping", "NTN، ایکٹو ٹیکس پیئرز لسٹ اور ریکارڈ"),
+      slugs: ["ntn-and-tax-basics"],
+    },
+  ],
+  articleCta: {
+    title: l("Ready to sell on AdeelSab?", "AdeelSab پر بیچنے کے لیے تیار ہیں؟"),
+    body: l(
+      "Join the Founding Seller waitlist. Our team will set up your store with you — in Urdu or English.",
+      "فاؤنڈنگ سیلر ویٹ لسٹ میں شامل ہوں۔ ہماری ٹیم آپ کے ساتھ مل کر آپ کا اسٹور سیٹ اپ کرے گی — اردو یا انگریزی میں۔",
+    ),
+  },
+  related: l("More guides", "مزید گائیڈز"),
+  back: l("All guides", "تمام گائیڈز"),
+};
+
+export const blog = {
+  meta: {
+    title: "Blog",
+    description: "News and ideas from AdeelSab on selling online in Pakistan, cash on delivery, and building a marketplace for local sellers.",
+  },
+  hero: {
+    eyebrow: l("Blog", "بلاگ"),
+    title: l("Notes from building AdeelSab", "AdeelSab بنانے کی کہانی"),
+    lead: l(
+      "What we're learning about online selling in Pakistan, and what we're building for sellers.",
+      "پاکستان میں آن لائن فروخت کے بارے میں ہم کیا سیکھ رہے ہیں، اور سیلرز کے لیے کیا بنا رہے ہیں۔",
+    ),
+  },
+  back: l("All posts", "تمام تحریریں"),
+  by: l("By", "از"),
+};
