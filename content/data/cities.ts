@@ -20,7 +20,7 @@ export type City = {
 
 export const cities: City[] = [
   { slug: "karachi", name: "Karachi", ur: "کراچی", lat: 24.86, lon: 67.01, ownFleet: false, major: true },
-  { slug: "lahore", name: "Lahore", ur: "لاہور", lat: 31.55, lon: 74.34, ownFleet: false, major: true },
+  { slug: "lahore", name: "Lahore", ur: "لاہور", lat: 31.55, lon: 74.34, ownFleet: true, major: true },
   {
     slug: "faisalabad",
     name: "Faisalabad",

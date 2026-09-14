@@ -17,7 +17,7 @@ To find every remaining marker on the running site, open DevTools and run `docum
 | # | Placeholder | Where to set it | Shown on |
 |---|---|---|---|
 | 1 | **Target launch date** | `facts.ts` → `launchDate` | Founding Seller timeline and FAQ |
-| 2 | **Own-fleet cities at launch** | `content/data/cities.ts` → set `ownFleet: true` per city | Home capability band, delivery section, coverage map, FAQ |
+| 2 | ✅ **Own-fleet cities at launch: Lahore** (add more by setting `ownFleet: true`) | `content/data/cities.ts` → `ownFleet` | Home capability band, delivery section, coverage map, FAQ |
 | 3 | **Commission % by category** (14 categories) | `content/data/categories.ts` → `commission` | Commission table on `/pricing` and `/sell/local-sellers` |
 | 4 | ✅ **Payout timeline: weekly** (written into the copy as "every week" / "ہر ہفتے"). Still needed: **minimum payout**. | `content/site.ts` (payout strings); `facts.ts` → `minPayout` | Home, FAQ, `/payouts`, `/pricing`, resellers |
 | 5 | ✅ **Delivery charge: flat Rs 350 per parcel**, every city. Confirm whether bulky or heavy parcels are an exception. | `facts.ts` → `deliveryCharge`; `shipping.ts` → `rateCard`; also written in `content/seller-hub/packaging-guide.*.mdx` | `/delivery#rates`, `/pricing`, FAQ, packaging guide |
