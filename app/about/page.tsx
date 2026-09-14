@@ -3,12 +3,12 @@ import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import { T } from "@/components/T";
 import { Card } from "@/components/ui/Card";
-import { Fact, TodoMark } from "@/components/ui/Fact";
+import { Fact } from "@/components/ui/Fact";
 import { Section } from "@/components/layout/Section";
 import { PageHero } from "@/components/blocks/PageHero";
 import { CTABand } from "@/components/blocks/CTABand";
 import { facts } from "@/content/data/facts";
-import { about as a, photos } from "@/content/site";
+import { about as a, footer, photos } from "@/content/site";
 import { pageMeta } from "@/lib/seo";
 
 export const dynamic = "force-static";
@@ -36,9 +36,6 @@ export default function AboutPage() {
                 <T v={p} />
               </p>
             ))}
-            <p className="mt-5">
-              <TodoMark label="Founder's origin story (2–3 sentences, first person)" />
-            </p>
           </div>
           <Card emphasis className="self-start">
             <p className="text-small font-semibold tracking-wide text-brand-700 uppercase">
@@ -89,25 +86,19 @@ export default function AboutPage() {
             <p className="mt-4 text-lg text-ink-500">
               <T v={a.team.lead} />
             </p>
-            <div className="mt-8 flex items-center gap-4">
-              <Image
-                src="/images/placeholder-founder.webp"
-                alt={a.team.founderAlt.en}
-                width={96}
-                height={96}
-                className="size-20 rounded-full object-cover"
-              />
-              <div>
-                <p className="font-semibold text-ink-900">
-                  <Fact f={facts.founderName} />
-                </p>
-                <p className="text-small text-ink-500">
-                  <T v={a.team.role} />
-                </p>
-                <p className="text-small mt-1 text-ink-700">
-                  <Fact f={facts.founderBio} />
-                </p>
-              </div>
+            <div className="mt-8 rounded-card border border-ink-200 bg-ink-50 p-5">
+              <p className="font-semibold text-ink-900">
+                <Fact f={facts.legalName} />
+              </p>
+              <p className="text-small mt-1 text-ink-500">
+                <T
+                  v={footer.registration}
+                  vars={{ secp: <Fact f={facts.secpNumber} />, ntn: <Fact f={facts.ntn} /> }}
+                />
+              </p>
+              <address className="text-small mt-1 text-ink-500 not-italic">
+                <Fact f={facts.officeAddress} />
+              </address>
             </div>
             <Link
               href="/careers"

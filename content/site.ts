@@ -464,8 +464,7 @@ export const home = {
     email: l("Email", "ای میل"),
     office: l("Office", "دفتر"),
     whatsapp: l("WhatsApp", "واٹس ایپ"),
-    founderAlt: l("Portrait of the AdeelSab founder", "AdeelSab کے بانی کی تصویر"),
-    founderRole: l("Founder, AdeelSab", "بانی، AdeelSab"),
+    company: l("Registered company", "رجسٹرڈ کمپنی"),
   },
   faq: {
     eyebrow: l("Straight answers", "سیدھے جواب"),
@@ -1765,7 +1764,6 @@ export const about = {
         "AdeelSab اسی لیے ہے کہ یہ سارا کام — ڈیلیوری، کیش وصولی، ادائیگیاں اور لسٹنگ میں مدد — ان سے لے لے، اور اس کا خرچ مکمل طور پر پہلے سے بتائے۔",
       ),
     ],
-    founderNote: l("Founder's story", "بانی کی کہانی"),
   },
   mission: {
     title: l("Our mission", "ہمارا مقصد"),
@@ -1815,9 +1813,6 @@ export const about = {
       "A small team in Pakistan, building the marketplace and onboarding our first sellers.",
       "پاکستان میں ایک چھوٹی ٹیم، جو مارکیٹ پلیس بنا رہی ہے اور پہلے سیلرز کو شامل کر رہی ہے۔",
     ),
-    founderAlt: l("AdeelSab founder", "AdeelSab کے بانی"),
-    teamAlt: l("The AdeelSab team at work", "AdeelSab ٹیم کام کرتے ہوئے"),
-    role: l("Founder", "بانی"),
     careers: l("We're hiring — see careers", "ہم بھرتی کر رہے ہیں — نوکریاں دیکھیں"),
   },
 };
@@ -1877,7 +1872,6 @@ export const careers = {
       "ابھی کوئی مخصوص آسامی درج نہیں، مگر ہم ہر درخواست پڑھتے ہیں۔ بتائیں آپ کس چیز پر کام کرنا چاہتے ہیں اور کیوں۔",
     ),
     sendCv: l("Send your CV", "اپنی CV بھیجیں"),
-    photosAlt: l("The AdeelSab team and office", "AdeelSab ٹیم اور دفتر"),
   },
 };
 

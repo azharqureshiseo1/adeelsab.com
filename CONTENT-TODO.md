@@ -24,10 +24,10 @@ To find every remaining marker on the running site, open DevTools and run `docum
 | 6 | **RTO charge structure** | `shipping.ts` → `rtoCharges` (per zone) **and** `facts.ts` → `rtoCharge` (summary text) | `/delivery#rto`, local sellers, pricing, FAQ |
 | 7 | **COD remittance schedule** | `facts.ts` → `codRemittanceDays` | `/delivery#cod`, `/payouts`, FAQ |
 | 8 | ✅ **SECP registration no.** (0353167) and **FBR registration no.** (J816970) | `facts.ts` → `secpNumber`, `ntn` | Footer, home trust bar, Organization JSON-LD |
-| 9 | ✅ **Physical office address** (H-115, S-4, Canal Forts 2, Khaira Pull, Jallo, Lahore) | `facts.ts` → `officeAddress` **and** legal MDX (privacy, terms) | Footer, trust bar, `/contact`, Organization JSON-LD |
+| 9 | ✅ **Physical office address** (Office No 20, First floor, Takbeer Plaza, Al Faisal Town, Lahore) | `facts.ts` → `officeAddress` **and** legal MDX (privacy, terms) | Footer, trust bar, `/contact`, Organization JSON-LD |
 | 10 | ⚠️ **WhatsApp support number**: currently a **DEMO** number (+92 300 0000000). Replace before launch. | `facts.ts` → `whatsappDisplay` **and** env `NEXT_PUBLIC_WHATSAPP` (digits only). Then add `telephone` back to `components/SiteJsonLd.tsx`. | Trust bar, `/contact`, every WhatsApp link |
 | 11 | ✅ **Support email** (support@adeelsab.com, also used for business enquiries and privacy requests). Still needed: careers email. | `facts.ts` → `supportEmail`, `businessEmail`; legal MDX; `content/data/roles.ts` → `careersEmail` | `/contact`, `/careers`, legal pages |
-| 12 | **Founder name, photo, one-line bio** | `facts.ts` → `founderName`, `founderBio`; photo → `public/images/placeholder-founder.webp` | Home trust bar, `/about` |
+| 12 | ✅ **Founder name, photo, bio**: not shown on the site, by decision. The trust bar and `/about` show the registered company (ADEELSAB (PRIVATE) LIMITED) instead. | — | — |
 | 13 | ✅ **Social media**: Facebook, Instagram, TikTok, Threads (@adeelsab.pk) | `facts.ts` → `facebook`, `instagram`, `tiktok`, `threads` | Footer, Organization `sameAs` |
 | 14 | **Founding Seller Program**: cap, commission-holiday length, reduced rate, current registered count | `facts.ts` → `foundingCap`, `foundingCommissionMonths`, `foundingCommissionRate`, `foundingRegistered` | Home, `/founding-seller` (counter), commission table note |
 | 15 | **Mobile app at launch?** | `facts.ts` → `mobileAppAtLaunch` | Not shown yet. If **yes**, add app-store links to the footer (`components/layout/Footer.tsx`) and CTAs. |
@@ -51,7 +51,6 @@ These came up while writing the pages. They are policy numbers the site must sta
 | Who pays return shipping on customer returns | `facts.ts` → `returnShippingPayer` | `/delivery#returns` |
 | Office hours (PKT) | `facts.ts` → `officeHours` | `/contact`, local sellers callback card |
 | Delivery time per zone | `shipping.ts` → `timelines` | `/delivery#times` |
-| Founder's origin story (2–3 sentences, first person) | `app/about/page.tsx` (replace the `TodoMark` with copy added to `about.story` in `content/site.ts`) | `/about` |
 | Open roles (optional; the page handles none) | `content/data/roles.ts` → `roles` | `/careers` |
 
 ## C. Legal (needs a lawyer)
@@ -60,7 +59,7 @@ All three legal pages show a **"Draft pending legal review"** banner. Remove it 
 
 | Placeholder | Files |
 |---|---|
-| Registered company name (as it appears on the SECP certificate) | `content/legal/privacy.*.mdx`, `terms.*.mdx` |
+| ✅ Registered company name: ADEELSAB (PRIVATE) LIMITED | `facts.ts` → `legalName`; `content/legal/privacy.*.mdx`, `terms.*.mdx` |
 | Response time and data retention period (the contact email is filled) | `content/legal/privacy.*.mdx` |
 | City for court jurisdiction | `content/legal/terms.*.mdx` |
 | **Full Seller Agreement text** | `content/legal/seller-agreement.*.mdx` (the page is currently a summary of what the agreement covers) |
@@ -91,5 +90,5 @@ These describe **how the service works**. They were written to match the brief, 
 
 - ✅ **Logos:** real logos, AdeelSab Couriers logos and the bag mark are in `assets/brand/`. Web versions, favicon, icons and OG image are generated with `npm run brand:assets`.
 - ✅ **Partner, payment and regulator logos:** TCS, Leopards, PostEx, M&P, JazzCash, Easypaisa, Stripe, SECP and FBR are in `assets/logos/`.
-- [ ] **Photography:** 5 real photos added. Still needed: the founder portrait. See [TODO-IMAGES.md](TODO-IMAGES.md).
+- ✅ **Photography:** 5 real photos added (no founder portrait, by decision). See [TODO-IMAGES.md](TODO-IMAGES.md).
 - [ ] **Environment:** set `NEXT_PUBLIC_WHATSAPP` and `NEXT_PUBLIC_GA_ID` (see [DEPLOY.md](DEPLOY.md)).

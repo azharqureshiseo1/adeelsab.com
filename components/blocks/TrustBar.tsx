@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Mail, MapPin, MessageCircle } from "lucide-react";
+import { Building2, Mail, MapPin, MessageCircle } from "lucide-react";
 import { T } from "@/components/T";
 import { Fact } from "@/components/ui/Fact";
 import { IconTile } from "@/components/ui/Card";
@@ -7,7 +7,7 @@ import { facts } from "@/content/data/facts";
 import { regulatorLogos } from "@/content/data/shipping";
 import { home } from "@/content/site";
 
-/** Registration details, address, contact and founder. All values come from facts.ts (TODO until confirmed). */
+/** Registered company, registration numbers, address and contact. All values come from facts.ts. */
 export function TrustBar() {
   const { trust } = home;
   const [secp, fbr] = regulatorLogos;
@@ -30,6 +30,7 @@ export function TrustBar() {
   );
 
   const rows = [
+    { tile: iconTile(Building2), label: trust.company, f: facts.legalName },
     { tile: logoTile(secp), label: trust.secp, f: facts.secpNumber },
     { tile: logoTile(fbr), label: trust.ntn, f: facts.ntn },
     { tile: iconTile(MapPin), label: trust.office, f: facts.officeAddress },
@@ -38,7 +39,7 @@ export function TrustBar() {
   ];
 
   return (
-    <div className="grid gap-8 lg:grid-cols-[2fr_1fr] lg:items-center">
+    <div>
       <div>
         <h2 id="trust-title" className="h3">
           <T v={trust.title} />
@@ -46,7 +47,7 @@ export function TrustBar() {
         <p className="mt-2 text-ink-500">
           <T v={trust.lead} />
         </p>
-        <dl className="mt-8 grid gap-5 sm:grid-cols-2">
+        <dl className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
           {rows.map(({ tile, label, f, href }) => (
             <div key={label.en} className="flex items-start gap-4">
               {tile}
@@ -68,26 +69,6 @@ export function TrustBar() {
           ))}
         </dl>
       </div>
-      <figure className="flex items-center gap-4 rounded-card border border-ink-200 bg-white p-5 shadow-soft">
-        <Image
-          src="/images/placeholder-founder.webp"
-          alt={trust.founderAlt.en}
-          width={96}
-          height={96}
-          className="size-20 shrink-0 rounded-full object-cover"
-        />
-        <figcaption>
-          <p className="font-semibold text-ink-900">
-            <Fact f={facts.founderName} />
-          </p>
-          <p className="text-small text-ink-500">
-            <T v={trust.founderRole} />
-          </p>
-          <p className="text-small mt-2 text-ink-700">
-            <Fact f={facts.founderBio} />
-          </p>
-        </figcaption>
-      </figure>
     </div>
   );
 }

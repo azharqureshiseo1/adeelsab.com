@@ -36,18 +36,17 @@ export const facts = {
   foundingRegistered: todo("Registered Founding Sellers (hand-updated)"),
 
   // Company & trust
+  legalName: known("ADEELSAB (PRIVATE) LIMITED"),
   secpNumber: known("0353167"),
   /** FBR registration number (shown as "FBR Reg. No."). */
   ntn: known("J816970"),
-  officeAddress: known("H-115, S-4, Canal Forts 2, Khaira Pull, Jallo, Lahore, Pakistan"),
+  officeAddress: known("Office No 20, First floor, Takbeer Plaza, Al Faisal Town, Lahore, Pakistan"),
   /** DEMO number — replace with the real WhatsApp support line before launch (and NEXT_PUBLIC_WHATSAPP). */
   whatsappDisplay: known("+92 300 0000000"),
   supportEmail: known("support@adeelsab.com"),
   // One inbox for now; split when a separate business address exists.
   businessEmail: known("support@adeelsab.com"),
   officeHours: todo("Office hours (PKT)"),
-  founderName: todo("Founder name"),
-  founderBio: todo("Founder one-line bio"),
 
   // Social — full profile URLs
   facebook: known("https://www.facebook.com/adeelsab.pk"),

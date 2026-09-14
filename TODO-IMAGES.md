@@ -36,10 +36,7 @@ To **replace a photo**, overwrite the original in `assets/photos/` with the same
 | Stripe | Footer (Payments). See CONTENT-TODO §D. |
 | SECP, FBR | Home trust bar, footer |
 
-## Still needed
+## Notes
 
-| File | Size | Used on | Shot |
-|---|---|---|---|
-| `public/images/placeholder-founder.webp` → add a real portrait to `assets/photos/founder.webp`, then update `TrustBar.tsx` and `app/about/page.tsx` | Square, at least 600 × 600 | Home trust bar, `/about` (shown as a circle) | Head-and-shoulders portrait of the founder, plain background, face centred |
-
-Also get **written consent** (a model release) from everyone recognisable in the photos, and permission to display partner logos.
+- No founder portrait is used on the site, by decision.
+- Get **written consent** (a model release) from everyone recognisable in the photos, and permission to display partner logos.

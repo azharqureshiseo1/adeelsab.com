@@ -26,6 +26,7 @@ export function SiteJsonLd() {
     "@type": "Organization",
     "@id": siteUrl("/#organization"),
     name: SITE_NAME,
+    legalName: facts.legalName.value ?? undefined,
     url: siteUrl(),
     logo: siteUrl("/brand/adeelsab-logo-dark.png"),
     description: "Pakistani multi-vendor marketplace for local sellers, with nationwide delivery and cash on delivery.",
@@ -34,7 +35,7 @@ export function SiteJsonLd() {
   if (facts.officeAddress.value) {
     organization.address = {
       "@type": "PostalAddress",
-      streetAddress: "H-115, S-4, Canal Forts 2, Khaira Pull, Jallo",
+      streetAddress: "Office No 20, First floor, Takbeer Plaza, Al Faisal Town",
       addressLocality: "Lahore",
       addressRegion: "Punjab",
       addressCountry: "PK",
