@@ -27,7 +27,7 @@ export type DocMeta = {
 type MdxModule = { default: ComponentType; metadata: DocMeta };
 type Loader = () => Promise<MdxModule>;
 
-export type Collection = "seller-hub" | "blog";
+export type Collection = "seller-hub" | "blog" | "legal";
 
 const registry: Record<Collection, Record<string, Record<Locale, Loader>>> = {
   "seller-hub": {
@@ -61,6 +61,20 @@ const registry: Record<Collection, Record<string, Record<Locale, Loader>>> = {
     },
   },
   blog: {},
+  legal: {
+    privacy: {
+      en: () => import("@/content/legal/privacy.en.mdx"),
+      ur: () => import("@/content/legal/privacy.ur.mdx"),
+    },
+    terms: {
+      en: () => import("@/content/legal/terms.en.mdx"),
+      ur: () => import("@/content/legal/terms.ur.mdx"),
+    },
+    "seller-agreement": {
+      en: () => import("@/content/legal/seller-agreement.en.mdx"),
+      ur: () => import("@/content/legal/seller-agreement.ur.mdx"),
+    },
+  },
 };
 
 export type TocItem = { id: string; text: string; level: 2 | 3 };

@@ -1608,3 +1608,184 @@ export const blog = {
   back: l("All posts", "تمام تحریریں"),
   by: l("By", "از"),
 };
+
+/* ───────────────────────────── Company ───────────────────────────── */
+
+export const about = {
+  meta: {
+    title: "About AdeelSab",
+    description:
+      "AdeelSab is a Pakistani multi-vendor marketplace built for local sellers: shops, wholesalers and brands who want to sell nationwide without the hassle of couriers and cash collection.",
+  },
+  hero: {
+    eyebrow: l("About us", "ہمارے بارے میں"),
+    title: l("Built for the shops that keep Pakistan running", "ان دکانوں کے لیے جو پاکستان کو چلاتی ہیں"),
+    lead: l(
+      "AdeelSab is a Pakistani marketplace made entirely of independent sellers. We handle what makes online selling hard, so shop owners can focus on what they already do well.",
+      "AdeelSab ایک پاکستانی مارکیٹ پلیس ہے جو مکمل طور پر آزاد سیلرز پر مشتمل ہے۔ آن لائن فروخت کے مشکل کام ہم سنبھالتے ہیں تاکہ دکاندار وہ کریں جو وہ پہلے سے بہترین کرتے ہیں۔",
+    ),
+  },
+  story: {
+    title: l("Why we started", "ہم نے کیوں شروع کیا"),
+    body: [
+      l(
+        "Across Pakistan, good shops and wholesalers sell online the hard way: juggling courier accounts, chasing cash-on-delivery payments, and absorbing returns they didn't see coming. Many don't sell online at all.",
+        "پورے پاکستان میں اچھی دکانیں اور ہول سیلرز مشکل طریقے سے آن لائن بیچتے ہیں: کوریئر اکاؤنٹس سنبھالنا، کیش آن ڈیلیوری کی رقم کے پیچھے بھاگنا، اور اچانک آنے والی واپسیوں کا نقصان اٹھانا۔ بہت سے تو آن لائن بیچتے ہی نہیں۔",
+      ),
+      l(
+        "AdeelSab exists to take that work off their hands — delivery, cash collection, payouts and listing support — and to be completely upfront about what it costs.",
+        "AdeelSab اسی لیے ہے کہ یہ سارا کام — ڈیلیوری، کیش وصولی، ادائیگیاں اور لسٹنگ میں مدد — ان سے لے لے، اور اس کا خرچ مکمل طور پر پہلے سے بتائے۔",
+      ),
+    ],
+    founderNote: l("Founder's story", "بانی کی کہانی"),
+  },
+  mission: {
+    title: l("Our mission", "ہمارا مقصد"),
+    body: l(
+      "Make selling across Pakistan as simple as selling from your own shop counter.",
+      "پورے پاکستان میں بیچنا اتنا آسان بنانا جتنا اپنی دکان کے کاؤنٹر سے بیچنا۔",
+    ),
+  },
+  building: {
+    title: l("What we're building", "ہم کیا بنا رہے ہیں"),
+    items: [
+      {
+        title: l("A marketplace of independent sellers", "آزاد سیلرز کی مارکیٹ پلیس"),
+        body: l("No house brands and no owned stock. Every product comes from a seller like you.", "نہ اپنے برانڈز، نہ اپنا اسٹاک۔ ہر پروڈکٹ آپ جیسے کسی سیلر کی ہے۔"),
+      },
+      {
+        title: l("Delivery that sellers don't have to manage", "ایسی ڈیلیوری جو سیلر کو سنبھالنی نہ پڑے"),
+        body: l("Our own fleet within cities, and national courier partners everywhere else.", "شہروں میں اپنا فلیٹ، اور باقی ہر جگہ قومی کوریئر پارٹنرز۔"),
+      },
+      {
+        title: l("Reseller-Enabled Listings", "ری سیلر اینیبلڈ لسٹنگز"),
+        body: l("A way for sellers to reach more customers through resellers, on terms they set.", "سیلرز کے لیے ری سیلرز کے ذریعے زیادہ گاہکوں تک پہنچنے کا طریقہ، اپنی شرائط پر۔"),
+      },
+    ],
+  },
+  values: {
+    title: l("How we work", "ہم کیسے کام کرتے ہیں"),
+    items: [
+      l("Every cost published before you sign", "دستخط سے پہلے ہر خرچ شائع"),
+      l("Support in Urdu and English", "اردو اور انگریزی میں مدد"),
+      l("No invented numbers — pre-launch means pre-launch", "کوئی فرضی اعداد نہیں — لانچ سے پہلے مطلب لانچ سے پہلے"),
+      l("Sellers first, in the order we open", "کھولنے کی ترتیب میں سیلرز پہلے"),
+    ],
+  },
+  team: {
+    title: l("The team", "ٹیم"),
+    lead: l(
+      "A small team in Pakistan, building the marketplace and onboarding our first sellers.",
+      "پاکستان میں ایک چھوٹی ٹیم، جو مارکیٹ پلیس بنا رہی ہے اور پہلے سیلرز کو شامل کر رہی ہے۔",
+    ),
+    founderAlt: l("AdeelSab founder", "AdeelSab کے بانی"),
+    teamAlt: l("The AdeelSab team at work", "AdeelSab ٹیم کام کرتے ہوئے"),
+    role: l("Founder", "بانی"),
+    careers: l("We're hiring — see careers", "ہم بھرتی کر رہے ہیں — نوکریاں دیکھیں"),
+  },
+};
+
+export const careers = {
+  meta: {
+    title: "Careers at AdeelSab",
+    description: "Join AdeelSab before launch and help build a marketplace for Pakistan's local sellers.",
+  },
+  hero: {
+    eyebrow: l("Careers", "نوکریاں"),
+    title: l("Help build it from the start", "شروع سے بنانے میں مدد کریں"),
+    lead: l(
+      "We're pre-launch, so the people who join now shape how AdeelSab works for years. If you care about Pakistan's small businesses, we'd like to hear from you.",
+      "ہم لانچ سے پہلے کے مرحلے میں ہیں، اس لیے ابھی شامل ہونے والے لوگ برسوں تک AdeelSab کے کام کا طریقہ طے کریں گے۔ اگر آپ کو پاکستان کے چھوٹے کاروباروں کی فکر ہے تو ہم آپ سے سننا چاہیں گے۔",
+    ),
+  },
+  culture: {
+    title: l("What it's like here", "یہاں کام کیسا ہے"),
+    items: [
+      {
+        title: l("Close to sellers", "سیلرز کے قریب"),
+        body: l("Everyone spends time with real shop owners. Decisions start from what they need.", "ہر کوئی اصل دکانداروں کے ساتھ وقت گزارتا ہے۔ فیصلے ان کی ضرورت سے شروع ہوتے ہیں۔"),
+      },
+      {
+        title: l("Honest by default", "ہمیشہ ایمانداری"),
+        body: l("We publish our fees and don't invent numbers. We work with each other the same way.", "ہم اپنی فیسیں شائع کرتے ہیں اور فرضی اعداد نہیں بناتے۔ آپس میں بھی ایسے ہی کام کرتے ہیں۔"),
+      },
+      {
+        title: l("Real ownership", "حقیقی ذمہ داری"),
+        body: l("Small team, big scope. You'll own problems end to end, not tickets.", "چھوٹی ٹیم، بڑا دائرہ۔ آپ مکمل مسائل کے ذمہ دار ہوں گے، صرف کاموں کے نہیں۔"),
+      },
+      {
+        title: l("Urdu and English", "اردو اور انگریزی"),
+        body: l("We work in both, because our sellers do.", "ہم دونوں زبانوں میں کام کرتے ہیں، کیونکہ ہمارے سیلرز بھی کرتے ہیں۔"),
+      },
+    ],
+  },
+  roles: {
+    title: l("Open roles", "دستیاب آسامیاں"),
+    apply: l("Apply", "درخواست دیں"),
+    none: l("We're always looking — send your CV", "ہم ہمیشہ اچھے لوگوں کی تلاش میں ہیں — اپنی CV بھیجیں"),
+    noneBody: l(
+      "There are no specific openings listed right now, but we read every application. Tell us what you'd like to work on and why.",
+      "ابھی کوئی مخصوص آسامی درج نہیں، مگر ہم ہر درخواست پڑھتے ہیں۔ بتائیں آپ کس چیز پر کام کرنا چاہتے ہیں اور کیوں۔",
+    ),
+    sendCv: l("Send your CV", "اپنی CV بھیجیں"),
+    photosAlt: l("The AdeelSab team and office", "AdeelSab ٹیم اور دفتر"),
+  },
+};
+
+export const contact = {
+  meta: {
+    title: "Contact AdeelSab",
+    description: "Contact AdeelSab on WhatsApp or email. Merchant support for sellers, and business enquiries for partners and press.",
+  },
+  hero: {
+    eyebrow: l("Contact", "رابطہ"),
+    title: l("Talk to a real person", "اصل انسان سے بات کریں"),
+    lead: l(
+      "WhatsApp is the fastest way to reach us, in Urdu or English.",
+      "ہم تک پہنچنے کا تیز ترین طریقہ واٹس ایپ ہے، اردو یا انگریزی میں۔",
+    ),
+  },
+  whatsapp: {
+    title: l("WhatsApp", "واٹس ایپ"),
+    body: l("For sellers, resellers and anyone joining the waitlist.", "سیلرز، ری سیلرز اور ویٹ لسٹ میں شامل ہونے والوں کے لیے۔"),
+    cta: l("Chat on WhatsApp", "واٹس ایپ پر بات کریں"),
+  },
+  routes: [
+    {
+      key: "support",
+      title: l("Merchant support", "مرچنٹ سپورٹ"),
+      body: l(
+        "Onboarding, listings, orders, delivery, returns and payouts.",
+        "آن بورڈنگ، لسٹنگز، آرڈرز، ڈیلیوری، واپسی اور ادائیگیاں۔",
+      ),
+    },
+    {
+      key: "business",
+      title: l("Business enquiries", "کاروباری رابطہ"),
+      body: l(
+        "Partnerships, logistics, investors and press.",
+        "شراکت داری، لاجسٹکس، سرمایہ کار اور میڈیا۔",
+      ),
+    },
+  ],
+  emailLabel: l("Email", "ای میل"),
+  office: {
+    title: l("Office", "دفتر"),
+    hours: l("Office hours", "دفتری اوقات"),
+    tz: l("Pakistan Standard Time (PKT)", "پاکستان اسٹینڈرڈ ٹائم (PKT)"),
+    mapAlt: l("Map showing the AdeelSab office location", "AdeelSab دفتر کا نقشہ"),
+    mapPlaceholder: l("Map will appear here once the office address is confirmed.", "دفتر کا پتہ تصدیق ہونے پر نقشہ یہاں دکھایا جائے گا۔"),
+  },
+};
+
+export const legal = {
+  draftBanner: l(
+    "Draft pending legal review. This document will be finalised before launch.",
+    "قانونی جائزے کا منتظر مسودہ۔ یہ دستاویز لانچ سے پہلے حتمی کی جائے گی۔",
+  ),
+  officialNote: l(
+    "If the English and Urdu versions differ, the English version applies.",
+    "اگر انگریزی اور اردو نسخوں میں فرق ہو تو انگریزی نسخہ لاگو ہوگا۔",
+  ),
+  crumb: l("Legal", "قانونی"),
+};
