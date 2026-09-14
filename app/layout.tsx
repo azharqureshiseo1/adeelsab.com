@@ -7,6 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 import { LangProvider } from "@/components/layout/LangProvider";
 import { RevealObserver } from "@/components/layout/RevealObserver";
 import { WhatsAppFab } from "@/components/blocks/WhatsAppFab";
+import { Analytics } from "@/components/Analytics";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -52,6 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <WhatsAppFab />
           <RevealObserver />
         </LangProvider>
+        <Analytics />
       </body>
     </html>
   );

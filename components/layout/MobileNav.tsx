@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Logo } from "@/components/Logo";
 import { T } from "@/components/T";
 import { Button } from "@/components/ui/Button";
-import { WhatsAppGlyph } from "@/components/blocks/WhatsAppFab";
+import { WhatsAppGlyph } from "@/components/ui/WhatsAppGlyph";
 import { common, nav } from "@/content/site";
 import { whatsappLink } from "@/lib/utils";
 import { MobileDrawer } from "./HeaderIslands";
