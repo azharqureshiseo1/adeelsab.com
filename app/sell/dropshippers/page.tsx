@@ -61,7 +61,7 @@ export default function DropshippersPage() {
             </ul>
             <p className="mt-8 text-ink-700">
               <T v={d.meanwhile} />{" "}
-              <Link href="/sell/local-sellers" className="inline-flex items-center gap-1 font-semibold text-brand-600 hover:underline">
+              <Link href="/sell/local-sellers" className="inline-flex items-center gap-1 font-semibold text-brand-700 hover:underline">
                 <T v={d.meanwhileCta} />
                 <ArrowRight size={16} className="flip-rtl" aria-hidden />
               </Link>

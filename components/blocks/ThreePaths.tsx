@@ -47,7 +47,7 @@ export function ThreePaths() {
                 href={item.href}
                 className={cn(
                   "mt-auto inline-flex min-h-11 items-center gap-1.5 pt-6 font-semibold",
-                  emphasis ? "text-brand-600" : "text-ink-900",
+                  emphasis ? "text-brand-700" : "text-ink-900",
                 )}
               >
                 <T v={item.cta} />

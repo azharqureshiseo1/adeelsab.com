@@ -27,7 +27,7 @@ const codIcons = [MapPinned, Banknote, Receipt];
 
 function GuideLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
-    <Link href={href} className="mt-5 inline-flex min-h-11 items-center gap-2 font-semibold text-brand-600 hover:underline">
+    <Link href={href} className="mt-5 inline-flex min-h-11 items-center gap-2 font-semibold text-brand-700 hover:underline">
       <FileText size={18} strokeWidth={1.75} aria-hidden />
       {children}
       <ArrowRight size={16} className="flip-rtl" aria-hidden />

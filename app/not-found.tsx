@@ -27,7 +27,7 @@ export default function NotFound() {
                 href={p.href}
                 className="group flex h-full flex-col rounded-card border border-ink-200 bg-white p-5 shadow-soft transition-shadow hover:shadow-lift"
               >
-                <span className="flex items-center justify-between font-semibold text-ink-900 group-hover:text-brand-600">
+                <span className="flex items-center justify-between font-semibold text-ink-900 group-hover:text-brand-700">
                   <T v={p.label} />
                   <ArrowRight size={18} className="flip-rtl" aria-hidden />
                 </span>

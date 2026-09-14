@@ -28,10 +28,10 @@ export default async function BlogIndex() {
                 href={`/blog/${en.slug}`}
                 className="group flex h-full flex-col rounded-card border border-ink-200 bg-white p-6 shadow-soft transition-shadow hover:shadow-lift"
               >
-                <span className="text-small font-semibold text-brand-600">
+                <span className="text-small font-semibold text-brand-700">
                   <T v={{ en: en.meta.audience, ur: ur.meta.audience }} />
                 </span>
-                <span className="h4 mt-3 block text-ink-900 group-hover:text-brand-600">
+                <span className="h4 mt-3 block text-ink-900 group-hover:text-brand-700">
                   <T v={{ en: en.meta.title, ur: ur.meta.title }} />
                 </span>
                 <span className="mt-3 block text-[15px] text-ink-500">
@@ -44,7 +44,7 @@ export default async function BlogIndex() {
                     </time>{" "}
                     · <span className="latin">{en.readingMinutes}</span> <T v={common.minRead} />
                   </span>
-                  <ArrowRight size={18} className="flip-rtl text-ink-400 group-hover:text-brand-600" aria-hidden />
+                  <ArrowRight size={18} className="flip-rtl text-ink-400 group-hover:text-brand-700" aria-hidden />
                 </span>
               </Link>
             </li>

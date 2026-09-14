@@ -41,7 +41,7 @@ export default function PricingPage() {
               </th>
               <td className="tabular text-ink-800">
                 {fee.href ? (
-                  <Link href={fee.href} className="font-medium text-brand-600 underline-offset-2 hover:underline">
+                  <Link href={fee.href} className="font-medium text-brand-700 underline-offset-2 hover:underline">
                     <T v={fee.amount} vars={factVars} />
                   </Link>
                 ) : (

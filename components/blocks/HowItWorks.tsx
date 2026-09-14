@@ -10,7 +10,7 @@ export function HowItWorks({ steps, vars }: { steps: { title: L; body: L }[]; va
       <span aria-hidden className="absolute start-[12%] end-[12%] top-5 hidden h-px bg-ink-200 lg:block" />
       {steps.map((step, i) => (
         <li key={step.title.en} className="reveal relative flex gap-5 lg:flex-col lg:gap-4">
-          <span className="latin relative z-10 inline-flex size-10 shrink-0 items-center justify-center rounded-full border-2 border-brand-500 bg-white font-bold text-brand-600 lg:mx-0">
+          <span className="latin relative z-10 inline-flex size-10 shrink-0 items-center justify-center rounded-full border-2 border-brand-500 bg-white font-bold text-brand-700 lg:mx-0">
             {i + 1}
           </span>
           <div>

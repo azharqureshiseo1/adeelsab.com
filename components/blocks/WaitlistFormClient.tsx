@@ -293,7 +293,7 @@ export function WaitlistFormClient({ audience, source, compact, copy, cityOption
 
       <p className="mt-4 text-[13px] leading-relaxed text-ink-500">
         <T v={copy.consent} />{" "}
-        <Link href="/legal/privacy" className="font-medium text-brand-600 underline underline-offset-2">
+        <Link href="/legal/privacy" className="font-medium text-brand-700 underline underline-offset-2">
           <T v={copy.privacy} />
         </Link>
         .

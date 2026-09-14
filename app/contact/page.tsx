@@ -77,7 +77,7 @@ export default function ContactPage() {
                     <T v={c.emailLabel} />:
                   </span>
                   {meta.email.value ? (
-                    <a href={`mailto:${meta.email.value}`} className="latin font-semibold text-brand-600 hover:underline">
+                    <a href={`mailto:${meta.email.value}`} className="latin font-semibold text-brand-700 hover:underline">
                       {meta.email.value}
                     </a>
                   ) : (

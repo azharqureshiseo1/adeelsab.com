@@ -70,7 +70,7 @@ export default function HowItWorksPage() {
             <ul className="mt-4 divide-y divide-ink-200">
               {h.links.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="flex min-h-12 items-center justify-between gap-3 font-semibold text-ink-800 hover:text-brand-600">
+                  <Link href={link.href} className="flex min-h-12 items-center justify-between gap-3 font-semibold text-ink-800 hover:text-brand-700">
                     <T v={link.label} />
                     <ArrowRight size={16} className="flip-rtl" aria-hidden />
                   </Link>

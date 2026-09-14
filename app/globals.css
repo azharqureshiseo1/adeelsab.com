@@ -8,6 +8,8 @@
   --color-brand-400: #ff7a2b;
   --color-brand-500: #fb5301; /* PRIMARY — buttons, links, accents */
   --color-brand-600: #e63e00; /* hover / pressed / deep end of gradient */
+  /* Extension (not in the brand spec): AA-contrast orange for small text on light grounds (5.3:1 on white). */
+  --color-brand-700: #c23400;
 
   /* Ink — the "Adeel" wordmark. Near-black with a slight navy cast */
   --color-ink-50: #f8fafc;
@@ -130,7 +132,7 @@
     border-radius: 999px;
     border: 1px solid var(--color-brand-100);
     background: var(--color-brand-50);
-    color: var(--color-brand-600);
+    color: var(--color-brand-700);
     font-size: 14px;
     font-weight: 600;
     padding: 0.3rem 0.85rem;
@@ -234,7 +236,7 @@ html.js .reveal.is-visible {
   margin-top: 1.6em;
 }
 .prose-as a {
-  color: var(--color-brand-600);
+  color: var(--color-brand-700);
   text-decoration: underline;
   text-underline-offset: 3px;
 }

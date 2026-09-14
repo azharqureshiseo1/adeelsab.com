@@ -87,7 +87,7 @@ export default function HomePage() {
             </Card>
           ))}
         </div>
-        <Link href="/reseller-listings" className="mt-8 inline-flex min-h-11 items-center gap-1.5 font-semibold text-brand-600">
+        <Link href="/reseller-listings" className="mt-8 inline-flex min-h-11 items-center gap-1.5 font-semibold text-brand-700">
           <T v={rl.cta} />
           <ArrowRight size={16} className="flip-rtl" aria-hidden />
         </Link>

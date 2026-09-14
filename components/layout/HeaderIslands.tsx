@@ -36,7 +36,7 @@ export function NavLink({
   href,
   children,
   className,
-  activeClassName = "text-brand-600",
+  activeClassName = "text-brand-700",
   inactiveClassName = "text-ink-700",
 }: {
   href: string;
@@ -89,7 +89,7 @@ export function SellDropdown({ label, children }: { label: React.ReactNode; chil
         onClick={() => setOpen((o) => !o)}
         className={cn(
           "inline-flex min-h-11 items-center gap-1 rounded-full px-3.5 font-semibold transition-colors hover:text-ink-900",
-          active ? "text-brand-600" : "text-ink-700",
+          active ? "text-brand-700" : "text-ink-700",
         )}
       >
         {label}

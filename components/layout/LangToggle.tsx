@@ -21,7 +21,9 @@ export function LangToggle({ className, dark }: { className?: string; dark?: boo
       )}
     >
       <Languages size={16} strokeWidth={1.75} aria-hidden />
-      <span className={cn(lang === "ur" && "opacity-50")} style={{ fontFamily: "var(--font-urdu)", lineHeight: 1.4 }}>
+      {/* No Nastaliq here: in English mode this label would force the 233 KB Urdu font to
+          download on every page. System Arabic glyphs are used until Urdu is switched on. */}
+      <span className={cn(lang === "ur" && "opacity-50")} style={{ lineHeight: 1.4 }}>
         اردو
       </span>
       <span aria-hidden className="opacity-40">

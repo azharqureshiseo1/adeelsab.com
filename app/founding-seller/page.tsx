@@ -55,7 +55,7 @@ export default function FoundingSellerPage() {
                 </dd>
               </div>
             </dl>
-            <p className="text-small mt-5 border-t border-ink-200 pt-4 text-ink-400">
+            <p className="text-small mt-5 border-t border-ink-200 pt-4 text-ink-500">
               <T v={hero.counterNote} />
             </p>
           </Card>

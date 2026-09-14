@@ -27,7 +27,7 @@ export function MobileNav() {
       }
     >
       <nav aria-label="Mobile">
-        <p className="text-small mb-2 font-semibold tracking-wide text-ink-400 uppercase">
+        <p className="text-small mb-2 font-semibold tracking-wide text-ink-500 uppercase">
           <T v={nav.sellWithUs} />
         </p>
         <ul className="space-y-1">

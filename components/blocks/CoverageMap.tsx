@@ -105,7 +105,7 @@ export function CoverageMap({ className, showList = true }: { className?: string
           <span className="inline-block size-3 shrink-0 rounded-full bg-brand-500" aria-hidden />
           <T v={coverage.legendFleet} />
           {fleetCities.length === 0 && (
-            <span className="text-ink-400">
+            <span className="text-ink-500">
               — <T v={coverage.fleetPending} />
             </span>
           )}
@@ -114,7 +114,7 @@ export function CoverageMap({ className, showList = true }: { className?: string
           <span className="inline-block size-3 shrink-0 rounded-sm bg-ink-200" aria-hidden />
           <T v={coverage.legend3pl} />
         </p>
-        <p className="text-ink-400">
+        <p className="text-ink-500">
           <T v={coverage.mapNote} />
         </p>
       </figcaption>
@@ -125,7 +125,7 @@ export function CoverageMap({ className, showList = true }: { className?: string
           </summary>
           <ul className="mt-3 grid grid-cols-2 gap-x-4 gap-y-1 text-ink-500 sm:grid-cols-3">
             {cities.map((c) => (
-              <li key={c.slug} className={cn(c.ownFleet && "font-semibold text-brand-600")}>
+              <li key={c.slug} className={cn(c.ownFleet && "font-semibold text-brand-700")}>
                 <T v={{ en: c.name, ur: c.ur }} />
               </li>
             ))}

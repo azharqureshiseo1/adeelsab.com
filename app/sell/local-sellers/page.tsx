@@ -27,7 +27,7 @@ function Objection({ n, q, title, id, children }: { n: number; q: L; title: L; i
   return (
     <div className="grid gap-6 border-t border-ink-200 py-12 first:border-t-0 first:pt-0 md:py-16 lg:grid-cols-[1fr_2fr] lg:gap-12">
       <div>
-        <span className="latin text-small font-bold text-brand-600">0{n}</span>
+        <span className="latin text-small font-bold text-brand-700">0{n}</span>
         <p className="mt-2 text-lg font-medium text-ink-500 italic">
           <T v={q} />
         </p>
@@ -42,7 +42,7 @@ function Objection({ n, q, title, id, children }: { n: number; q: L; title: L; i
 
 function GuideLink({ href, label }: { href: string; label: L }) {
   return (
-    <Link href={href} className="mt-5 inline-flex min-h-11 items-center gap-2 font-semibold text-brand-600 hover:underline">
+    <Link href={href} className="mt-5 inline-flex min-h-11 items-center gap-2 font-semibold text-brand-700 hover:underline">
       <FileText size={18} strokeWidth={1.75} aria-hidden />
       <T v={label} />
       <ArrowRight size={16} className="flip-rtl" aria-hidden />
@@ -83,7 +83,7 @@ export default function LocalSellersPage() {
 
       <Section labelledBy="objections-title">
         <div className="max-w-2xl">
-          <p className="text-small mb-3 font-semibold tracking-wide text-brand-600 uppercase">
+          <p className="text-small mb-3 font-semibold tracking-wide text-brand-700 uppercase">
             <T v={ls.objectionsIntro.eyebrow} />
           </p>
           <h2 id="objections-title" className="h2">
@@ -150,7 +150,7 @@ export default function LocalSellersPage() {
             <ol className="grid gap-4 sm:grid-cols-3">
               {ls.money.schedule.map((s, i) => (
                 <li key={s.title.en} className="rounded-card bg-ink-50 p-5">
-                  <span className="latin inline-flex size-8 items-center justify-center rounded-full bg-white text-sm font-bold text-brand-600 shadow-soft">
+                  <span className="latin inline-flex size-8 items-center justify-center rounded-full bg-white text-sm font-bold text-brand-700 shadow-soft">
                     {i + 1}
                   </span>
                   <p className="mt-3 font-semibold text-ink-900">
@@ -197,7 +197,7 @@ export default function LocalSellersPage() {
 
       {/* Onboarding steps */}
       <Section tone="muted" labelledBy="onboarding-title">
-        <p className="text-small mb-3 font-semibold tracking-wide text-brand-600 uppercase">
+        <p className="text-small mb-3 font-semibold tracking-wide text-brand-700 uppercase">
           <T v={ls.onboarding.eyebrow} />
         </p>
         <h2 id="onboarding-title" className="h2 max-w-2xl">
@@ -206,7 +206,7 @@ export default function LocalSellersPage() {
         <ol className="mt-10 grid gap-4 md:grid-cols-5">
           {ls.onboarding.steps.map((s, i) => (
             <li key={s.title.en} className="reveal rounded-card border border-ink-200 bg-white p-5">
-              <span className="latin inline-flex size-9 items-center justify-center rounded-full border-2 border-brand-500 font-bold text-brand-600">
+              <span className="latin inline-flex size-9 items-center justify-center rounded-full border-2 border-brand-500 font-bold text-brand-700">
                 {i + 1}
               </span>
               <p className="mt-4 font-semibold text-ink-900">

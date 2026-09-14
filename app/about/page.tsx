@@ -36,7 +36,7 @@ export default function AboutPage() {
             </p>
           </div>
           <Card emphasis className="self-start">
-            <p className="text-small font-semibold tracking-wide text-brand-600 uppercase">
+            <p className="text-small font-semibold tracking-wide text-brand-700 uppercase">
               <T v={a.mission.title} />
             </p>
             <p className="mt-3 text-2xl leading-snug font-bold text-ink-900">
@@ -104,7 +104,7 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <Link href="/careers" className="mt-8 inline-flex min-h-11 items-center gap-1.5 font-semibold text-brand-600">
+            <Link href="/careers" className="mt-8 inline-flex min-h-11 items-center gap-1.5 font-semibold text-brand-700">
               <T v={a.team.careers} />
               <ArrowRight size={16} className="flip-rtl" aria-hidden />
             </Link>

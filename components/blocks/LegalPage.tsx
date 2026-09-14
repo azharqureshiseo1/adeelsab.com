@@ -21,7 +21,7 @@ export async function LegalPage({ slug }: { slug: LegalSlug }) {
   return (
     <>
       <div className="border-b border-[#F5DFB5] bg-[#FFF6E5]">
-        <Container className="flex items-center gap-3 py-3 text-sm font-medium text-warning">
+        <Container className="flex items-center gap-3 py-3 text-sm font-medium text-[#8A5300]">
           <TriangleAlert size={18} className="shrink-0" aria-hidden />
           <p>
             <T v={legal.draftBanner} /> <T v={legal.officialNote} />

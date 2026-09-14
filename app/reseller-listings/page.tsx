@@ -39,7 +39,7 @@ export default function ResellerListingsPage() {
                     <IconTile>
                       <Icon size={24} strokeWidth={1.75} />
                     </IconTile>
-                    <span className="latin text-sm font-bold text-brand-600">0{i + 1}</span>
+                    <span className="latin text-sm font-bold text-brand-700">0{i + 1}</span>
                   </div>
                   <h3 className="h4 mt-4">
                     <T v={s.title} />

@@ -27,7 +27,7 @@ function Toc({ doc }: { doc: LoadedDoc }) {
       <ol className="mt-3 space-y-2 text-[15px]">
         {items.map((t) => (
           <li key={t.id}>
-            <a href={`#${t.id}`} className="text-ink-700 hover:text-brand-600">
+            <a href={`#${t.id}`} className="text-ink-700 hover:text-brand-700">
               {t.text}
             </a>
           </li>

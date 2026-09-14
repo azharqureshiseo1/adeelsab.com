@@ -31,7 +31,7 @@ export function CommissionTable({ showFounding = true }: { showFounding?: boolea
       </Table>
       {showFounding && (
         <p className="mt-3 flex gap-2 rounded-xl bg-brand-50 px-4 py-3 text-[15px] text-ink-800">
-          <BadgeCheck size={20} strokeWidth={1.75} className="mt-0.5 shrink-0 text-brand-600" aria-hidden />
+          <BadgeCheck size={20} strokeWidth={1.75} className="mt-0.5 shrink-0 text-brand-700" aria-hidden />
           <span>
             <T v={commissionTable.foundingNote} vars={factVars} />
           </span>

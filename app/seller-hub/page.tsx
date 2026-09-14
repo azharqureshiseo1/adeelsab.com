@@ -57,7 +57,7 @@ export default async function SellerHubIndex() {
                       <li key={slug}>
                         <Link href={`/seller-hub/${slug}`} className="group flex items-start justify-between gap-3 py-3.5">
                           <span>
-                            <span className="block font-semibold text-ink-900 group-hover:text-brand-600">
+                            <span className="block font-semibold text-ink-900 group-hover:text-brand-700">
                               <T v={{ en: doc.en.meta.title, ur: doc.ur.meta.title }} />
                             </span>
                             <span className="text-small text-ink-500">
@@ -69,7 +69,7 @@ export default async function SellerHubIndex() {
                               </span>
                             </span>
                           </span>
-                          <ArrowRight size={18} className="flip-rtl mt-1 shrink-0 text-ink-400 group-hover:text-brand-600" aria-hidden />
+                          <ArrowRight size={18} className="flip-rtl mt-1 shrink-0 text-ink-400 group-hover:text-brand-700" aria-hidden />
                         </Link>
                       </li>
                     );

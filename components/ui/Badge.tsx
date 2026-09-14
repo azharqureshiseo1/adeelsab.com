@@ -3,10 +3,10 @@ import { cn } from "@/lib/utils";
 type Tone = "brand" | "success" | "neutral" | "warning" | "dark";
 
 const tones: Record<Tone, string> = {
-  brand: "bg-brand-50 text-brand-600 border-brand-100",
-  success: "bg-[#E8F5EE] text-success border-[#CDEBDA]",
+  brand: "bg-brand-50 text-brand-700 border-brand-100",
+  success: "bg-[#E8F5EE] text-[#0B6B39] border-[#CDEBDA]",
   neutral: "bg-ink-100 text-ink-700 border-ink-200",
-  warning: "bg-[#FFF6E5] text-warning border-[#F5DFB5]",
+  warning: "bg-[#FFF6E5] text-[#8A5300] border-[#F5DFB5]",
   dark: "bg-ink-800 text-ink-100 border-ink-700",
 };
 
