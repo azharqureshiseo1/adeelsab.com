@@ -1308,3 +1308,227 @@ export const delivery = {
   faqTitle: l("Delivery questions", "ڈیلیوری سے متعلق سوالات"),
   ctaTitle: l("Let us handle delivery. You handle the selling.", "ڈیلیوری ہم سنبھالیں۔ آپ فروخت سنبھالیں۔"),
 };
+
+/* ───────────────────────────── Pricing ───────────────────────────── */
+
+export const pricing = {
+  meta: {
+    title: "Pricing & Commission",
+    description:
+      "Every fee AdeelSab charges sellers: commission by category, shipping, COD, RTO and payout fees. If it isn't listed here, we don't charge it.",
+  },
+  hero: {
+    eyebrow: l("Pricing", "قیمتیں"),
+    title: l("Every fee, on one page", "ہر فیس، ایک صفحے پر"),
+    lead: l(
+      "No setup costs hidden in the agreement, no surprise deductions in your payout. This is the complete list of what selling on AdeelSab costs.",
+      "نہ معاہدے میں چھپے سیٹ اپ اخراجات، نہ ادائیگی میں اچانک کٹوتیاں۔ AdeelSab پر فروخت کے تمام اخراجات کی مکمل فہرست یہ ہے۔",
+    ),
+  },
+  commissionTitle: l("Commission by category", "کیٹیگری کے حساب سے کمیشن"),
+  feesTitle: l("All fees", "تمام فیسیں"),
+  feesHead: [l("Fee", "فیس"), l("Amount", "رقم"), l("When it applies", "کب لاگو ہوتی ہے")],
+  fees: [
+    {
+      name: l("Commission", "کمیشن"),
+      amount: l("By category — see table above", "کیٹیگری کے مطابق — اوپر ٹیبل دیکھیں"),
+      when: l("On each order", "ہر آرڈر پر"),
+    },
+    {
+      name: l("Listing fee", "لسٹنگ فیس"),
+      amount: l("{listingFee}", "{listingFee}"),
+      when: l("Per product listed", "فی لسٹڈ پروڈکٹ"),
+    },
+    {
+      name: l("Shipping", "شپنگ"),
+      amount: l("Weight-banded rate card", "وزن کے حساب سے ریٹ کارڈ"),
+      when: l("Only when you choose to pay shipping (free or split delivery)", "صرف جب آپ شپنگ خود دینا چنیں (مفت یا آدھی ڈیلیوری)"),
+      href: "/delivery#rates",
+    },
+    {
+      name: l("COD handling", "COD ہینڈلنگ"),
+      amount: l("{codFee}", "{codFee}"),
+      when: l("Per cash-on-delivery order", "فی کیش آن ڈیلیوری آرڈر"),
+    },
+    {
+      name: l("RTO charge", "RTO چارج"),
+      amount: l("{rtoCharge}", "{rtoCharge}"),
+      when: l("Per parcel returned to you undelivered", "فی پارسل جو بغیر ڈیلیوری آپ کو واپس آئے"),
+      href: "/delivery#rto",
+    },
+    {
+      name: l("Payout transfer", "ادائیگی ٹرانسفر"),
+      amount: l("{payoutFee}", "{payoutFee}"),
+      when: l("Per payout to bank, JazzCash or Easypaisa", "بینک، JazzCash یا Easypaisa میں فی ادائیگی"),
+    },
+  ],
+  noOther: l("There are no other fees.", "اس کے علاوہ کوئی فیس نہیں۔"),
+  noOtherBody: l(
+    "No monthly subscription and no registration fee. If a fee is not on this page, we don't charge it.",
+    "نہ ماہانہ سبسکرپشن، نہ رجسٹریشن فیس۔ جو فیس اس صفحے پر نہیں، وہ ہم نہیں لیتے۔",
+  ),
+  payoutTitle: l("How and when you're paid", "ادائیگی کیسے اور کب ہوتی ہے"),
+  payoutBody: l(
+    "Payouts are released {payoutDays} days after delivery, with a minimum payout of {minPayout}.",
+    "ادائیگیاں ڈیلیوری کے {payoutDays} دن بعد جاری ہوتی ہیں، کم از کم ادائیگی {minPayout}۔",
+  ),
+  payoutCta: l("Payout details", "ادائیگی کی تفصیلات"),
+  faqTitle: l("Pricing questions", "قیمتوں سے متعلق سوالات"),
+};
+
+/* ───────────────────────────── Payouts ───────────────────────────── */
+
+export const payouts = {
+  meta: {
+    title: "Seller Payouts",
+    description:
+      "When and how AdeelSab pays sellers: payout schedule, bank, JazzCash and Easypaisa, minimum payout threshold, deductions and the dispute hold policy.",
+  },
+  hero: {
+    eyebrow: l("Payouts", "ادائیگیاں"),
+    title: l("Know exactly when your money arrives", "ٹھیک ٹھیک جانیں آپ کے پیسے کب آئیں گے"),
+    lead: l(
+      "A fixed schedule, the account of your choice, and a clear statement of every deduction.",
+      "طے شدہ شیڈول، آپ کی پسند کا اکاؤنٹ، اور ہر کٹوتی کی واضح تفصیل۔",
+    ),
+  },
+  schedule: {
+    eyebrow: l("Schedule", "شیڈول"),
+    title: l("From delivery to your account", "ڈیلیوری سے آپ کے اکاؤنٹ تک"),
+  },
+  summary: [
+    { label: l("Payout cycle", "ادائیگی سائیکل"), value: l("{payoutDays} days after delivery", "ڈیلیوری کے {payoutDays} دن بعد") },
+    { label: l("Minimum payout", "کم از کم ادائیگی"), value: l("{minPayout}", "{minPayout}") },
+    { label: l("COD remittance", "COD رقم کی منتقلی"), value: l("{codDays} days after delivery", "ڈیلیوری کے {codDays} دن بعد") },
+    { label: l("Transfer fee", "ٹرانسفر فیس"), value: l("{payoutFee}", "{payoutFee}") },
+  ],
+  threshold: {
+    title: l("Below the minimum?", "کم از کم رقم سے کم؟"),
+    body: l(
+      "If your balance is below {minPayout} on a payout day, it carries over and is added to your next payout. Nothing is lost.",
+      "اگر ادائیگی کے دن آپ کا بیلنس {minPayout} سے کم ہو تو اگلی ادائیگی میں شامل ہو جاتا ہے۔ کچھ ضائع نہیں ہوتا۔",
+    ),
+  },
+  deductions: {
+    title: l("What's deducted from a payout", "ادائیگی سے کیا کٹتا ہے"),
+    items: [
+      l("Commission for your category", "آپ کی کیٹیگری کا کمیشن"),
+      l("Shipping — only if you offer free or split delivery", "شپنگ — صرف اگر آپ مفت یا آدھی ڈیلیوری دیں"),
+      l("COD handling fee, if applicable", "COD ہینڈلنگ فیس، اگر لاگو ہو"),
+      l("RTO charges for parcels returned undelivered", "بغیر ڈیلیوری واپس آنے والے پارسلز کے RTO چارجز"),
+    ],
+    link: l("Every fee is listed on the pricing page", "ہر فیس قیمتوں کے صفحے پر درج ہے"),
+  },
+  hold: {
+    title: l("Disputes and holds", "تنازعات اور رقم روکنا"),
+    body: l(
+      "If a customer opens a return or dispute on an order, only that order's earnings are held while it's resolved — for up to {holdDays} days. The rest of your payout is released on schedule.",
+      "اگر گاہک کسی آرڈر پر واپسی یا تنازعہ کھولے تو صرف اس آرڈر کی کمائی حل ہونے تک روکی جاتی ہے — زیادہ سے زیادہ {holdDays} دن۔ باقی ادائیگی شیڈول پر جاری ہوتی ہے۔",
+    ),
+    link: l("How returns and disputes work", "واپسی اور تنازعات کیسے کام کرتے ہیں"),
+  },
+  faqTitle: l("Payout questions", "ادائیگی سے متعلق سوالات"),
+};
+
+/* ───────────────────────────── Reseller-Enabled Listings ───────────────────────────── */
+
+export const resellerListings = {
+  meta: {
+    title: "Reseller-Enabled Listings",
+    description:
+      "How Reseller-Enabled Listings work on AdeelSab: sellers opt in and set a margin; resellers see every margin upfront and sell with zero inventory.",
+  },
+  hero: {
+    eyebrow: l("Reseller-Enabled Listings", "ری سیلر اینیبلڈ لسٹنگز"),
+    title: l("Sellers set the margin. Resellers see it upfront.", "مارجن سیلر طے کرے۔ ری سیلر کو پہلے سے معلوم۔"),
+    lead: l(
+      "A simple agreement between two people who never have to negotiate: the seller consents to reselling and names a margin, the reseller finds the customer.",
+      "دو لوگوں کے درمیان سادہ معاہدہ جنہیں مول تول نہیں کرنا پڑتا: سیلر ری سیلنگ کی اجازت دے کر مارجن طے کرتا ہے، ری سیلر گاہک ڈھونڈتا ہے۔",
+    ),
+  },
+  consent: {
+    title: l("Nothing is resold without the seller's consent", "سیلر کی اجازت کے بغیر کچھ ری سیل نہیں ہوتا"),
+    body: l(
+      "Reselling is switched on per listing, by the seller. Listings that aren't reseller-enabled can't be shared or sold by resellers.",
+      "ری سیلنگ ہر لسٹنگ پر سیلر خود آن کرتا ہے۔ جو لسٹنگ ری سیلر اینیبلڈ نہ ہو اسے ری سیلرز شیئر یا فروخت نہیں کر سکتے۔",
+    ),
+  },
+  stepsTitle: l("How it works, in three steps", "یہ کیسے کام کرتا ہے، تین قدموں میں"),
+  steps: [
+    {
+      title: l("Seller enables the listing", "سیلر لسٹنگ اینیبل کرتا ہے"),
+      body: l("The seller switches on reselling for a product and sets the margin they'll share.", "سیلر کسی پروڈکٹ پر ری سیلنگ آن کر کے مارجن طے کرتا ہے۔"),
+    },
+    {
+      title: l("Reseller sells it", "ری سیلر بیچتا ہے"),
+      body: l("Resellers see the published margin, share the product and place orders for their customers.", "ری سیلرز شائع شدہ مارجن دیکھ کر پروڈکٹ شیئر کرتے ہیں اور اپنے گاہکوں کے آرڈر لگاتے ہیں۔"),
+    },
+    {
+      title: l("Delivered, both paid", "ڈیلیور، دونوں کو ادائیگی"),
+      body: l(
+        "We deliver and collect payment. The seller is paid the item price minus commission and margin; the reseller is paid the margin.",
+        "ہم ڈیلیور کر کے رقم وصول کرتے ہیں۔ سیلر کو پروڈکٹ قیمت، کمیشن اور مارجن منہا کر کے ملتی ہے؛ ری سیلر کو مارجن۔",
+      ),
+    },
+  ],
+  forSellers: {
+    title: l("For sellers", "سیلرز کے لیے"),
+    points: [
+      l("Opt in per product — you stay in control of what's resold", "ہر پروڈکٹ پر خود فیصلہ — کیا ری سیل ہو، آپ کے ہاتھ میں"),
+      l("Set the margin once; no one can negotiate it down", "مارجن ایک بار طے کریں؛ کوئی کم نہیں کروا سکتا"),
+      l("Reach customers you'd never reach yourself", "ان گاہکوں تک پہنچیں جن تک خود نہ پہنچ پاتے"),
+      l("Pay the margin only on delivered orders", "مارجن صرف ڈیلیور شدہ آرڈرز پر"),
+      l("Switch reselling off at any time", "ری سیلنگ جب چاہیں بند کریں"),
+    ],
+    cta: l("Join as a local seller", "بطور لوکل سیلر شامل ہوں"),
+  },
+  forResellers: {
+    title: l("For resellers", "ری سیلرز کے لیے"),
+    points: [
+      l("Every margin is published before you share a product", "پروڈکٹ شیئر کرنے سے پہلے ہر مارجن شائع"),
+      l("No negotiation with sellers", "سیلرز سے کوئی مول تول نہیں"),
+      l("No inventory and no money upfront", "نہ اسٹاک، نہ پیشگی رقم"),
+      l("Delivery and cash collection handled for you", "ڈیلیوری اور کیش وصولی ہماری ذمہ داری"),
+      l("Margins paid on a fixed schedule", "مارجن طے شدہ شیڈول پر ادا"),
+    ],
+    cta: l("Join the reseller waitlist", "ری سیلر ویٹ لسٹ میں شامل ہوں"),
+  },
+};
+
+/* ───────────────────────────── How it works ───────────────────────────── */
+
+export const howItWorks = {
+  meta: {
+    title: "How AdeelSab Works",
+    description:
+      "How selling on AdeelSab works, step by step: register, list products (or we list them for you), receive orders, and get paid on a fixed schedule.",
+  },
+  hero: {
+    eyebrow: l("How it works", "یہ کیسے کام کرتا ہے"),
+    title: l("You sell. We deliver, collect and pay.", "آپ بیچیں۔ ڈیلیوری، وصولی اور ادائیگی ہماری۔"),
+    lead: l(
+      "AdeelSab is a marketplace made up entirely of independent sellers. Here's how an order moves from your shelf to your customer — and how the money moves back to you.",
+      "AdeelSab مکمل طور پر آزاد سیلرز پر مشتمل مارکیٹ پلیس ہے۔ دیکھیں آرڈر آپ کی شیلف سے گاہک تک کیسے جاتا ہے — اور رقم آپ تک کیسے واپس آتی ہے۔",
+    ),
+  },
+  sellerFlowTitle: l("For local sellers", "لوکل سیلرز کے لیے"),
+  resellerFlowTitle: l("For resellers (after the catalogue opens)", "ری سیلرز کے لیے (کیٹلاگ کھلنے کے بعد)"),
+  splitTitle: l("Who does what", "کون کیا کرتا ہے"),
+  splitHead: [l("Task", "کام"), l("You", "آپ"), l("AdeelSab", "AdeelSab")],
+  split: [
+    { task: l("Stock and pricing", "اسٹاک اور قیمت"), you: true, us: false },
+    { task: l("Product listings", "پروڈکٹ لسٹنگز"), you: false, us: true, note: l("Free for Founding Sellers", "فاؤنڈنگ سیلرز کے لیے مفت") },
+    { task: l("Packing the order", "آرڈر پیک کرنا"), you: true, us: false },
+    { task: l("Pickup and delivery", "پک اپ اور ڈیلیوری"), you: false, us: true },
+    { task: l("Cash collection (COD)", "کیش وصولی (COD)"), you: false, us: true },
+    { task: l("Customer support for delivery", "ڈیلیوری سے متعلق کسٹمر سپورٹ"), you: false, us: true },
+    { task: l("Payouts", "ادائیگیاں"), you: false, us: true },
+  ],
+  links: [
+    { href: "/delivery", label: l("Delivery & RTO", "ڈیلیوری اور RTO") },
+    { href: "/pricing", label: l("Pricing & commission", "قیمتیں اور کمیشن") },
+    { href: "/payouts", label: l("Payouts", "ادائیگیاں") },
+    { href: "/reseller-listings", label: l("Reseller-Enabled Listings", "ری سیلر اینیبلڈ لسٹنگز") },
+  ],
+  linksTitle: l("Go deeper", "مزید تفصیل"),
+};

@@ -22,6 +22,7 @@ export const facts = {
   listingFee: todo("Listing fee per product (Rs)"),
   holdPeriodDays: todo("Dispute hold period (days)"),
   codFee: todo("COD handling fee, if any"),
+  payoutFee: todo("Payout / transfer fee, if any"),
   deliveryAttempts: todo("Delivery attempts before RTO"),
   returnWindowDays: todo("Customer return window (days)"),
   returnShippingPayer: todo("Who pays return shipping for customer returns"),
