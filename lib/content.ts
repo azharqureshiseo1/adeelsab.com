@@ -60,7 +60,21 @@ const registry: Record<Collection, Record<string, Record<Locale, Loader>>> = {
       ur: () => import("@/content/seller-hub/ntn-and-tax-basics.ur.mdx"),
     },
   },
-  blog: {},
+  // Newest first — this order is used on the blog index.
+  blog: {
+    "no-hidden-fees": {
+      en: () => import("@/content/blog/no-hidden-fees.en.mdx"),
+      ur: () => import("@/content/blog/no-hidden-fees.ur.mdx"),
+    },
+    "cash-on-delivery-what-sellers-should-know": {
+      en: () => import("@/content/blog/cash-on-delivery-what-sellers-should-know.en.mdx"),
+      ur: () => import("@/content/blog/cash-on-delivery-what-sellers-should-know.ur.mdx"),
+    },
+    "why-local-sellers-first": {
+      en: () => import("@/content/blog/why-local-sellers-first.en.mdx"),
+      ur: () => import("@/content/blog/why-local-sellers-first.ur.mdx"),
+    },
+  },
   legal: {
     privacy: {
       en: () => import("@/content/legal/privacy.en.mdx"),
