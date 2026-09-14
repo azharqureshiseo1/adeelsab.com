@@ -63,20 +63,38 @@ export function CoverageMap({ className, showList = true }: { className?: string
                 <circle cx={x} cy={y} r="3.5" fill="var(--color-ink-500)" stroke="#fff" strokeWidth="1" />
               )}
               {c.major && (
-                <text
-                  x={c.labelLeft ? x - 8 : x + 8}
-                  y={y + 4}
-                  textAnchor={c.labelLeft ? "end" : "start"}
-                  fontSize="12"
-                  fontWeight="600"
-                  fill="var(--color-ink-800)"
-                  style={{ fontFamily: "var(--font-sans)" }}
-                  paintOrder="stroke"
-                  stroke="#F1F4F7"
-                  strokeWidth="3"
-                >
-                  {c.name}
-                </text>
+                <>
+                  <text
+                    className="l-en"
+                    x={c.labelLeft ? x - 8 : x + 8}
+                    y={y + 4}
+                    textAnchor={c.labelLeft ? "end" : "start"}
+                    fontSize="12"
+                    fontWeight="600"
+                    fill="var(--color-ink-800)"
+                    style={{ fontFamily: "var(--font-sans)" }}
+                    paintOrder="stroke"
+                    stroke="#F1F4F7"
+                    strokeWidth="3"
+                  >
+                    {c.name}
+                  </text>
+                  <text
+                    className="l-ur"
+                    x={c.labelLeft ? x - 8 : x + 8}
+                    y={y + 5}
+                    textAnchor={c.labelLeft ? "end" : "start"}
+                    direction="ltr"
+                    fontSize="13"
+                    fill="var(--color-ink-800)"
+                    style={{ fontFamily: "var(--font-urdu)" }}
+                    paintOrder="stroke"
+                    stroke="#F1F4F7"
+                    strokeWidth="3"
+                  >
+                    {c.ur}
+                  </text>
+                </>
               )}
             </g>
           );

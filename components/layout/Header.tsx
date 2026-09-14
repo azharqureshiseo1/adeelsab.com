@@ -19,8 +19,12 @@ export function Header() {
       </a>
       <Container className="flex h-16 items-center gap-4 md:h-[72px]">
         <Link href="/" aria-label="AdeelSab home" className="shrink-0">
-          <Logo height={30} className="md:hidden" priority />
-          <Logo height={36} className="hidden md:block" priority />
+          <span className="block md:hidden">
+            <Logo height={30} priority />
+          </span>
+          <span className="hidden md:block">
+            <Logo height={36} priority />
+          </span>
         </Link>
 
         <nav aria-label="Main" className="ms-6 hidden items-center gap-0.5 whitespace-nowrap xl:flex">
@@ -48,10 +52,15 @@ export function Header() {
         </nav>
 
         <div className="ms-auto flex items-center gap-2">
-          <LangToggle className="hidden sm:inline-flex" />
-          <Button href="/founding-seller" className="hidden md:inline-flex">
-            <T v={common.ctaFounding} />
-          </Button>
+          {/* Visibility lives on wrappers: `hidden` on the components would conflict with their own inline-flex. */}
+          <div className="hidden sm:block">
+            <LangToggle />
+          </div>
+          <div className="hidden md:block">
+            <Button href="/founding-seller">
+              <T v={common.ctaFounding} />
+            </Button>
+          </div>
           <MobileNav />
         </div>
       </Container>

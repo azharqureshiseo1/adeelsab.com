@@ -202,7 +202,7 @@ export default function DeliveryPage() {
               ))}
             </ul>
           </div>
-          <div>
+          <div className="min-w-0">
             <h3 className="h4">
               <T v={d.rto.chargeTitle} />
             </h3>

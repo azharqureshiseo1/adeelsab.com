@@ -74,6 +74,11 @@
   .tabular {
     font-variant-numeric: tabular-nums;
   }
+  /* Grid children may shrink below their content, so wide tables scroll inside
+     their own container instead of widening the page. */
+  .grid > * {
+    min-width: 0;
+  }
 }
 
 /* ── Type scale: desktop / mobile ─────────────────────────────── */
@@ -147,6 +152,14 @@ html[lang="ur"] body,
 .font-urdu {
   font-family: var(--font-urdu);
   line-height: 2;
+}
+/* Nastaliq needs far more leading than Latin. Unlayered, so it beats Tailwind's
+   text-size utilities, which set their own line-height on each element. */
+html[lang="ur"] body :is(p, li, dd, dt, td, th, label, summary, figcaption, address, blockquote, input, select, textarea) {
+  line-height: 2;
+}
+html[lang="ur"] body :is(a, button) {
+  line-height: 1.8;
 }
 html[lang="ur"] h1,
 html[lang="ur"] h2,
