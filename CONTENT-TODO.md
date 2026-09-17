@@ -55,16 +55,25 @@ These came up while writing the pages. They are policy numbers the site must sta
 
 **Every operational value on the site is now filled.** The only remaining `TODO:` markers are the three legal ones in section C (jurisdiction city, privacy retention/response time, full Seller Agreement text), plus the Urdu review in section E.
 
-## C. Legal (needs a lawyer)
+## C. Legal
 
-All three legal pages show a **"Draft pending legal review"** banner. Remove it from `components/blocks/LegalPage.tsx` once they're finalised.
+The three legal documents were replaced on 17 September 2026 with the owner-supplied
+drafts. They now describe the marketplace, not just the waitlist. The **"Draft pending legal
+review" banner is still shown** on all three pages (`components/blocks/LegalPage.tsx`) — remove
+it only once a lawyer has signed them off and the values below are filled.
 
-| Placeholder | Files |
+| Placeholder | Where |
 |---|---|
-| ✅ Registered company name: ADEELSAB (PRIVATE) LIMITED | `facts.ts` → `legalName`; `content/legal/privacy.*.mdx`, `terms.*.mdx` |
-| Response time and data retention period (the contact email is filled) | `content/legal/privacy.*.mdx` |
-| City for court jurisdiction | `content/legal/terms.*.mdx` |
-| **Full Seller Agreement text** | `content/legal/seller-agreement.*.mdx` (the page is currently a summary of what the agreement covers) |
+| ✅ Registered company name: ADEELSAB (PRIVATE) LIMITED | `facts.ts` → `legalName`; all three documents |
+| ✅ City for court jurisdiction: **Lahore** | `terms.*.mdx` §19, `seller-agreement.*.mdx` §19.2 |
+| ✅ Full Seller Agreement text | `content/legal/seller-agreement.*.mdx` |
+| ✅ Privacy retention and response time | Rewritten as a purpose-based retention clause (§8) and "as promptly as reasonably possible" (§9) |
+| **Liability cap: how many months of payments, and the minimum PKR figure** | `terms.*.mdx` §16.2 |
+| **Liability cap: how many months of commission** | `seller-agreement.*.mdx` §16 |
+| **Notice period for a fee change (days)** | `seller-agreement.*.mdx` §8.1 |
+| **Notice period to terminate for convenience (days)** | `seller-agreement.*.mdx` §17.2 |
+| **Non-circumvention period after termination (months)** | `seller-agreement.*.mdx` §18 |
+| Optional **arbitration clause** — the owner's draft offered one; it was left out, so disputes go to the Lahore courts. Add it if the lawyer wants it | `terms.*.mdx` §15.2, `seller-agreement.*.mdx` §19.2 |
 | Review all three documents end to end | Privacy, Terms, Seller Agreement, in EN and UR |
 
 ## D. Confirm operational wording
