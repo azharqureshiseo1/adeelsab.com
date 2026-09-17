@@ -25,7 +25,6 @@ export const common = {
   skipToContent: l("Skip to content", "مواد پر جائیں"),
   launchingSoon: l("Launching soon · Pakistan", "جلد لانچ ہو رہا ہے · پاکستان"),
   badgeNowOnboarding: l("Now onboarding", "رجسٹریشن جاری ہے"),
-  badgeWaitlist: l("Waitlist open", "ویٹ لسٹ کھلی ہے"),
   badgeComingSoon: l("Coming soon", "جلد آ رہا ہے"),
   badgePhase2: l("Phase 2", "دوسرا مرحلہ"),
   minRead: l("min read", "منٹ کا مطالعہ"),
@@ -284,7 +283,7 @@ export const home = {
       {
         key: "reseller",
         href: "/sell/resellers",
-        badge: common.badgeWaitlist,
+        badge: common.badgeComingSoon,
         title: l("Resellers", "ری سیلرز"),
         promise: l(
           "Earn by selling products you never have to stock.",
@@ -295,7 +294,7 @@ export const home = {
           l("Every margin published upfront", "ہر مارجن پہلے سے واضح"),
           l("Opens once the catalogue is ready", "کیٹلاگ تیار ہوتے ہی شروع"),
         ],
-        cta: l("Join the reseller waitlist", "ری سیلر ویٹ لسٹ میں شامل ہوں"),
+        cta: l("Notify me when it opens", "کھلنے پر مجھے اطلاع دیں"),
       },
       {
         key: "dropshipper",
