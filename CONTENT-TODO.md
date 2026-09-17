@@ -70,7 +70,7 @@ notice. The values below are still unfilled and render as visible TODO markers.
 | ✅ Full Seller Agreement text | `content/legal/seller-agreement.*.mdx` |
 | ✅ Privacy retention and response time | Rewritten as a purpose-based retention clause (§8) and "as promptly as reasonably possible" (§9) |
 | ✅ Liability cap in the Terms: **removed at the owner's request**. §16 now excludes indirect damages and preserves non-excludable liability, with no monetary cap. | `terms.*.mdx` §16 |
-| **Liability cap: how many months of commission** | `seller-agreement.*.mdx` §16 |
+| ✅ Liability cap in the Seller Agreement: **removed at the owner's request**, matching the Terms. §16 now excludes indirect damages and preserves non-excludable liability, with no monetary cap. | `seller-agreement.*.mdx` §16 |
 | ✅ Notice period for a fee change: **15 days** | `seller-agreement.*.mdx` §8.1 |
 | ✅ Notice period to terminate for convenience: **15 days** | `seller-agreement.*.mdx` §17.2 |
 | ✅ Non-circumvention period after termination: **2 months** | `seller-agreement.*.mdx` §18 |
