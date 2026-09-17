@@ -69,11 +69,11 @@ notice. The values below are still unfilled and render as visible TODO markers.
 | ✅ City for court jurisdiction: **Lahore** | `terms.*.mdx` §19, `seller-agreement.*.mdx` §19.2 |
 | ✅ Full Seller Agreement text | `content/legal/seller-agreement.*.mdx` |
 | ✅ Privacy retention and response time | Rewritten as a purpose-based retention clause (§8) and "as promptly as reasonably possible" (§9) |
-| **Liability cap: how many months of payments, and the minimum PKR figure** | `terms.*.mdx` §16.2 |
+| ✅ Liability cap in the Terms: **removed at the owner's request**. §16 now excludes indirect damages and preserves non-excludable liability, with no monetary cap. | `terms.*.mdx` §16 |
 | **Liability cap: how many months of commission** | `seller-agreement.*.mdx` §16 |
-| **Notice period for a fee change (days)** | `seller-agreement.*.mdx` §8.1 |
-| **Notice period to terminate for convenience (days)** | `seller-agreement.*.mdx` §17.2 |
-| **Non-circumvention period after termination (months)** | `seller-agreement.*.mdx` §18 |
+| ✅ Notice period for a fee change: **15 days** | `seller-agreement.*.mdx` §8.1 |
+| ✅ Notice period to terminate for convenience: **15 days** | `seller-agreement.*.mdx` §17.2 |
+| ✅ Non-circumvention period after termination: **2 months** | `seller-agreement.*.mdx` §18 |
 | Optional **arbitration clause** — the owner's draft offered one; it was left out, so disputes go to the Lahore courts. Add it if the lawyer wants it | `terms.*.mdx` §15.2, `seller-agreement.*.mdx` §19.2 |
 | Review all three documents end to end | Privacy, Terms, Seller Agreement, in EN and UR |
 

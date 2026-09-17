@@ -5,7 +5,7 @@ type Variant = "primary" | "secondary" | "ghost" | "onDark" | "whatsapp";
 type Size = "md" | "lg";
 
 const base =
-  "group relative inline-flex min-h-11 max-w-full items-center justify-center gap-2 rounded-full text-center font-semibold leading-snug sm:whitespace-nowrap transition-[background,color,box-shadow,border-color] duration-200 active:translate-y-px disabled:pointer-events-none disabled:opacity-60 [&>svg]:shrink-0";
+  "group relative inline-flex min-h-10 max-w-full items-center justify-center gap-2 rounded-full text-center font-semibold leading-snug sm:whitespace-nowrap transition-[background,color,box-shadow,border-color] duration-200 active:translate-y-px disabled:pointer-events-none disabled:opacity-60 [&>svg]:shrink-0";
 
 const variants: Record<Variant, string> = {
   // Primary: flat brand-500, gradient on hover (one of the ≤3 gradient uses per page).
@@ -18,8 +18,8 @@ const variants: Record<Variant, string> = {
 };
 
 const sizes: Record<Size, string> = {
-  md: "px-5 py-2.5 text-base",
-  lg: "px-7 py-3.5 text-[17px]",
+  md: "px-4 py-2 text-[15px]",
+  lg: "px-6 py-3 text-base",
 };
 
 type Common = { variant?: Variant; size?: Size; className?: string; children: React.ReactNode };
