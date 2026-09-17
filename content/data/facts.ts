@@ -31,7 +31,8 @@ export const facts = {
   // is the only fee on a sale, so neither has a fact or a row on the pricing page.
   /** No transfer fee on payouts. */
   payoutFee: known("Rs 0"),
-  deliveryAttempts: todo("Delivery attempts before RTO"),
+  /** Delivery attempts made before a parcel is returned to origin. */
+  deliveryAttempts: known("3"),
   /** Customer return window, in days. Return shipping is paid by the customer. */
   returnWindowDays: known("2"),
 

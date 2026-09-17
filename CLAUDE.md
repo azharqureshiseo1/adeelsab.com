@@ -77,6 +77,8 @@ npm run brand:assets   # rebuild public/brand, public/images, public/logos, icon
   counter on the page — it states the cap instead.
 - **No launch date is published** anywhere; Founding Sellers are told first, on WhatsApp.
 - **Resellers are now "Coming soon"**, like dropshippers (badge, nav, compare table, meta).
+- **3 delivery attempts before RTO.** Delivery times: Lahore same/next day, major cities 2–3 working
+  days, rest of Pakistan 3–4 working days (`shipping.ts` → `timelines`, now bilingual `L`).
 - **M&P** added as 4th national courier partner (home stat says "4").
 
 ## Open questions for the owner

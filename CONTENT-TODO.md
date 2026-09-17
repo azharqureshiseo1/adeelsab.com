@@ -46,14 +46,14 @@ These came up while writing the pages. They are policy numbers the site must sta
 | ✅ COD handling fee: **none** — the fee row and `codFee` were removed; the copy says there is no COD fee | — | — |
 | ✅ Payout / transfer fee: **Rs 0** | `facts.ts` → `payoutFee` | `/pricing`, `/payouts` |
 | ✅ Dispute hold period: **no fixed number of days published** — `holdPeriodDays` removed; the copy says the disputed order's earnings are held until it is resolved | — | — |
-| Delivery attempts before RTO | `facts.ts` → `deliveryAttempts` | `/delivery#rto` |
+| ✅ Delivery attempts before RTO: **3** | `facts.ts` → `deliveryAttempts` | `/delivery#rto` |
 | ✅ Customer return window: **2 days** | `facts.ts` → `returnWindowDays` | `/delivery#returns` |
 | ✅ Return shipping on customer returns: **paid by the customer** — written into the copy, `returnShippingPayer` removed | `content/site.ts` → `delivery.returns` | `/delivery#returns` |
 | ✅ Office hours: **9:00 am – 9:00 pm (PKT)** | `facts.ts` → `officeHours` | `/contact`, local sellers callback card |
-| Delivery time per zone | `shipping.ts` → `timelines` | `/delivery#times` |
+| ✅ Delivery time per zone: same city **same day to next day**, major cities **2–3 working days**, rest of Pakistan **3–4 working days** | `shipping.ts` → `timelines` (now bilingual `L`) | `/delivery#times` |
 | Open roles (optional; the page handles none) | `content/data/roles.ts` → `roles` | `/careers` |
 
-**Only two site values are still unanswered:** delivery attempts before RTO (`facts.ts` → `deliveryAttempts`) and delivery time per zone (`shipping.ts` → `timelines`). Everything else left below is legal or review work.
+**Every operational value on the site is now filled.** The only remaining `TODO:` markers are the three legal ones in section C (jurisdiction city, privacy retention/response time, full Seller Agreement text), plus the Urdu review in section E.
 
 ## C. Legal (needs a lawyer)
 

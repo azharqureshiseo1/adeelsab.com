@@ -122,7 +122,13 @@ export default function DeliveryPage() {
               <td className="text-ink-700">
                 <T v={z.note} />
               </td>
-              <td className="tabular">{timelines[z.key] ?? <TodoMark label={`Delivery time — ${z.label.en}`} />}</td>
+              <td className="tabular">
+                {timelines[z.key] ? (
+                  <T v={timelines[z.key]!} />
+                ) : (
+                  <TodoMark label={`Delivery time — ${z.label.en}`} />
+                )}
+              </td>
               <td>
                 <Check size={20} className="text-success" aria-label="Available" />
               </td>

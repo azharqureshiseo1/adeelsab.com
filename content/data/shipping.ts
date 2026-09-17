@@ -24,11 +24,11 @@ export const zones: Zone[] = [
   },
 ];
 
-/** Delivery time per zone. Strings like "4–8 hours" or "2–3 working days" once confirmed. */
-export const timelines: Record<Zone["key"], string | null> = {
-  intraCity: null,
-  majorCities: null,
-  restOfPakistan: null,
+/** Delivery time per zone. Same-city is our own fleet (Lahore), the rest go by courier. */
+export const timelines: Record<Zone["key"], L | null> = {
+  intraCity: { en: "Same day to next day", ur: "اسی دن یا اگلے دن" },
+  majorCities: { en: "2–3 working days", ur: "2–3 کاروباری دن" },
+  restOfPakistan: { en: "3–4 working days", ur: "3–4 کاروباری دن" },
 };
 
 export type WeightBand = { label: string; rates: Record<Zone["key"], number | null> };
