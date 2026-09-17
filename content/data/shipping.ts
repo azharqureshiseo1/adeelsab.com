@@ -41,11 +41,17 @@ export const rateCard: WeightBand[] = [
   { label: "Every parcel", rates: { intraCity: 350, majorCities: 350, restOfPakistan: 350 } },
 ];
 
-/** Return-to-origin charge, PKR per parcel, by zone. */
+/**
+ * Return-to-origin charge billed to the SELLER, PKR per parcel, by zone.
+ *
+ * Confirmed by the owner: the return charge is paid by the customer who placed the
+ * order, so the seller is charged Rs 0 in every zone. Do not soften or drop the RTO
+ * section because of this — the policy is stated plainly, it is not hidden.
+ */
 export const rtoCharges: Record<Zone["key"], number | null> = {
-  intraCity: null,
-  majorCities: null,
-  restOfPakistan: null,
+  intraCity: 0,
+  majorCities: 0,
+  restOfPakistan: 0,
 };
 
 /** In-house same-city delivery fleet. */

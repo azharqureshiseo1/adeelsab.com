@@ -20,10 +20,12 @@ export const facts = {
   payoutSchedule: known("Weekly"),
   /** Flat delivery charge per parcel, anywhere in Pakistan. Also set in shipping.ts → rateCard. */
   deliveryCharge: known("Rs 350"),
-  minPayout: todo("Minimum payout threshold (Rs)"),
-  codRemittanceDays: todo("COD remittance (days after delivery)"),
-  rtoCharge: todo("RTO charge per returned parcel"),
-  listingFee: todo("Listing fee per product (Rs)"),
+  minPayout: known("Rs 3,000"),
+  codRemittanceDays: known("9"),
+  /** The seller is not charged for RTO — the customer who placed the order pays the return charge. */
+  rtoCharge: known("Rs 0"),
+  /** No listing fee at all — commission is the only fee on a sale. */
+  listingFee: known("Rs 0"),
   holdPeriodDays: todo("Dispute hold period (days)"),
   codFee: todo("COD handling fee, if any"),
   payoutFee: todo("Payout / transfer fee, if any"),
@@ -32,9 +34,10 @@ export const facts = {
   returnShippingPayer: todo("Who pays return shipping for customer returns"),
 
   // Founding Seller Program
-  foundingCap: todo("Founding Seller cap (e.g. first 500)"),
+  foundingCap: known("100"),
   foundingCommissionMonths: todo("Reduced-commission period (months)"),
-  foundingCommissionRate: todo("Founding Seller commission rate"),
+  /** Founding Sellers pay no commission and no listing fee. */
+  foundingCommissionRate: known("0%"),
   /** Hand-updated. Do not wire to a live counter. */
   foundingRegistered: todo("Registered Founding Sellers (hand-updated)"),
 

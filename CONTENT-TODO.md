@@ -18,18 +18,18 @@ To find every remaining marker on the running site, open DevTools and run `docum
 |---|---|---|---|
 | 1 | **Target launch date** | `facts.ts` → `launchDate` | Founding Seller timeline and FAQ |
 | 2 | ✅ **Own-fleet cities at launch: Lahore** (add more by setting `ownFleet: true`) | `content/data/cities.ts` → `ownFleet` | Home capability band, delivery section, coverage map, FAQ |
-| 3 | **Commission % by category** (14 categories) | `content/data/categories.ts` → `commission` | Commission table on `/pricing` and `/sell/local-sellers` |
-| 4 | ✅ **Payout timeline: weekly** (written into the copy as "every week" / "ہر ہفتے"). Still needed: **minimum payout**. | `content/site.ts` (payout strings); `facts.ts` → `minPayout` | Home, FAQ, `/payouts`, `/pricing`, resellers |
+| 3 | ✅ **Commission: 8% at launch, same for all 14 categories** | `content/data/categories.ts` → `commission` | Commission table on `/pricing` and `/sell/local-sellers` |
+| 4 | ✅ **Payout timeline: weekly** (written into the copy as "every week" / "ہر ہفتے") and **minimum payout: Rs 3,000**. | `content/site.ts` (payout strings); `facts.ts` → `minPayout` | Home, FAQ, `/payouts`, `/pricing`, resellers |
 | 5 | ✅ **Delivery charge: flat Rs 350 per parcel**, every city. Confirm whether bulky or heavy parcels are an exception. | `facts.ts` → `deliveryCharge`; `shipping.ts` → `rateCard`; also written in `content/seller-hub/packaging-guide.*.mdx` | `/delivery#rates`, `/pricing`, FAQ, packaging guide |
-| 6 | **RTO charge structure** | `shipping.ts` → `rtoCharges` (per zone) **and** `facts.ts` → `rtoCharge` (summary text) | `/delivery#rto`, local sellers, pricing, FAQ |
-| 7 | **COD remittance schedule** | `facts.ts` → `codRemittanceDays` | `/delivery#cod`, `/payouts`, FAQ |
+| 6 | ✅ **RTO: paid by the customer who placed the order** — the seller is charged Rs 0 in every zone. | `shipping.ts` → `rtoCharges` (per zone) **and** `facts.ts` → `rtoCharge` (summary text) | `/delivery#rto`, local sellers, pricing, FAQ |
+| 7 | ✅ **COD remittance: 9 days after delivery** | `facts.ts` → `codRemittanceDays` | `/delivery#cod`, `/payouts`, FAQ |
 | 8 | ✅ **SECP registration no.** (0353167) and **FBR registration no.** (J816970) | `facts.ts` → `secpNumber`, `ntn` | Footer, home trust bar, Organization JSON-LD |
 | 9 | ✅ **Physical office address** (Office No 20, First floor, Takbeer Plaza, Al Faisal Town, Lahore) | `facts.ts` → `officeAddress` **and** legal MDX (privacy, terms) | Footer, trust bar, `/contact`, Organization JSON-LD |
 | 10 | ⚠️ **WhatsApp support number**: currently a **DEMO** number (+92 300 0000000). Replace before launch. | `facts.ts` → `whatsappDisplay` **and** env `NEXT_PUBLIC_WHATSAPP` (digits only). Then add `telephone` back to `components/SiteJsonLd.tsx`. | Trust bar, `/contact`, every WhatsApp link |
 | 11 | ✅ **Support email** (support@adeelsab.com, also used for business enquiries and privacy requests). Still needed: careers email. | `facts.ts` → `supportEmail`, `businessEmail`; legal MDX; `content/data/roles.ts` → `careersEmail` | `/contact`, `/careers`, legal pages |
 | 12 | ✅ **Founder name, photo, bio**: not shown on the site, by decision. The trust bar and `/about` show the registered company (ADEELSAB (PRIVATE) LIMITED) instead. | — | — |
 | 13 | ✅ **Social media**: Facebook, Instagram, TikTok, Threads (@adeelsab.pk) | `facts.ts` → `facebook`, `instagram`, `tiktok`, `threads` | Footer, Organization `sameAs` |
-| 14 | **Founding Seller Program**: cap, commission-holiday length, reduced rate, current registered count | `facts.ts` → `foundingCap`, `foundingCommissionMonths`, `foundingCommissionRate`, `foundingRegistered` | Home, `/founding-seller` (counter), commission table note |
+| 14 | ⚠️ **Founding Seller Program**: ✅ cap **100**, ✅ rate **0% commission + no listing fee**. Still needed: **how many months the 0% lasts** (`foundingCommissionMonths`) and the hand-updated **registered count** (`foundingRegistered`). | `facts.ts` → `foundingCap`, `foundingCommissionMonths`, `foundingCommissionRate`, `foundingRegistered` | Home, `/founding-seller` (counter), commission table note |
 | 15 | **Mobile app at launch?** | `facts.ts` → `mobileAppAtLaunch` | Not shown yet. If **yes**, add app-store links to the footer (`components/layout/Footer.tsx`) and CTAs. |
 
 > **#14 counter:** `foundingRegistered` is updated **by hand**. It is deliberately not a live counter, and the page says so.
@@ -42,7 +42,7 @@ These came up while writing the pages. They are policy numbers the site must sta
 
 | Placeholder | Where to set it | Shown on |
 |---|---|---|
-| Listing fee per product | `facts.ts` → `listingFee` | `/pricing` fee table, FAQ |
+| ✅ Listing fee per product: **Rs 0** — commission is the only fee on a sale | `facts.ts` → `listingFee` | `/pricing` fee table, FAQ |
 | COD handling fee (if any; write "Rs 0" if none) | `facts.ts` → `codFee` | `/delivery#cod`, `/pricing`, `/payouts` |
 | Payout / transfer fee (if any; write "Rs 0" if none) | `facts.ts` → `payoutFee` | `/pricing`, `/payouts` |
 | Dispute hold period (days) | `facts.ts` → `holdPeriodDays` | `/payouts` |
@@ -73,6 +73,7 @@ These describe **how the service works**. They were written to match the brief, 
 - [ ] **Below-minimum payouts carry over** to the next cycle. `payouts.threshold`
 - [ ] **Disputes hold only the disputed order's earnings.** `payouts.hold`
 - [ ] **Who pays shipping**: customer, seller or split, deducted from payout. `delivery.whoPays`
+- [ ] **RTO billed to the customer**: confirm how the return charge is collected from a customer who already refused the parcel, and what happens if it can't be collected. `content/data/shipping.ts` → `rtoCharges`, `facts.rtoCharge`
 - [ ] **Payout rails**: bank (IBAN), JazzCash, Easypaisa, in the seller's name. `payoutRails`
 - [ ] **Reseller margin** is paid on delivered orders only. `resellerListings`, `resellers.margins`
 - [ ] **Careers culture points.** `careers.culture`

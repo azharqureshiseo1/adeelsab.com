@@ -444,7 +444,7 @@ export const home = {
       "لانچ سے پہلے شامل ہونے والے سیلرز کو ایسی شرائط ملیں گی جو دوبارہ نہیں ملیں گی — بدلے میں آپ وہ کیٹلاگ بنانے میں مدد دیں جو گاہک پہلے دن دیکھیں گے۔",
     ),
     benefits: [
-      l("Reduced commission for your first {months} months", "پہلے {months} ماہ کم کمیشن"),
+      l("No commission and no listing fee for your first {months} months", "پہلے {months} ماہ نہ کمیشن نہ لسٹنگ فیس"),
       l("Free listing creation by our team", "ہماری ٹیم کی طرف سے مفت لسٹنگ"),
       l("Priority support on WhatsApp", "واٹس ایپ پر ترجیحی سپورٹ"),
       l("Featured placement at launch", "لانچ پر نمایاں جگہ"),
@@ -477,8 +477,8 @@ export const faqs = {
   commission: {
     q: l("How much commission do you charge?", "آپ کتنا کمیشن لیتے ہیں؟"),
     a: l(
-      "Commission is a percentage of the item price, set by category and published in full on our pricing page. Every fee we charge is listed there — if a fee isn't on that page, we don't charge it.",
-      "کمیشن پروڈکٹ کی قیمت کا ایک فیصد ہے جو کیٹیگری کے حساب سے طے ہے اور ہمارے قیمتوں کے صفحے پر مکمل شائع ہے۔ ہر فیس وہاں درج ہے — جو فیس اس صفحے پر نہیں، وہ ہم نہیں لیتے۔",
+      "Commission is 8% of the item price at launch, the same for every category, and published in full on our pricing page. There is no listing fee. Every fee we charge is listed there — if a fee isn't on that page, we don't charge it.",
+      "لانچ پر کمیشن پروڈکٹ کی قیمت کا 8% ہے، ہر کیٹیگری کے لیے ایک جیسا، اور ہمارے قیمتوں کے صفحے پر مکمل شائع ہے۔ لسٹنگ فیس کوئی نہیں۔ ہر فیس وہاں درج ہے — جو فیس اس صفحے پر نہیں، وہ ہم نہیں لیتے۔",
     ),
   },
   payoutTiming: {
@@ -491,8 +491,8 @@ export const faqs = {
   rto: {
     q: l("What if a customer refuses a COD parcel?", "اگر گاہک COD پارسل لینے سے انکار کر دے تو؟"),
     a: l(
-      "The parcel comes back to you (return to origin, RTO) and a return charge of {rtoCharge} applies. We publish this upfront because returns are the biggest hidden cost of COD in Pakistan. Our Seller Hub guide on reducing RTO shows how to keep it low.",
-      "پارسل آپ کو واپس آتا ہے (RTO) اور {rtoCharge} واپسی چارج لگتا ہے۔ ہم یہ پہلے بتاتے ہیں کیونکہ پاکستان میں COD کا سب سے بڑا چھپا خرچ واپسی ہے۔ سیلر ہب میں RTO کم کرنے کی گائیڈ موجود ہے۔",
+      "The parcel comes back to you (return to origin, RTO) and the return charge is billed to the customer who placed the order, not to you — your RTO cost is {rtoCharge}. You still lose the time and the packaging, so our Seller Hub guide on reducing RTO shows how to keep returns low.",
+      "پارسل آپ کو واپس آتا ہے (RTO) اور واپسی کا چارج اُس گاہک سے لیا جاتا ہے جس نے آرڈر کیا تھا، آپ سے نہیں — آپ کا RTO خرچ {rtoCharge} ہے۔ وقت اور پیکجنگ کا نقصان پھر بھی ہوتا ہے، اس لیے سیلر ہب میں RTO کم کرنے کی گائیڈ موجود ہے۔",
     ),
   },
   shipping: {
@@ -512,8 +512,8 @@ export const faqs = {
   unsold: {
     q: l("What if my stock doesn't sell?", "اگر میرا مال نہ بکے تو؟"),
     a: l(
-      "Your stock stays with you. We never buy or hold inventory, so there is nothing to send us, take back or write off. You can change prices, pause or remove listings whenever you like. The listing fee is {listingFee}.",
-      "آپ کا مال آپ کے پاس ہی رہتا ہے۔ ہم نہ اسٹاک خریدتے ہیں نہ رکھتے ہیں، اس لیے نہ کچھ بھیجنا ہے نہ واپس لینا۔ آپ جب چاہیں قیمت بدلیں، لسٹنگ روکیں یا ہٹا دیں۔ لسٹنگ فیس {listingFee} ہے۔",
+      "Your stock stays with you. We never buy or hold inventory, so there is nothing to send us, take back or write off. You can change prices, pause or remove listings whenever you like. There is no listing fee — you only pay commission when an item sells.",
+      "آپ کا مال آپ کے پاس ہی رہتا ہے۔ ہم نہ اسٹاک خریدتے ہیں نہ رکھتے ہیں، اس لیے نہ کچھ بھیجنا ہے نہ واپس لینا۔ آپ جب چاہیں قیمت بدلیں، لسٹنگ روکیں یا ہٹا دیں۔ لسٹنگ فیس کوئی نہیں — آپ صرف اُس وقت کمیشن دیتے ہیں جب پروڈکٹ بکے۔",
     ),
   },
   // Founding Seller
@@ -527,8 +527,8 @@ export const faqs = {
   foundingAfter: {
     q: l("What happens when the Founding Seller period ends?", "فاؤنڈنگ سیلر مدت ختم ہونے کے بعد کیا ہوگا؟"),
     a: l(
-      "After {months} months your commission moves to the standard rate for your category, as published on our pricing page. Your badge and store stay as they are.",
-      "{months} ماہ بعد آپ کا کمیشن آپ کی کیٹیگری کے معیاری ریٹ پر آ جائے گا جو ہمارے قیمتوں کے صفحے پر شائع ہے۔ آپ کا بیج اور اسٹور ویسے ہی رہیں گے۔",
+      "After {months} months your commission moves to the standard launch rate of 8%, as published on our pricing page. Your badge and store stay as they are.",
+      "{months} ماہ بعد آپ کا کمیشن معیاری لانچ ریٹ 8% پر آ جائے گا جو ہمارے قیمتوں کے صفحے پر شائع ہے۔ آپ کا بیج اور اسٹور ویسے ہی رہیں گے۔",
     ),
   },
   foundingCapFull: {
@@ -600,10 +600,10 @@ export const founding = {
     ),
     items: [
       {
-        title: l("Reduced commission", "کم کمیشن"),
+        title: l("No commission", "کوئی کمیشن نہیں"),
         body: l(
-          "Pay {foundingRate} commission for your first {months} months after launch, instead of the standard rate for your category.",
-          "لانچ کے بعد پہلے {months} ماہ اپنی کیٹیگری کے معیاری ریٹ کے بجائے صرف {foundingRate} کمیشن دیں۔",
+          "Pay {foundingRate} commission for your first {months} months after launch, instead of the standard 8% rate. There is no listing fee either.",
+          "لانچ کے بعد پہلے {months} ماہ معیاری 8% ریٹ کے بجائے {foundingRate} کمیشن دیں۔ لسٹنگ فیس بھی کوئی نہیں۔",
         ),
       },
       {
@@ -732,7 +732,7 @@ export const commissionTable = {
   category: l("Category", "کیٹیگری"),
   rate: l("Commission (% of item price)", "کمیشن (پروڈکٹ قیمت کا %)"),
   foundingNote: l(
-    "Founding Sellers pay {foundingRate} on every category for their first {months} months after launch.",
+    "Founding Sellers pay {foundingRate} commission on every category for their first {months} months after launch.",
     "فاؤنڈنگ سیلرز لانچ کے بعد پہلے {months} ماہ ہر کیٹیگری پر {foundingRate} کمیشن دیتے ہیں۔",
   ),
   note: l(
@@ -901,19 +901,19 @@ export const localSellers = {
     q: l("“Returns will cost me.”", "”واپسی کا خرچ مجھ پر پڑے گا۔“"),
     title: l("Here is exactly what a return costs", "واپسی کا اصل خرچ یہ ہے"),
     body: l(
-      "With cash on delivery, some customers refuse parcels at the door. When that happens the parcel is returned to you (return to origin, or RTO) and a return charge applies. We publish it here rather than surprising you with it later.",
-      "کیش آن ڈیلیوری میں کچھ گاہک دروازے پر پارسل لینے سے انکار کر دیتے ہیں۔ ایسی صورت میں پارسل آپ کو واپس آتا ہے (RTO) اور واپسی چارج لگتا ہے۔ ہم اسے یہاں شائع کرتے ہیں تاکہ بعد میں کوئی سرپرائز نہ ہو۔",
+      "With cash on delivery, some customers refuse parcels at the door. When that happens the parcel is returned to you (return to origin, or RTO) and the return charge is billed to the customer who placed the order. Your RTO charge is Rs 0 in every zone. We publish it here rather than surprising you with it later.",
+      "کیش آن ڈیلیوری میں کچھ گاہک دروازے پر پارسل لینے سے انکار کر دیتے ہیں۔ ایسی صورت میں پارسل آپ کو واپس آتا ہے (RTO) اور واپسی کا چارج اُس گاہک سے لیا جاتا ہے جس نے آرڈر کیا تھا۔ ہر زون میں آپ کا RTO چارج Rs 0 ہے۔ ہم اسے یہاں شائع کرتے ہیں تاکہ بعد میں کوئی سرپرائز نہ ہو۔",
     ),
     tableZone: l("Delivery zone", "ڈیلیوری زون"),
-    tableCharge: l("RTO charge per parcel", "فی پارسل RTO چارج"),
+    tableCharge: l("RTO charge to you, per parcel", "آپ پر فی پارسل RTO چارج"),
     points: [
       l(
         "Returned parcels come back to you — the product stays yours.",
         "واپس ہونے والے پارسل آپ کو واپس ملتے ہیں — پروڈکٹ آپ کی ہی رہتی ہے۔",
       ),
       l(
-        "The charge depends on where the parcel was going — see the table.",
-        "چارج اس بات پر منحصر ہے کہ پارسل کہاں جا رہا تھا — ٹیبل دیکھیں۔",
+        "The return charge is paid by the customer who placed the order — it is not deducted from your payout.",
+        "واپسی کا چارج وہ گاہک دیتا ہے جس نے آرڈر کیا تھا — یہ آپ کی ادائیگی سے نہیں کٹتا۔",
       ),
     ],
     guide: l("Read: how to reduce RTO on COD orders", "پڑھیں: COD آرڈرز میں RTO کیسے کم کریں"),
@@ -1358,8 +1358,8 @@ export const delivery = {
     ],
     chargeTitle: l("What it costs", "اس کا خرچ"),
     chargeBody: l(
-      "The RTO charge below applies to each returned parcel. The product comes back to you; it is not lost or written off.",
-      "نیچے دیا گیا RTO چارج ہر واپس آنے والے پارسل پر لاگو ہوتا ہے۔ پروڈکٹ آپ کو واپس ملتی ہے؛ ضائع نہیں ہوتی۔",
+      "The return charge on an RTO parcel is billed to the customer who placed the order, so the charge to you is Rs 0 in every zone. The product comes back to you; it is not lost or written off.",
+      "RTO پارسل پر واپسی کا چارج اُس گاہک سے لیا جاتا ہے جس نے آرڈر کیا تھا، اس لیے آپ پر ہر زون میں چارج Rs 0 ہے۔ پروڈکٹ آپ کو واپس ملتی ہے؛ ضائع نہیں ہوتی۔",
     ),
     guide: l("How to reduce RTO on COD orders", "COD آرڈرز میں RTO کیسے کم کریں"),
   },
@@ -1453,7 +1453,10 @@ export const pricing = {
     {
       name: l("RTO charge", "RTO چارج"),
       amount: l("{rtoCharge}", "{rtoCharge}"),
-      when: l("Per parcel returned to you undelivered", "فی پارسل جو بغیر ڈیلیوری آپ کو واپس آئے"),
+      when: l(
+        "Per parcel returned to you undelivered — the return charge is paid by the customer who ordered",
+        "فی پارسل جو بغیر ڈیلیوری آپ کو واپس آئے — واپسی کا چارج آرڈر کرنے والا گاہک دیتا ہے",
+      ),
       href: "/delivery#rto",
     },
     {
@@ -1521,7 +1524,10 @@ export const payouts = {
       l("Commission for your category", "آپ کی کیٹیگری کا کمیشن"),
       l("Shipping — only if you offer free or split delivery", "شپنگ — صرف اگر آپ مفت یا آدھی ڈیلیوری دیں"),
       l("COD handling fee, if applicable", "COD ہینڈلنگ فیس، اگر لاگو ہو"),
-      l("RTO charges for parcels returned undelivered", "بغیر ڈیلیوری واپس آنے والے پارسلز کے RTO چارجز"),
+      l(
+        "No RTO deduction — the return charge is paid by the customer who ordered",
+        "RTO کی کوئی کٹوتی نہیں — واپسی کا چارج آرڈر کرنے والا گاہک دیتا ہے",
+      ),
     ],
     link: l("Every fee is listed on the pricing page", "ہر فیس قیمتوں کے صفحے پر درج ہے"),
   },
