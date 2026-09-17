@@ -53,13 +53,13 @@ hPanel → your Node.js app → **Environment Variables**. Add every key from [`
 | Key | Required | Notes |
 |---|---|---|
 | `NEXT_PUBLIC_SITE_URL` | Yes | `https://adeelsab.com` |
-| `SUPABASE_URL` | Yes | Injected by the Database Connect Wizard (step 1.7) |
-| `SUPABASE_SERVICE_ROLE_KEY` | Yes | Injected by the wizard. **Server-only, never share.** |
+| `SUPABASE_URL` | Yes | Project URL only, e.g. `https://xxxx.supabase.co` — **no `/rest/v1/` suffix** |
+| `SUPABASE_SERVICE_ROLE_KEY` | Yes | The project's **secret** key (`sb_secret_…`), never the publishable/anon key. **Server-only, never share or commit.** |
 | `SMTP_HOST` | Yes | `smtp.hostinger.com` |
 | `SMTP_PORT` | Yes | `465` |
 | `SMTP_USER` | Yes | Full mailbox address, e.g. `noreply@adeelsab.com` |
 | `SMTP_PASS` | Yes | Mailbox password |
-| `LEAD_NOTIFY_TO` | Yes | Where new-lead emails are sent |
+| `LEAD_NOTIFY_TO` | Yes | Where new-lead emails are sent — `leads@adeelsab.com` |
 | `NEXT_PUBLIC_GA_ID` | No | `G-XXXXXXXXXX`. Empty disables analytics. |
 | `NEXT_PUBLIC_WHATSAPP` | Yes | Digits only, e.g. `923001234567` |
 | `IP_HASH_SALT` | No | Any long random string |
