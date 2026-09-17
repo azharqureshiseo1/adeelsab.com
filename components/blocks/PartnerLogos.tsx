@@ -14,7 +14,7 @@ export function PartnerLogos({
   className,
 }: {
   withLines?: boolean;
-  /** 2 for half-width layouts, 4 for full-width sections. */
+  /** 2 for half-width layouts, 4 for full-width sections (one row per partner). */
   columns?: 2 | 4;
   showOwnFleet?: boolean;
   className?: string;
@@ -35,19 +35,25 @@ export function PartnerLogos({
           </p>
         </div>
       )}
-      <ul className={cn("grid grid-cols-2 gap-4", columns === 4 && "lg:grid-cols-4")}>
+      <ul className={cn("grid grid-cols-2 gap-4", columns === 4 && "lg:grid-cols-3")}>
         {partners.map((p) => (
           <li
             key={p.slug}
             className="group flex flex-col items-center justify-center rounded-card border border-ink-200 bg-white p-5 text-center shadow-soft transition-shadow hover:shadow-lift"
           >
-            <Image
-              src={p.logo.src}
-              alt={`${p.name} logo`}
-              width={p.logo.width}
-              height={p.logo.height}
-              className="h-10 w-auto max-w-[120px] object-contain opacity-80 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0 md:h-11"
-            />
+            {p.logo ? (
+              <Image
+                src={p.logo.src}
+                alt={`${p.name} logo`}
+                width={p.logo.width}
+                height={p.logo.height}
+                className="h-10 w-auto max-w-[120px] object-contain opacity-80 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0 md:h-11"
+              />
+            ) : (
+              <span className="latin flex h-10 items-center text-2xl font-extrabold tracking-[0.18em] text-ink-700 md:h-11">
+                {p.name}
+              </span>
+            )}
             {withLines && (
               <>
                 <p className="mt-4 font-semibold text-ink-900">{p.name}</p>

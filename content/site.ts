@@ -327,10 +327,10 @@ export const home = {
         label: l("for same-city delivery in {fleetCities}", "{fleetCities} میں اسی شہر کی ڈیلیوری کے لیے"),
       },
       {
-        stat: l("4", "4"),
+        stat: l("3", "3"),
         label: l(
-          "national courier partners — TCS, Leopards, PostEx, M&P",
-          "قومی کوریئر پارٹنرز — TCS، Leopards، PostEx، M&P",
+          "national courier partners — TCS, PostEx, TRAX",
+          "قومی کوریئر پارٹنرز — TCS، PostEx، TRAX",
         ),
       },
       { stat: l("COD", "COD"), label: l("cash on delivery across Pakistan", "پورے پاکستان میں کیش آن ڈیلیوری") },
@@ -422,7 +422,7 @@ export const home = {
       },
       {
         title: l("Nationwide", "ملک بھر میں"),
-        body: l("Through TCS, Leopards, PostEx and M&P", "TCS، Leopards، PostEx اور M&P کے ذریعے"),
+        body: l("Through TCS, PostEx and TRAX", "TCS، PostEx اور TRAX کے ذریعے"),
       },
       {
         title: l("Cash on delivery", "کیش آن ڈیلیوری"),
@@ -506,8 +506,8 @@ export const faqs = {
   cod: {
     q: l("Do you offer cash on delivery?", "کیا کیش آن ڈیلیوری دستیاب ہے؟"),
     a: l(
-      "Yes, across Pakistan — through AdeelSab Couriers, our own fleet, for same-city orders and through TCS, Leopards, PostEx and M&P nationwide. Cash collected is remitted to you {codDays} days after delivery.",
-      "جی ہاں، پورے پاکستان میں — اسی شہر کے آرڈرز ہمارے اپنے فلیٹ AdeelSab Couriers سے اور ملک بھر میں TCS، Leopards، PostEx اور M&P کے ذریعے۔ وصول شدہ رقم ڈیلیوری کے {codDays} دن بعد آپ کو منتقل کی جاتی ہے۔",
+      "Yes, across Pakistan — through AdeelSab Couriers, our own fleet, for same-city orders and through TCS, PostEx and TRAX nationwide. Cash collected is remitted to you {codDays} days after delivery.",
+      "جی ہاں، پورے پاکستان میں — اسی شہر کے آرڈرز ہمارے اپنے فلیٹ AdeelSab Couriers سے اور ملک بھر میں TCS، PostEx اور TRAX کے ذریعے۔ وصول شدہ رقم ڈیلیوری کے {codDays} دن بعد آپ کو منتقل کی جاتی ہے۔",
     ),
   },
   unsold: {
@@ -768,7 +768,7 @@ export const coverage = {
     "پاکستان کا نقشہ جس میں شہروں کے حساب سے AdeelSab ڈیلیوری کوریج دکھائی گئی ہے",
   ),
   legendFleet: l("Own fleet (same-city delivery)", "اپنا فلیٹ (اسی شہر میں ڈیلیوری)"),
-  legend3pl: l("Nationwide via TCS · Leopards · PostEx · M&P", "ملک بھر میں TCS · Leopards · PostEx · M&P کے ذریعے"),
+  legend3pl: l("Nationwide via TCS · PostEx · TRAX", "ملک بھر میں TCS · PostEx · TRAX کے ذریعے"),
   fleetPending: l(
     "Own-fleet cities will be marked here once confirmed.",
     "اپنے فلیٹ والے شہر تصدیق کے بعد یہاں دکھائے جائیں گے۔",
@@ -1230,7 +1230,7 @@ export const delivery = {
   meta: {
     title: "Delivery, COD & Returns",
     description:
-      "How AdeelSab delivers across Pakistan: AdeelSab Couriers for same-city orders, TCS, Leopards, PostEx and M&P nationwide. Coverage map, delivery times, flat Rs 350 delivery charge, COD remittance and RTO charges.",
+      "How AdeelSab delivers across Pakistan: AdeelSab Couriers for same-city orders, TCS, PostEx and TRAX nationwide. Coverage map, delivery times, flat Rs 350 delivery charge, COD remittance and RTO charges.",
   },
   hero: {
     eyebrow: l("Delivery & COD", "ڈیلیوری اور COD"),

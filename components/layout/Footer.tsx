@@ -27,6 +27,15 @@ function LogoChip({ src, alt, width, height }: { src: string; alt: string; width
   );
 }
 
+/** Stand-in for a partner whose logo file hasn't been added yet. */
+function NameChip({ name }: { name: string }) {
+  return (
+    <li className="latin flex h-12 items-center rounded-lg bg-white px-3 text-base font-extrabold tracking-[0.15em] text-ink-800">
+      {name}
+    </li>
+  );
+}
+
 export function Footer() {
   const year = new Date().getFullYear();
   return (
@@ -127,15 +136,19 @@ export function Footer() {
                 width={ownCourier.logo.width}
                 height={ownCourier.logo.height}
               />
-              {partners.map((p) => (
-                <LogoChip
-                  key={p.slug}
-                  src={p.logo.src}
-                  alt={`${p.name} logo`}
-                  width={p.logo.width}
-                  height={p.logo.height}
-                />
-              ))}
+              {partners.map((p) =>
+                p.logo ? (
+                  <LogoChip
+                    key={p.slug}
+                    src={p.logo.src}
+                    alt={`${p.name} logo`}
+                    width={p.logo.width}
+                    height={p.logo.height}
+                  />
+                ) : (
+                  <NameChip key={p.slug} name={p.name} />
+                ),
+              )}
             </ul>
           </div>
           <div>

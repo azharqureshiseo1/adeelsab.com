@@ -15,12 +15,12 @@ export const zones: Zone[] = [
   {
     key: "majorCities",
     label: { en: "Major cities", ur: "بڑے شہر" },
-    note: { en: "TCS · Leopards · PostEx · M&P", ur: "TCS · Leopards · PostEx · M&P" },
+    note: { en: "TCS · PostEx · TRAX", ur: "TCS · PostEx · TRAX" },
   },
   {
     key: "restOfPakistan",
     label: { en: "Rest of Pakistan", ur: "باقی پاکستان" },
-    note: { en: "TCS · Leopards · PostEx · M&P", ur: "TCS · Leopards · PostEx · M&P" },
+    note: { en: "TCS · PostEx · TRAX", ur: "TCS · PostEx · TRAX" },
   },
 ];
 
@@ -65,7 +65,10 @@ export const ownCourier = {
   },
 } as const;
 
-/** National courier partners. Logos are generated into /public/logos by `npm run brand:assets`. */
+/**
+ * National courier partners. Logos are generated into /public/logos by `npm run brand:assets`.
+ * A partner with `logo: null` renders as a text wordmark until its logo file is added.
+ */
 export const partners = [
   {
     slug: "tcs",
@@ -74,15 +77,6 @@ export const partners = [
     line: {
       en: "Nationwide courier network reaching major cities and smaller towns.",
       ur: "ملک گیر کوریئر نیٹ ورک جو بڑے شہروں اور چھوٹے قصبوں تک پہنچتا ہے۔",
-    },
-  },
-  {
-    slug: "leopards",
-    name: "Leopards Courier",
-    logo: { src: "/logos/leopards.webp", width: 239, height: 96 },
-    line: {
-      en: "Courier network with cash-on-delivery service across Pakistan.",
-      ur: "پورے پاکستان میں کیش آن ڈیلیوری سروس کے ساتھ کوریئر نیٹ ورک۔",
     },
   },
   {
@@ -95,12 +89,15 @@ export const partners = [
     },
   },
   {
-    slug: "mp",
-    name: "M&P (Muller & Phipps)",
-    logo: { src: "/logos/mp.webp", width: 188, height: 96 },
+    slug: "trax",
+    name: "TRAX",
+    // TODO: add assets/logos/trax.png and run `npm run brand:assets`, then set
+    // logo: { src: "/logos/trax.webp", width: <w>, height: 96 }. Until then the
+    // card shows the TRAX wordmark as text rather than a broken image.
+    logo: null,
     line: {
-      en: "Courier and logistics network serving cities across Pakistan.",
-      ur: "پاکستان بھر کے شہروں میں کوریئر اور لاجسٹکس نیٹ ورک۔",
+      en: "E-commerce courier network with cash-on-delivery collection across Pakistan.",
+      ur: "پورے پاکستان میں کیش آن ڈیلیوری کلیکشن کے ساتھ ای کامرس کوریئر نیٹ ورک۔",
     },
   },
 ] as const;
