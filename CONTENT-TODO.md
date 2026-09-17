@@ -58,9 +58,10 @@ These came up while writing the pages. They are policy numbers the site must sta
 ## C. Legal
 
 The three legal documents were replaced on 17 September 2026 with the owner-supplied
-drafts. They now describe the marketplace, not just the waitlist. The **"Draft pending legal
-review" banner is still shown** on all three pages (`components/blocks/LegalPage.tsx`) — remove
-it only once a lawyer has signed them off and the values below are filled.
+drafts. They now describe the marketplace, not just the waitlist. The "Draft pending legal
+review" banner was **removed at the owner's request**; the "English version prevails" line is
+kept as a footer on each document, because that is a term of the documents rather than a draft
+notice. The values below are still unfilled and render as visible TODO markers.
 
 | Placeholder | Where |
 |---|---|

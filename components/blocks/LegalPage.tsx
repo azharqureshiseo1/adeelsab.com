@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { TriangleAlert } from "lucide-react";
 import { T } from "@/components/T";
 import { Container } from "@/components/layout/Container";
 import { DocArticle } from "./DocArticle";
@@ -15,19 +14,11 @@ export async function legalMetadata(slug: LegalSlug): Promise<Metadata> {
   return pageMeta({ title: en.meta.title, description: en.meta.description, path: `/legal/${slug}` });
 }
 
-/** Shared renderer for legal documents (MDX, EN + UR), with a visible draft notice. */
+/** Shared renderer for legal documents (MDX, EN + UR). */
 export async function LegalPage({ slug }: { slug: LegalSlug }) {
   const { en, ur } = await loadBoth("legal", slug);
   return (
     <>
-      <div className="border-b border-[#F5DFB5] bg-[#FFF6E5]">
-        <Container className="flex items-center gap-3 py-3 text-sm font-medium text-[#8A5300]">
-          <TriangleAlert size={18} className="shrink-0" aria-hidden />
-          <p>
-            <T v={legal.draftBanner} /> <T v={legal.officialNote} />
-          </p>
-        </Container>
-      </div>
       <DocArticle
         en={en}
         ur={ur}
@@ -36,6 +27,12 @@ export async function LegalPage({ slug }: { slug: LegalSlug }) {
         backLabel={notFound.home}
         cta={sellerHub.articleCta}
       />
+      {/* Which language version prevails — a term of the documents, not a draft notice. */}
+      <Container className="pb-12">
+        <p className="text-small text-ink-500">
+          <T v={legal.officialNote} />
+        </p>
+      </Container>
       <CTABand form={false} source={`/legal/${slug}`} />
     </>
   );

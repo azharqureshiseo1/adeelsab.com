@@ -1933,10 +1933,6 @@ export const contact = {
 };
 
 export const legal = {
-  draftBanner: l(
-    "Draft pending legal review. This document will be finalised before launch.",
-    "قانونی جائزے کا منتظر مسودہ۔ یہ دستاویز لانچ سے پہلے حتمی کی جائے گی۔",
-  ),
   officialNote: l(
     "If the English and Urdu versions differ, the English version applies.",
     "اگر انگریزی اور اردو نسخوں میں فرق ہو تو انگریزی نسخہ لاگو ہوگا۔",
