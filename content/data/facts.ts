@@ -12,7 +12,8 @@ const known = (value: string): Fact => ({ value, todo: "" });
 
 export const facts = {
   // Launch
-  launchDate: todo("Target launch date"),
+  // No target launch date is published — the owner does not want a date on the site until
+  // it is certain. Founding Sellers are told the confirmed date first, by WhatsApp.
   mobileAppAtLaunch: todo("Mobile app at launch? (yes/no)"),
 
   // Money
@@ -26,20 +27,21 @@ export const facts = {
   rtoCharge: known("Rs 0"),
   /** No listing fee at all — commission is the only fee on a sale. */
   listingFee: known("Rs 0"),
-  holdPeriodDays: todo("Dispute hold period (days)"),
-  codFee: todo("COD handling fee, if any"),
-  payoutFee: todo("Payout / transfer fee, if any"),
+  // No COD handling fee and no dispute hold period are charged or published — commission
+  // is the only fee on a sale, so neither has a fact or a row on the pricing page.
+  /** No transfer fee on payouts. */
+  payoutFee: known("Rs 0"),
   deliveryAttempts: todo("Delivery attempts before RTO"),
-  returnWindowDays: todo("Customer return window (days)"),
-  returnShippingPayer: todo("Who pays return shipping for customer returns"),
+  /** Customer return window, in days. Return shipping is paid by the customer. */
+  returnWindowDays: known("2"),
 
   // Founding Seller Program
   foundingCap: known("100"),
-  foundingCommissionMonths: todo("Reduced-commission period (months)"),
+  /** How long the 0% Founding Seller commission lasts, in months. */
+  foundingCommissionMonths: known("2"),
   /** Founding Sellers pay no commission and no listing fee. */
   foundingCommissionRate: known("0%"),
-  /** Hand-updated. Do not wire to a live counter. */
-  foundingRegistered: todo("Registered Founding Sellers (hand-updated)"),
+  // No registered-seller counter is shown. The page states the cap (first 100) instead.
 
   // Company & trust
   legalName: known("ADEELSAB (PRIVATE) LIMITED"),
@@ -47,12 +49,16 @@ export const facts = {
   /** FBR registration number (shown as "FBR Reg. No."). */
   ntn: known("J816970"),
   officeAddress: known("Office No 20, First floor, Takbeer Plaza, Al Faisal Town, Lahore, Pakistan"),
-  /** DEMO number — replace with the real WhatsApp support line before launch (and NEXT_PUBLIC_WHATSAPP). */
-  whatsappDisplay: known("+92 300 0000000"),
+  /** Support WhatsApp line. Keep in sync with NEXT_PUBLIC_WHATSAPP (digits only). */
+  whatsappDisplay: known("+92 325 0040009"),
+  /** Landline for vendors/sellers only — not a customer support line. */
+  landlineDisplay: known("042 3663 2828"),
+  /** Same landline in tel: format. */
+  landlineTel: known("+924236632828"),
   supportEmail: known("support@adeelsab.com"),
   // One inbox for now; split when a separate business address exists.
   businessEmail: known("support@adeelsab.com"),
-  officeHours: todo("Office hours (PKT)"),
+  officeHours: known("9:00 am – 9:00 pm"),
 
   // Social — full profile URLs
   facebook: known("https://www.facebook.com/adeelsab.pk"),

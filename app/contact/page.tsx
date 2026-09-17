@@ -1,4 +1,4 @@
-import { Briefcase, Clock, LifeBuoy, Mail, MapPin } from "lucide-react";
+import { Briefcase, Clock, LifeBuoy, Mail, MapPin, Phone } from "lucide-react";
 import { T } from "@/components/T";
 import { Button } from "@/components/ui/Button";
 import { Card, IconTile } from "@/components/ui/Card";
@@ -58,6 +58,33 @@ export default function ContactPage() {
             <WhatsAppGlyph className="size-5" />
             <T v={c.whatsapp.cta} />
           </Button>
+        </Card>
+
+        {/* Landline — sellers and vendors only */}
+        <Card className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-start gap-4">
+            <IconTile>
+              <Phone size={22} strokeWidth={1.75} />
+            </IconTile>
+            <div>
+              <h3 className="h4">
+                <T v={c.phone.title} />
+              </h3>
+              <p className="mt-1 text-[15px] text-ink-500">
+                <T v={c.phone.body} />
+              </p>
+            </div>
+          </div>
+          {facts.landlineTel.value ? (
+            <a
+              href={`tel:${facts.landlineTel.value}`}
+              className="latin tabular shrink-0 text-lg font-semibold text-brand-700 hover:underline"
+            >
+              {facts.landlineDisplay.value}
+            </a>
+          ) : (
+            <Fact f={facts.landlineDisplay} />
+          )}
         </Card>
 
         {/* Routing */}

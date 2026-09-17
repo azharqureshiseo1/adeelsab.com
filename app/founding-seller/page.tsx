@@ -50,23 +50,13 @@ export default function FoundingSellerPage() {
         }
         aside={
           <Card emphasis className="text-center">
-            <dl className="grid grid-cols-2 divide-x divide-ink-200 rtl:divide-x-reverse">
-              <div className="px-3">
-                <dt className="text-small text-ink-500">
-                  <T v={hero.counterLabel} />
-                </dt>
-                <dd className="gradient-text tabular mt-2 text-4xl font-extrabold [&_mark]:text-sm">
-                  <Fact f={facts.foundingRegistered} />
-                </dd>
-              </div>
-              <div className="px-3">
-                <dt className="text-small text-ink-500">
-                  <T v={hero.capLabel} />
-                </dt>
-                <dd className="tabular mt-2 text-4xl font-extrabold text-ink-900 [&_mark]:text-sm">
-                  <Fact f={facts.foundingCap} />
-                </dd>
-              </div>
+            <dl>
+              <dt className="text-small text-ink-500">
+                <T v={hero.capLabel} />
+              </dt>
+              <dd className="gradient-text tabular mt-2 text-5xl font-extrabold [&_mark]:text-sm">
+                <Fact f={facts.foundingCap} />
+              </dd>
             </dl>
             <p className="text-small mt-5 border-t border-ink-200 pt-4 text-ink-500">
               <T v={hero.counterNote} />

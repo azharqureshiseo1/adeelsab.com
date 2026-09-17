@@ -9,13 +9,19 @@ export function SiteJsonLd() {
     .map((f) => f.value)
     .filter((v): v is string => Boolean(v));
 
-  // The WhatsApp number is still a demo placeholder, so it is not published to search engines.
-  // Add `telephone` here once the real support number is set.
   const contactPoint = [
-    facts.supportEmail.value && {
+    (facts.supportEmail.value || facts.whatsappDisplay.value) && {
       "@type": "ContactPoint",
       contactType: "customer support",
-      email: facts.supportEmail.value,
+      email: facts.supportEmail.value ?? undefined,
+      telephone: facts.whatsappDisplay.value?.replace(/\s/g, "") ?? undefined,
+      areaServed: "PK",
+      availableLanguage: ["English", "Urdu"],
+    },
+    facts.landlineTel.value && {
+      "@type": "ContactPoint",
+      contactType: "sales",
+      telephone: facts.landlineTel.value,
       areaServed: "PK",
       availableLanguage: ["English", "Urdu"],
     },

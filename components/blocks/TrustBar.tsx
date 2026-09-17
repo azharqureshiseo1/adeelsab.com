@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Building2, Mail, MapPin, MessageCircle } from "lucide-react";
+import { Building2, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { T } from "@/components/T";
 import { Fact } from "@/components/ui/Fact";
 import { IconTile } from "@/components/ui/Card";
@@ -36,6 +36,12 @@ export function TrustBar() {
     { tile: iconTile(MapPin), label: trust.office, f: facts.officeAddress },
     { tile: iconTile(Mail), label: trust.email, f: facts.supportEmail, href: `mailto:${facts.supportEmail.value}` },
     { tile: iconTile(MessageCircle), label: trust.whatsapp, f: facts.whatsappDisplay },
+    {
+      tile: iconTile(Phone),
+      label: trust.phone,
+      f: facts.landlineDisplay,
+      href: facts.landlineTel.value ? `tel:${facts.landlineTel.value}` : undefined,
+    },
   ];
 
   return (

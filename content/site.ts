@@ -45,7 +45,7 @@ export const nav = {
     {
       href: "/sell/resellers",
       label: l("Resellers", "ری سیلرز"),
-      desc: l("Sell our catalogue with zero inventory — waitlist", "بغیر اسٹاک کے بیچیں — ویٹ لسٹ"),
+      desc: l("Sell our catalogue with zero inventory — coming soon", "بغیر اسٹاک کے بیچیں — جلد آ رہا ہے"),
     },
     {
       href: "/sell/dropshippers",
@@ -464,6 +464,7 @@ export const home = {
     email: l("Email", "ای میل"),
     office: l("Office", "دفتر"),
     whatsapp: l("WhatsApp", "واٹس ایپ"),
+    phone: l("Landline (sellers)", "لینڈ لائن (سیلرز)"),
     company: l("Registered company", "رجسٹرڈ کمپنی"),
   },
   faq: {
@@ -548,8 +549,8 @@ export const faqs = {
   foundingLaunch: {
     q: l("When does AdeelSab launch?", "AdeelSab کب لانچ ہوگا؟"),
     a: l(
-      "Our target launch date is {launchDate}. Founding Sellers are told the confirmed date first, with enough time to get listings and stock ready.",
-      "ہماری متوقع لانچ تاریخ {launchDate} ہے۔ فاؤنڈنگ سیلرز کو حتمی تاریخ سب سے پہلے بتائی جائے گی تاکہ لسٹنگز اور اسٹاک تیار کرنے کا وقت ملے۔",
+      "We haven't announced a public launch date yet. Founding Sellers are told the confirmed date first, on WhatsApp, with enough time to get listings and stock ready.",
+      "ہم نے ابھی عوامی لانچ تاریخ کا اعلان نہیں کیا۔ فاؤنڈنگ سیلرز کو حتمی تاریخ سب سے پہلے واٹس ایپ پر بتائی جائے گی تاکہ لسٹنگز اور اسٹاک تیار کرنے کا وقت ملے۔",
     ),
   },
 };
@@ -573,11 +574,10 @@ export const founding = {
       "ہم وہ پہلے سیلرز منتخب کر رہے ہیں جنہیں گاہک پہلے دن دیکھیں گے۔ ابھی شامل ہوں — ہم آپ کا اسٹور مفت سیٹ اپ کریں گے اور شروع میں کم کمیشن لیں گے۔",
     ),
     cta: l("Reserve my place", "میری جگہ محفوظ کریں"),
-    counterLabel: l("Founding Sellers registered", "رجسٹرڈ فاؤنڈنگ سیلرز"),
     capLabel: l("Places in the program", "پروگرام میں کل جگہیں"),
     counterNote: l(
-      "Updated by our team, not a live counter.",
-      "یہ تعداد ہماری ٹیم اپ ڈیٹ کرتی ہے، یہ لائیو کاؤنٹر نہیں۔",
+      "Open to the first 100 sellers only. Places are reserved in the order you join.",
+      "صرف پہلے 100 سیلرز کے لیے۔ جگہیں شامل ہونے کی ترتیب سے محفوظ ہوتی ہیں۔",
     ),
   },
   what: {
@@ -704,8 +704,8 @@ export const founding = {
       {
         title: l("Launch day", "لانچ کا دن"),
         body: l(
-          "Target: {launchDate}. Your store opens with the marketplace.",
-          "متوقع: {launchDate}۔ مارکیٹ پلیس کے ساتھ آپ کا اسٹور کھلے گا۔",
+          "Your store opens with the marketplace. Founding Sellers hear the confirmed date first.",
+          "مارکیٹ پلیس کے ساتھ آپ کا اسٹور کھلے گا۔ حتمی تاریخ سب سے پہلے فاؤنڈنگ سیلرز کو بتائی جائے گی۔",
         ),
       },
     ],
@@ -786,7 +786,7 @@ export const sellHub = {
   meta: {
     title: "Sell With Us",
     description:
-      "Three ways to earn on AdeelSab: local sellers (now onboarding), resellers (waitlist) and dropshippers (Phase 2). Compare and choose.",
+      "Three ways to earn on AdeelSab: local sellers (now onboarding), resellers (coming soon) and dropshippers (Phase 2). Compare and choose.",
   },
   hero: {
     eyebrow: l("Sell With Us", "ہمارے ساتھ بیچیں"),
@@ -835,7 +835,7 @@ export const sellHub = {
         label: l("Status", "صورتحال"),
         cells: [
           l("Now onboarding", "رجسٹریشن جاری ہے"),
-          l("Waitlist open", "ویٹ لسٹ کھلی ہے"),
+          l("Coming soon", "جلد آ رہا ہے"),
           l("Phase 2", "دوسرا مرحلہ"),
         ],
       },
@@ -1047,12 +1047,12 @@ export const localSellers = {
 
 export const resellers = {
   meta: {
-    title: "Become a Reseller — Waitlist",
+    title: "Become a Reseller — Coming Soon",
     description:
       "Sell products from AdeelSab's catalogue with zero inventory and published margins. The reseller program opens once the catalogue is ready — join the waitlist to be notified.",
   },
   hero: {
-    eyebrow: l("Reseller program · Waitlist", "ری سیلر پروگرام · ویٹ لسٹ"),
+    eyebrow: l("Reseller program · Coming soon", "ری سیلر پروگرام · جلد آ رہا ہے"),
     title: l("Earn from products you never have to stock", "ان پروڈکٹس سے کمائیں جن کا اسٹاک رکھنا نہ پڑے"),
     lead: l(
       "We're being straight with you: the reseller catalogue is still being built, and no products are available to resell yet. Join the waitlist and we'll message you the day it opens.",
@@ -1335,8 +1335,11 @@ export const delivery = {
         ),
       },
       {
-        title: l("COD fee", "COD فیس"),
-        body: l("COD handling fee per order: {codFee}.", "فی آرڈر COD ہینڈلنگ فیس: {codFee}۔"),
+        title: l("No COD fee", "کوئی COD فیس نہیں"),
+        body: l(
+          "We charge no cash-on-delivery handling fee. Commission is the only fee on a sale.",
+          "ہم کیش آن ڈیلیوری پر کوئی ہینڈلنگ فیس نہیں لیتے۔ فروخت پر صرف کمیشن لگتا ہے۔",
+        ),
       },
     ],
   },
@@ -1392,8 +1395,8 @@ export const delivery = {
       {
         title: l("Back to you", "آپ تک واپس"),
         body: l(
-          "The item is delivered back to you. Return shipping is paid by: {returnPayer}.",
-          "آئٹم آپ کو واپس پہنچایا جاتا ہے۔ واپسی شپنگ کی ادائیگی: {returnPayer}۔",
+          "The item is delivered back to you. Return shipping is paid by the customer, not deducted from your payout.",
+          "آئٹم آپ کو واپس پہنچایا جاتا ہے۔ واپسی کی شپنگ گاہک ادا کرتا ہے، آپ کی ادائیگی سے نہیں کٹتی۔",
         ),
       },
     ],
@@ -1444,11 +1447,6 @@ export const pricing = {
         "صرف جب آپ شپنگ خود دینا چنیں (مفت یا آدھی ڈیلیوری)",
       ),
       href: "/delivery#rates",
-    },
-    {
-      name: l("COD handling", "COD ہینڈلنگ"),
-      amount: l("{codFee}", "{codFee}"),
-      when: l("Per cash-on-delivery order", "فی کیش آن ڈیلیوری آرڈر"),
     },
     {
       name: l("RTO charge", "RTO چارج"),
@@ -1523,7 +1521,6 @@ export const payouts = {
     items: [
       l("Commission for your category", "آپ کی کیٹیگری کا کمیشن"),
       l("Shipping — only if you offer free or split delivery", "شپنگ — صرف اگر آپ مفت یا آدھی ڈیلیوری دیں"),
-      l("COD handling fee, if applicable", "COD ہینڈلنگ فیس، اگر لاگو ہو"),
       l(
         "No RTO deduction — the return charge is paid by the customer who ordered",
         "RTO کی کوئی کٹوتی نہیں — واپسی کا چارج آرڈر کرنے والا گاہک دیتا ہے",
@@ -1534,8 +1531,8 @@ export const payouts = {
   hold: {
     title: l("Disputes and holds", "تنازعات اور رقم روکنا"),
     body: l(
-      "If a customer opens a return or dispute on an order, only that order's earnings are held while it's resolved — for up to {holdDays} days. The rest of your payout is released on schedule.",
-      "اگر گاہک کسی آرڈر پر واپسی یا تنازعہ کھولے تو صرف اس آرڈر کی کمائی حل ہونے تک روکی جاتی ہے — زیادہ سے زیادہ {holdDays} دن۔ باقی ادائیگی شیڈول پر جاری ہوتی ہے۔",
+      "If a customer opens a return or dispute on an order, only that order's earnings are held until it is resolved. The rest of your payout is released on schedule.",
+      "اگر گاہک کسی آرڈر پر واپسی یا تنازعہ کھولے تو صرف اس آرڈر کی کمائی حل ہونے تک روکی جاتی ہے۔ باقی ادائیگی شیڈول پر جاری ہوتی ہے۔",
     ),
     link: l("How returns and disputes work", "واپسی اور تنازعات کیسے کام کرتے ہیں"),
   },
@@ -1915,6 +1912,14 @@ export const contact = {
       body: l("Partnerships, logistics, investors and press.", "شراکت داری، لاجسٹکس، سرمایہ کار اور میڈیا۔"),
     },
   ],
+  phone: {
+    title: l("Landline — sellers only", "لینڈ لائن — صرف سیلرز کے لیے"),
+    body: l(
+      "A direct line for sellers and vendors during office hours. It is not a customer order line.",
+      "دفتری اوقات میں سیلرز اور وینڈرز کے لیے براہِ راست لائن۔ یہ گاہکوں کی آرڈر لائن نہیں ہے۔",
+    ),
+    label: l("Call", "کال کریں"),
+  },
   emailLabel: l("Email", "ای میل"),
   office: {
     title: l("Office", "دفتر"),

@@ -30,8 +30,8 @@ export default function ResellersPage() {
         ]}
         eyebrow={r.hero.eyebrow}
         badge={
-          <Badge tone="brand" dot>
-            <T v={common.badgeWaitlist} />
+          <Badge tone="neutral" dot>
+            <T v={common.badgeComingSoon} />
           </Badge>
         }
         title={r.hero.title}
