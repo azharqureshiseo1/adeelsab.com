@@ -80,9 +80,7 @@ npm run brand:assets   # rebuild public/brand, public/images, public/logos, icon
 - **3 delivery attempts before RTO.** Delivery times: Lahore same/next day, major cities 2–3 working
   days, rest of Pakistan 3–4 working days (`shipping.ts` → `timelines`, now bilingual `L`).
 - **Courier partners: TCS, PostEx, TRAX** (home stat says "3"). Leopards and M&P were dropped by the
-  owner. TRAX has **no logo file yet** — `partners[].logo` is `null` and the partner grid and footer
-  render its name as a text wordmark. Add `assets/logos/trax.png`, run `npm run brand:assets`, then
-  set `logo: { src: "/logos/trax.webp", width: …, height: 96 }`.
+  owner; their logo files are deleted. TRAX's logo is in `assets/logos/trax.png`.
 
 ## Open questions for the owner
 

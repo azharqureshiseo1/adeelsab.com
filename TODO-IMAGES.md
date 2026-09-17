@@ -31,8 +31,7 @@ To **replace a photo**, overwrite the original in `assets/photos/` with the same
 | Logo | Used on |
 |---|---|
 | AdeelSab Couriers | Delivery partner card (home, `/delivery`, local sellers), footer |
-| TCS, PostEx | Partner grid (home, `/delivery`, local sellers), footer |
-| **TRAX — still needed.** Drop `assets/logos/trax.png` in and run `npm run brand:assets`, then set `logo` in `content/data/shipping.ts` | Partner grid, footer (currently a text wordmark) |
+| TCS, PostEx, TRAX | Partner grid (home, `/delivery`, local sellers), footer |
 | JazzCash, Easypaisa | Payout rails (local sellers, pricing, payouts, resellers), footer |
 | Stripe | Footer (Payments). See CONTENT-TODO §D. |
 | SECP, FBR | Home trust bar, footer |

@@ -65,10 +65,7 @@ export const ownCourier = {
   },
 } as const;
 
-/**
- * National courier partners. Logos are generated into /public/logos by `npm run brand:assets`.
- * A partner with `logo: null` renders as a text wordmark until its logo file is added.
- */
+/** National courier partners. Logos are generated into /public/logos by `npm run brand:assets`. */
 export const partners = [
   {
     slug: "tcs",
@@ -91,10 +88,7 @@ export const partners = [
   {
     slug: "trax",
     name: "TRAX",
-    // TODO: add assets/logos/trax.png and run `npm run brand:assets`, then set
-    // logo: { src: "/logos/trax.webp", width: <w>, height: 96 }. Until then the
-    // card shows the TRAX wordmark as text rather than a broken image.
-    logo: null,
+    logo: { src: "/logos/trax.webp", width: 147, height: 96 },
     line: {
       en: "E-commerce courier network with cash-on-delivery collection across Pakistan.",
       ur: "پورے پاکستان میں کیش آن ڈیلیوری کلیکشن کے ساتھ ای کامرس کوریئر نیٹ ورک۔",

@@ -41,19 +41,13 @@ export function PartnerLogos({
             key={p.slug}
             className="group flex flex-col items-center justify-center rounded-card border border-ink-200 bg-white p-5 text-center shadow-soft transition-shadow hover:shadow-lift"
           >
-            {p.logo ? (
-              <Image
-                src={p.logo.src}
-                alt={`${p.name} logo`}
-                width={p.logo.width}
-                height={p.logo.height}
-                className="h-10 w-auto max-w-[120px] object-contain opacity-80 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0 md:h-11"
-              />
-            ) : (
-              <span className="latin flex h-10 items-center text-2xl font-extrabold tracking-[0.18em] text-ink-700 md:h-11">
-                {p.name}
-              </span>
-            )}
+            <Image
+              src={p.logo.src}
+              alt={`${p.name} logo`}
+              width={p.logo.width}
+              height={p.logo.height}
+              className="h-10 w-auto max-w-[120px] object-contain opacity-80 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0 md:h-11"
+            />
             {withLines && (
               <>
                 <p className="mt-4 font-semibold text-ink-900">{p.name}</p>

@@ -80,7 +80,6 @@ These describe **how the service works**. They were written to match the brief, 
 - [ ] **Reseller margin** is paid on delivered orders only. `resellerListings`, `resellers.margins`
 - [ ] **Careers culture points.** `careers.culture`
 - [ ] **Courier partner descriptions** (TCS, PostEx, TRAX), and written permission to show their logos. `content/data/shipping.ts` → `partners`
-- [ ] **TRAX logo file**: add `assets/logos/trax.png`, run `npm run brand:assets`, then set `logo` on the TRAX entry in `content/data/shipping.ts`. Until then its card and footer chip show the name as text.
 - [ ] **Stripe** is shown under Payments in the footer. Stripe does not onboard Pakistan-registered businesses directly, so confirm how it is used (e.g. through a foreign entity), or remove it from `paymentLogos` in `content/data/shipping.ts`.
 - [ ] **TRAX** replaced Leopards and M&P (the home stat now says "3 national courier partners"). Confirm the partnership.
 
@@ -92,6 +91,6 @@ These describe **how the service works**. They were written to match the brief, 
 ## F. Brand and partner assets
 
 - ✅ **Logos:** real logos, AdeelSab Couriers logos and the bag mark are in `assets/brand/`. Web versions, favicon, icons and OG image are generated with `npm run brand:assets`.
-- ⚠️ **Partner, payment and regulator logos:** TCS, PostEx, JazzCash, Easypaisa, Stripe, SECP and FBR are in `assets/logos/`. **TRAX is missing** — see above.
+- ✅ **Partner, payment and regulator logos:** TCS, PostEx, TRAX, JazzCash, Easypaisa, Stripe, SECP and FBR are in `assets/logos/`.
 - ✅ **Photography:** 5 real photos added (no founder portrait, by decision). See [TODO-IMAGES.md](TODO-IMAGES.md).
 - [ ] **Environment:** set `NEXT_PUBLIC_WHATSAPP` and `NEXT_PUBLIC_GA_ID` (see [DEPLOY.md](DEPLOY.md)).
