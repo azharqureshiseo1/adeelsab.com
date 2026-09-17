@@ -27,7 +27,7 @@ export function siteUrl(path = "/"): string {
 }
 
 export function whatsappLink(message?: string): string {
-  const number = (process.env.NEXT_PUBLIC_WHATSAPP || "923000000000").replace(/\D/g, "");
+  const number = (process.env.NEXT_PUBLIC_WHATSAPP || "923250040009").replace(/\D/g, "");
   const text = message ? `?text=${encodeURIComponent(message)}` : "";
   return `https://wa.me/${number}${text}`;
 }

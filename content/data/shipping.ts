@@ -15,20 +15,20 @@ export const zones: Zone[] = [
   {
     key: "majorCities",
     label: { en: "Major cities", ur: "بڑے شہر" },
-    note: { en: "TCS · Leopards · PostEx · M&P", ur: "TCS · Leopards · PostEx · M&P" },
+    note: { en: "TCS · PostEx · TRAX", ur: "TCS · PostEx · TRAX" },
   },
   {
     key: "restOfPakistan",
     label: { en: "Rest of Pakistan", ur: "باقی پاکستان" },
-    note: { en: "TCS · Leopards · PostEx · M&P", ur: "TCS · Leopards · PostEx · M&P" },
+    note: { en: "TCS · PostEx · TRAX", ur: "TCS · PostEx · TRAX" },
   },
 ];
 
-/** Delivery time per zone. Strings like "4–8 hours" or "2–3 working days" once confirmed. */
-export const timelines: Record<Zone["key"], string | null> = {
-  intraCity: null,
-  majorCities: null,
-  restOfPakistan: null,
+/** Delivery time per zone. Same-city is our own fleet (Lahore), the rest go by courier. */
+export const timelines: Record<Zone["key"], L | null> = {
+  intraCity: { en: "Same day to next day", ur: "اسی دن یا اگلے دن" },
+  majorCities: { en: "2–3 working days", ur: "2–3 کاروباری دن" },
+  restOfPakistan: { en: "3–4 working days", ur: "3–4 کاروباری دن" },
 };
 
 export type WeightBand = { label: string; rates: Record<Zone["key"], number | null> };
@@ -41,11 +41,17 @@ export const rateCard: WeightBand[] = [
   { label: "Every parcel", rates: { intraCity: 350, majorCities: 350, restOfPakistan: 350 } },
 ];
 
-/** Return-to-origin charge, PKR per parcel, by zone. */
+/**
+ * Return-to-origin charge billed to the SELLER, PKR per parcel, by zone.
+ *
+ * Confirmed by the owner: the return charge is paid by the customer who placed the
+ * order, so the seller is charged Rs 0 in every zone. Do not soften or drop the RTO
+ * section because of this — the policy is stated plainly, it is not hidden.
+ */
 export const rtoCharges: Record<Zone["key"], number | null> = {
-  intraCity: null,
-  majorCities: null,
-  restOfPakistan: null,
+  intraCity: 0,
+  majorCities: 0,
+  restOfPakistan: 0,
 };
 
 /** In-house same-city delivery fleet. */
@@ -71,15 +77,6 @@ export const partners = [
     },
   },
   {
-    slug: "leopards",
-    name: "Leopards Courier",
-    logo: { src: "/logos/leopards.webp", width: 239, height: 96 },
-    line: {
-      en: "Courier network with cash-on-delivery service across Pakistan.",
-      ur: "پورے پاکستان میں کیش آن ڈیلیوری سروس کے ساتھ کوریئر نیٹ ورک۔",
-    },
-  },
-  {
     slug: "postex",
     name: "PostEx",
     logo: { src: "/logos/postex.webp", width: 431, height: 96 },
@@ -89,12 +86,12 @@ export const partners = [
     },
   },
   {
-    slug: "mp",
-    name: "M&P (Muller & Phipps)",
-    logo: { src: "/logos/mp.webp", width: 188, height: 96 },
+    slug: "trax",
+    name: "TRAX",
+    logo: { src: "/logos/trax.webp", width: 147, height: 96 },
     line: {
-      en: "Courier and logistics network serving cities across Pakistan.",
-      ur: "پاکستان بھر کے شہروں میں کوریئر اور لاجسٹکس نیٹ ورک۔",
+      en: "E-commerce courier network with cash-on-delivery collection across Pakistan.",
+      ur: "پورے پاکستان میں کیش آن ڈیلیوری کلیکشن کے ساتھ ای کامرس کوریئر نیٹ ورک۔",
     },
   },
 ] as const;

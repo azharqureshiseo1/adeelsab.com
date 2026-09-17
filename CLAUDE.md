@@ -53,8 +53,9 @@ npm run brand:assets   # rebuild public/brand, public/images, public/logos, icon
   - SECP Reg. No. **0353167** · FBR Reg. No. **J816970**
   - Address: **Office No 20, First floor, Takbeer Plaza, Al Faisal Town, Lahore, Pakistan**
   - Email: **support@adeelsab.com** (also used for business and privacy requests)
-  - WhatsApp: **DEMO +92 300 0000000** (`NEXT_PUBLIC_WHATSAPP=923000000000`) — replace before launch;
-    it is intentionally NOT in JSON-LD until real.
+  - WhatsApp support: **+92 325 0040009** (`NEXT_PUBLIC_WHATSAPP=923250040009`)
+  - Landline (**sellers/vendors only**, not a customer line): **042 3663 2828**
+  - Careers: **careers@adeelsab.com** · Office hours: **9:00 am – 9:00 pm (PKT)**
   - Social: facebook.com/adeelsab.pk, instagram.com/adeelsab.pk, tiktok.com/@adeelsab.pk, threads.com/@adeelsab.pk
 - **Footer**: "© 2026 AdeelSab. All rights reserved." + "Developed by Refine Core Private Limited"
   linking to https://refinecore.pk/. Shows SECP/FBR, delivery-partner and payment logo chips.
@@ -64,7 +65,22 @@ npm run brand:assets   # rebuild public/brand, public/images, public/logos, icon
 - **Delivery charge: flat Rs 350 per parcel**, every city (`facts.deliveryCharge`, `shipping.rateCard`,
   packaging guide). Volumetric-weight copy was removed.
 - **Own fleet (AdeelSab Couriers): Lahore only** (`content/data/cities.ts` → `ownFleet: true`).
-- **M&P** added as 4th national courier partner (home stat says "4").
+- **Commission: 8% flat**, every category, at launch (`content/data/categories.ts`).
+- **No listing fee, no COD handling fee, no payout transfer fee, no dispute hold period** — commission
+  is the only fee on a sale. Those rows/facts were removed rather than set to "Rs 0" where the owner
+  asked for removal.
+- **RTO: the customer who placed the order pays the return charge**, so the seller is charged Rs 0 in
+  every zone. The RTO section stays in full — stated plainly, never hidden (rule 5).
+- **Customer returns: 2-day window, return shipping paid by the customer.**
+- **Minimum payout Rs 3,000 · COD remitted 9 days after delivery.**
+- **Founding Seller: first 100 only, 0% commission + no listing fee for 2 months.** No registered
+  counter on the page — it states the cap instead.
+- **No launch date is published** anywhere; Founding Sellers are told first, on WhatsApp.
+- **Resellers are now "Coming soon"**, like dropshippers (badge, nav, compare table, meta).
+- **3 delivery attempts before RTO.** Delivery times: Lahore same/next day, major cities 2–3 working
+  days, rest of Pakistan 3–4 working days (`shipping.ts` → `timelines`, now bilingual `L`).
+- **Courier partners: TCS, PostEx, TRAX** (home stat says "3"). Leopards and M&P were dropped by the
+  owner; their logo files are deleted. TRAX's logo is in `assets/logos/trax.png`.
 
 ## Open questions for the owner
 

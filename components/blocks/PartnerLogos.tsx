@@ -14,7 +14,7 @@ export function PartnerLogos({
   className,
 }: {
   withLines?: boolean;
-  /** 2 for half-width layouts, 4 for full-width sections. */
+  /** 2 for half-width layouts, 4 for full-width sections (one row per partner). */
   columns?: 2 | 4;
   showOwnFleet?: boolean;
   className?: string;
@@ -35,7 +35,7 @@ export function PartnerLogos({
           </p>
         </div>
       )}
-      <ul className={cn("grid grid-cols-2 gap-4", columns === 4 && "lg:grid-cols-4")}>
+      <ul className={cn("grid grid-cols-2 gap-4", columns === 4 && "lg:grid-cols-3")}>
         {partners.map((p) => (
           <li
             key={p.slug}

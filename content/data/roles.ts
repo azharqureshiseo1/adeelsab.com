@@ -25,4 +25,4 @@ export const roles: Role[] = [
   // },
 ];
 
-export const careersEmail: string | null = null; // TODO: careers inbox (CONTENT-TODO #11)
+export const careersEmail: string | null = "careers@adeelsab.com";

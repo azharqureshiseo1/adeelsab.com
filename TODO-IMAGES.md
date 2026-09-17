@@ -31,7 +31,7 @@ To **replace a photo**, overwrite the original in `assets/photos/` with the same
 | Logo | Used on |
 |---|---|
 | AdeelSab Couriers | Delivery partner card (home, `/delivery`, local sellers), footer |
-| TCS, Leopards, PostEx, M&P | Partner grid (home, `/delivery`, local sellers), footer |
+| TCS, PostEx, TRAX | Partner grid (home, `/delivery`, local sellers), footer |
 | JazzCash, Easypaisa | Payout rails (local sellers, pricing, payouts, resellers), footer |
 | Stripe | Footer (Payments). See CONTENT-TODO §D. |
 | SECP, FBR | Home trust bar, footer |
