@@ -23,8 +23,12 @@ export const facts = {
   deliveryCharge: known("Rs 350"),
   minPayout: known("Rs 3,000"),
   codRemittanceDays: known("9"),
-  /** The seller is not charged for RTO — the customer who placed the order pays the return charge. */
-  rtoCharge: known("Rs 0"),
+  /**
+   * RTO charge per returned parcel, paid by the SELLER. A customer who refuses a
+   * parcel is not billed for it — there is no reliable way to collect from someone
+   * who never took delivery. Also set per zone in shipping.ts → rtoCharges.
+   */
+  rtoCharge: known("Rs 300"),
   /** No listing fee at all — commission is the only fee on a sale. */
   listingFee: known("Rs 0"),
   // No COD handling fee and no dispute hold period are charged or published — commission
@@ -38,10 +42,8 @@ export const facts = {
 
   // Founding Seller Program
   foundingCap: known("100"),
-  /** How long the 0% Founding Seller commission lasts, in months. */
-  foundingCommissionMonths: known("2"),
-  /** Founding Sellers pay no commission and no listing fee. */
-  foundingCommissionRate: known("0%"),
+  // The Founding Seller programme carries NO commission discount: founding sellers pay
+  // the same 7% as everyone else, so there is no founding rate or holiday period to state.
   // No registered-seller counter is shown. The page states the cap (first 100) instead.
 
   // Company & trust

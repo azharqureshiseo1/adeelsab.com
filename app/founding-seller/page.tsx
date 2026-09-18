@@ -3,7 +3,6 @@ import {
   Camera,
   Check,
   CreditCard,
-  HandCoins,
   IdCard,
   Megaphone,
   MessageCircle,
@@ -31,7 +30,7 @@ export const dynamic = "force-static";
 
 export const metadata = pageMeta({ ...founding.meta, path: "/founding-seller" });
 
-const benefitIcons = [HandCoins, PenLine, MessageCircle, Megaphone, BadgeCheck];
+const benefitIcons = [PenLine, MessageCircle, Megaphone, BadgeCheck];
 const needIcons = [IdCard, CreditCard, Camera, Package];
 
 export default function FoundingSellerPage() {
@@ -191,7 +190,7 @@ export default function FoundingSellerPage() {
         <FAQ
           items={[
             faqs.foundingFree,
-            faqs.foundingAfter,
+            faqs.foundingCommission,
             faqs.foundingCapFull,
             faqs.foundingNtn,
             faqs.foundingLaunch,

@@ -65,16 +65,22 @@ npm run brand:assets   # rebuild public/brand, public/images, public/logos, icon
 - **Delivery charge: flat Rs 350 per parcel**, every city (`facts.deliveryCharge`, `shipping.rateCard`,
   packaging guide). Volumetric-weight copy was removed.
 - **Own fleet (AdeelSab Couriers): Lahore only** (`content/data/cities.ts` → `ownFleet: true`).
-- **Commission: 8% flat**, every category, at launch (`content/data/categories.ts`).
+- **Commission: 7% flat**, every category AND every seller at launch, Founding Sellers included
+  (`content/data/categories.ts`). The Founding Seller programme carries **no commission discount** —
+  `foundingCommissionRate` and `foundingCommissionMonths` were removed, along with the commission
+  benefit card, the home benefit line and the "after the founding period" FAQ.
 - **No listing fee, no COD handling fee, no payout transfer fee, no dispute hold period** — commission
   is the only fee on a sale. Those rows/facts were removed rather than set to "Rs 0" where the owner
   asked for removal.
-- **RTO: the customer who placed the order pays the return charge**, so the seller is charged Rs 0 in
-  every zone. The RTO section stays in full — stated plainly, never hidden (rule 5).
+- **RTO: Rs 300 per returned parcel, paid by the SELLER**, the same in every zone
+  (`facts.rtoCharge`, `shipping.rtoCharges`). A customer who refuses a parcel is **not** billed for
+  the return. (This reverses an earlier decision that the customer paid it.) Never soften or hide
+  this — rule 5.
 - **Customer returns: 2-day window, return shipping paid by the customer.**
 - **Minimum payout Rs 3,000 · COD remitted 9 days after delivery.**
-- **Founding Seller: first 100 only, 0% commission + no listing fee for 2 months.** No registered
-  counter on the page — it states the cap instead.
+- **Founding Seller: first 100 only.** Benefits are free listing creation, priority WhatsApp support,
+  featured placement at launch and the badge — **not** a commission discount. No registered counter
+  on the page; it states the cap instead.
 - **No launch date is published** anywhere; Founding Sellers are told first, on WhatsApp.
 - **Resellers are now "Coming soon"**, like dropshippers (badge, nav, compare table, meta).
 - **3 delivery attempts before RTO.** Delivery times: Lahore same/next day, major cities 2–3 working
