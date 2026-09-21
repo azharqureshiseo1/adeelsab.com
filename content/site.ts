@@ -1911,10 +1911,7 @@ export const contact = {
     hours: l("Office hours", "دفتری اوقات"),
     tz: l("Pakistan Standard Time (PKT)", "پاکستان اسٹینڈرڈ ٹائم (PKT)"),
     mapAlt: l("Map showing the AdeelSab office location", "AdeelSab دفتر کا نقشہ"),
-    mapPlaceholder: l(
-      "Map will appear here once the office address is confirmed.",
-      "دفتر کا پتہ تصدیق ہونے پر نقشہ یہاں دکھایا جائے گا۔",
-    ),
+    directions: l("Open in Google Maps", "گوگل میپس میں کھولیں"),
   },
 };
 

@@ -25,6 +25,7 @@ To find every remaining marker on the running site, open DevTools and run `docum
 | 7 | ✅ **COD remittance: 9 days after delivery** | `facts.ts` → `codRemittanceDays` | `/delivery#cod`, `/payouts`, FAQ |
 | 8 | ✅ **SECP registration no.** (0353167) and **FBR registration no.** (J816970) | `facts.ts` → `secpNumber`, `ntn` | Footer, home trust bar, Organization JSON-LD |
 | 9 | ✅ **Physical office address** (Office No 20, First floor, Takbeer Plaza, Al Faisal Town, Lahore) | `facts.ts` → `officeAddress` **and** legal MDX (privacy, terms) | Footer, trust bar, `/contact`, Organization JSON-LD |
+| — | ✅ **Office map**: a Google Maps embed of the ADEELSAB.PK pickup and dropout point now replaces the map placeholder on `/contact`. | `app/contact/page.tsx` → `MAP_EMBED_SRC` | `/contact` |
 | 10 | ✅ **WhatsApp support: +92 325 0040009** and **landline 042 3663 2828 (sellers/vendors only)**. Both are now in the Organization JSON-LD. | `facts.ts` → `whatsappDisplay`, `landlineDisplay`, `landlineTel`; env `NEXT_PUBLIC_WHATSAPP=923250040009` | Trust bar, `/contact`, every WhatsApp link |
 | 11 | ✅ **Support email** (support@adeelsab.com, also used for business enquiries and privacy requests) and **careers@adeelsab.com**. | `facts.ts` → `supportEmail`, `businessEmail`; legal MDX; `content/data/roles.ts` → `careersEmail` | `/contact`, `/careers`, legal pages |
 | 12 | ✅ **Founder name, photo, bio**: not shown on the site, by decision. The trust bar and `/about` show the registered company (ADEELSAB (PRIVATE) LIMITED) instead. | — | — |

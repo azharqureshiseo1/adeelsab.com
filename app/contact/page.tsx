@@ -16,6 +16,12 @@ export const dynamic = "force-static";
 
 export const metadata = pageMeta({ ...c.meta, path: "/contact" });
 
+/** Google Maps embed for the office (ADEELSAB.PK pickup and dropout point, Al Faisal Town). */
+const MAP_EMBED_SRC =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.1537081670517!2d74.4108931!3d31.547396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919053bea205b7d%3A0x3c2e87e0f5f20456!2sADEELSAB.PK%20PICKUP%20%26%20DROPOUT%20POINT!5e0!3m2!1sen!2s!4v1790015155316!5m2!1sen!2s";
+/** Same coordinates as the embed, in Google's documented search-URL format. */
+const MAP_LINK = "https://www.google.com/maps/search/?api=1&query=31.547396,74.4108931";
+
 const routeMeta = {
   support: { icon: LifeBuoy, email: facts.supportEmail, prefill: "Assalam o Alaikum, I need seller support." },
   business: { icon: Briefcase, email: facts.businessEmail, prefill: "Hello, I have a business enquiry for AdeelSab." },
@@ -154,17 +160,30 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-          {/* Map placeholder — no third-party embed until the address is confirmed (keeps pages fast and private). */}
-          <div
-            role="img"
-            aria-label={c.office.mapAlt.en}
-            className="flex min-h-64 items-center justify-center rounded-card border border-dashed border-ink-400 bg-white p-8 text-center"
-          >
-            <p className="max-w-xs text-ink-500">
-              <MapPin size={32} strokeWidth={1.5} className="mx-auto mb-3 text-ink-400" aria-hidden />
-              <T v={c.office.mapPlaceholder} />
-            </p>
+          {/* Google Maps embed. `loading="lazy"` keeps it off the critical path, so the page
+              still renders fast even though this is a third-party frame. */}
+          <div className="overflow-hidden rounded-card border border-ink-200 bg-white">
+            <iframe
+              src={MAP_EMBED_SRC}
+              title={c.office.mapAlt.en}
+              className="block h-full min-h-72 w-full lg:min-h-[22rem]"
+              style={{ border: 0 }}
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="strict-origin-when-cross-origin"
+            />
           </div>
+          <p className="text-small text-ink-500 lg:col-start-2">
+            <a
+              href={MAP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 font-semibold text-brand-700 hover:underline"
+            >
+              <MapPin size={16} strokeWidth={1.75} aria-hidden />
+              <T v={c.office.directions} />
+            </a>
+          </p>
         </div>
       </Section>
 
