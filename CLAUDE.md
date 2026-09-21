@@ -89,8 +89,14 @@ npm run brand:assets   # rebuild public/brand, public/images, public/logos, icon
 - **Resellers are now "Coming soon"**, like dropshippers (badge, nav, compare table, meta).
 - **3 delivery attempts before RTO.** Delivery times: Lahore same/next day, major cities 2–3 working
   days, rest of Pakistan 3–4 working days (`shipping.ts` → `timelines`, now bilingual `L`).
-- **`/llms.txt`** (`app/llms.txt/route.ts`) describes the site for AI agents, generated at build time
-  from the same route list as the sitemap. Keep its key-facts paragraph in sync with `facts.ts`.
+- **Agent readiness**: `/llms.txt` (`app/llms.txt/route.ts`) describes the site for AI agents,
+  generated at build time from the same route list as the sitemap — keep its key-facts paragraph in
+  sync with `facts.ts`. `app/robots.ts` also names the AI crawlers explicitly (`AI_AGENTS`); remove
+  a name there to opt that crawler out. Organization, WebSite, FAQPage and BreadcrumbList JSON-LD
+  are already emitted site-wide.
+- **Caching**: `next.config.mjs` → `headers()` serves `/images`, `/logos`, `/brand` and the icons
+  with a 30-day cache plus stale-while-revalidate. Not a year: `brand:assets` overwrites those files
+  in place, so a replaced logo must still reach visitors.
 - **Courier partners: TCS, PostEx, TRAX** (home stat says "3"). Leopards and M&P were dropped by the
   owner; their logo files are deleted. TRAX's logo is in `assets/logos/trax.png`.
 
