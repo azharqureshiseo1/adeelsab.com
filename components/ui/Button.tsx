@@ -8,9 +8,10 @@ const base =
   "group relative inline-flex min-h-10 max-w-full items-center justify-center gap-2 rounded-full text-center font-semibold leading-snug sm:whitespace-nowrap transition-[background,color,box-shadow,border-color] duration-200 active:translate-y-px disabled:pointer-events-none disabled:opacity-60 [&>svg]:shrink-0";
 
 const variants: Record<Variant, string> = {
-  // Primary: flat brand-500, gradient on hover (one of the ≤3 gradient uses per page).
+  // Primary: flat brand-650, gradient on hover (one of the ≤3 gradient uses per page).
+  // Both carry white text at AA — brand-500 is only 3.31:1 and cannot.
   primary:
-    "bg-brand-500 text-white shadow-[0_6px_18px_rgba(251,83,1,.25)] hover:bg-[image:var(--brand-gradient)] hover:shadow-[0_10px_24px_rgba(230,62,0,.3)]",
+    "bg-brand-650 text-white shadow-[0_6px_18px_rgba(214,56,0,.25)] hover:bg-[image:var(--brand-gradient-strong)] hover:shadow-[0_10px_24px_rgba(176,47,0,.3)]",
   secondary: "border border-ink-200 bg-white text-ink-900 hover:border-ink-400 hover:bg-ink-50",
   ghost: "text-ink-900 hover:bg-ink-100",
   onDark: "border border-ink-700 bg-transparent text-white hover:border-ink-400 hover:bg-ink-800",

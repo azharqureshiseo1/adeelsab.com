@@ -102,18 +102,18 @@ export function MarginCalculator({ copy }: { copy: Copy }) {
       </div>
       <div className="flex flex-col justify-center gap-6 bg-ink-900 p-6 md:p-8" aria-live="polite">
         <div>
-          <p className="text-small text-ink-400">
+          <p className="text-small text-ink-500">
             <T v={copy.perSale} />
           </p>
           <p className="latin tabular mt-1 text-4xl font-extrabold text-brand-400">{formatPKR(perSale)}</p>
         </div>
         <div>
-          <p className="text-small text-ink-400">
+          <p className="text-small text-ink-500">
             <T v={copy.perMonth} />
           </p>
           <p className="latin tabular mt-1 text-3xl font-extrabold text-white">{formatPKR(perMonth)}</p>
         </div>
-        <p className="text-[13px] leading-relaxed text-ink-400">
+        <p className="text-[13px] leading-relaxed text-ink-500">
           <T v={copy.note} />
         </p>
       </div>

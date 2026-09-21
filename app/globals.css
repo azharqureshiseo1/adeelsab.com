@@ -8,7 +8,9 @@
   --color-brand-400: #ff7a2b;
   --color-brand-500: #fb5301; /* PRIMARY — buttons, links, accents */
   --color-brand-600: #e63e00; /* hover / pressed / deep end of gradient */
-  /* Extension (not in the brand spec): AA-contrast orange for small text on light grounds (5.3:1 on white). */
+  /* Extension: the lightest brand orange that carries WHITE text at AA (4.75:1). Primary buttons. */
+  --color-brand-650: #d63800;
+  /* Extension (not in the brand spec): AA-contrast orange for small text on light grounds (5.5:1 on white). */
   --color-brand-700: #c23400;
 
   /* Ink — the "Adeel" wordmark. Near-black with a slight navy cast */
@@ -36,7 +38,12 @@
 }
 
 :root {
+  /* Decorative only — never put text on this, the light end is 2.3:1 against white. */
   --brand-gradient: linear-gradient(135deg, #ff8b3d 0%, #fb5301 55%, #e63e00 100%);
+  /* Carries WHITE text at AA: every stop is at least 4.75:1. Primary button hover. */
+  --brand-gradient-strong: linear-gradient(135deg, #d63800 0%, #c23400 55%, #b02f00 100%);
+  /* Orange text on white. Every stop clears 3:1, and it is only ever used at 36px+. */
+  --brand-gradient-text: linear-gradient(135deg, #fb5301 0%, #e63e00 55%, #c23400 100%);
 }
 
 @layer base {
@@ -119,7 +126,7 @@
   }
 
   .gradient-text {
-    background: var(--brand-gradient);
+    background: var(--brand-gradient-text);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
